@@ -7,5 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Thibaut Géry",
-  "license": "AGPL-3.0"
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "async": "2.0.1",
+    "aws-sdk": "2.4.10",
+    "csv-parser": "1.9.3"
+  }
 }
