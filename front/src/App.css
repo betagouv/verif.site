@@ -1,7 +1,27 @@
 .site-table {
-  background-color: #222;
-  color: white;
   border-color: white;
-  width: 100%;
+  color: white;
+  width: 80%;
+  margin: 4em auto;
+  padding: 0;
+}
+
+.site-table tr {
+  border-bottom: 1px solid whitesmoke;
+}
+
+.site-table td {
+  background-color: white;
   padding: 20px 5px;
+  text-align: center;
+  color: #162a45;
+}
+
+.site-table td.site-title {
+  color: white;
+  background-color: #162a45;
+}
+
+.site-table tr:hover td.site-title {
+  background-color: #12b793;
 }

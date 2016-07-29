@@ -27,12 +27,9 @@ class App extends Component {
       <div>
         <table className="site-table">
           <tbody>
-            <tr>
-              <td className="site-title">Sites.beta.gouv.fr</td>
-            </tr>
+            {this.state ? this.state.analytics.map((site, idx) => <SiteRow key={idx} site={site} />) : 'Loading'}
           </tbody>
         </table>
-        {this.state ? this.state.analytics.map((site) => <SiteRow site={site} />) : 'Loading'}
       </div>
     );
   }
