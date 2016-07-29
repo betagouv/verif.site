@@ -17,7 +17,7 @@ module.exports = function(results, callback) {
       if( !data[domain]) {
         data[domain] = {}
       }
-      data[domain][result] = removePrototype(row)
+      data[domain][result] = cleanObject(row)
     })
     .on('end', () => {
       cb(data)
@@ -26,6 +26,29 @@ module.exports = function(results, callback) {
 
 
 }
+
+function cleanObject(object) {
+  let cleanedObject = removePrototype(object)
+  cleanedObject = parseObject(cleanedObject)
+  return cleanedObject
+}
+
 function removePrototype(object) {
   return Object.assign({}, object);
+}
+
+function parseObject(object) {
+  const newObject = {}
+  const keys = Object.keys(object)
+  console.log('keys', keys)
+  keys.forEach((key) => {
+    if(object[key] === 'True') {
+      newObject[key] = true
+    } else if (object[key] === 'False') {
+      newObject[key] = false
+    } else {
+      newObject[key] = object[key]
+    }
+  })
+  return newObject
 }
