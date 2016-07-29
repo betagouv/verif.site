@@ -12,5 +12,5 @@ Ce site permet de visualiser les statistiques des différents site de [l'incubat
 ./bin/update
 ```
 
-[NodeJS]: https://nodejs.org/en/
+[Node.js]: https://nodejs.org/en/
 [Docker]: https://www.docker.com/
