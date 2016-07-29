@@ -1,23 +1,30 @@
 const analyse = require('./analyze')
 const model = require('./model')
+const fs = require('fs')
 
 const scanners = ['inspect', 'sslyze', 'tls', 'pageload']
 
-
+const name = 'sites'
 const options = {
   dockerImage: 'domainscan_scan',
   scanners,
-  file: 'sites.csv',
+  file: name+ '.csv',
 }
 
 
 
 analyse(options, (err, stdout, stderr) => {
   if(err) return console.error(err)
-  console.log('analysed Done')
+  console.log('analyze Done')
 
   console.log('create model')
-  model(scanners, (data) => {
-    console.log('END', JSON.stringify(data))
+
+  const files = scanners.map((item) => {
+    return {name: item, path: __dirname + '/../results/' + item + '.csv'}
+  })
+  files.push({name: 'meta', path: __dirname + '/../data/' + name + '.csv'})
+
+  model(files, (data) => {
+    fs.writeFileSync(__dirname + '/../data/sites.json', JSON.stringify(data), 'utf8')
   })
 })

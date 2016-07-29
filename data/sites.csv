@@ -1,7 +1,7 @@
-Domain, Administration
-beta.gouv.fr, Incubateur Services Numeriques
-particulier.api.gouv.fr, Incubateur Services Numeriques
-geo.api.gouv.fr, Incubateur Services Numeriques
-mes-aides.gouv.fr, Incubateur Services Numeriques
-mdph.beta.gouv.fr, Incubateur Services Numeriques
-api.gouv.fr, DINSIC
+Domain, Administration, Type
+beta.gouv.fr, Incubateur Services Numeriques, website
+particulier.api.gouv.fr, Incubateur Services Numeriques, api
+geo.api.gouv.fr, Incubateur Services Numeriques, api
+mes-aides.gouv.fr, Incubateur Services Numeriques, website
+mdph.beta.gouv.fr, Incubateur Services Numeriques, website
+api.gouv.fr, DINSIC, website

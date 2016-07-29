@@ -10,21 +10,19 @@ module.exports = function(results, callback) {
 
 
   function addResult(result, cb) {
-    fs.createReadStream(__dirname + '/../results/'+ result + '.csv')
+    fs.createReadStream(result.path)
     .pipe(csv())
     .on('data', function(row) {
       const domain = row.Domain
       if( !data[domain]) {
         data[domain] = {}
       }
-      data[domain][result] = cleanObject(row)
+      data[domain][result.name] = cleanObject(row)
     })
     .on('end', () => {
       cb(data)
     })
   }
-
-
 }
 
 function cleanObject(object) {
@@ -40,7 +38,6 @@ function removePrototype(object) {
 function parseObject(object) {
   const newObject = {}
   const keys = Object.keys(object)
-  console.log('keys', keys)
   keys.forEach((key) => {
     if(object[key] === 'True') {
       newObject[key] = true
