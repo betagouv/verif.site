@@ -62,3 +62,7 @@ td.warning {
   background-color: #F2E94E;
 }
 
+td i.fa {
+  display: inline-block;
+}
+
