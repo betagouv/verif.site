@@ -12,16 +12,16 @@ class HttpsGrade extends Component {
 
     if(this.props.tls["Grade"].includes('A')) {
       return (
-        <td className="valid"><span>{ this.props.tls["Grade"] }</span></td>
+        <td className="valid">Note SSL Labs&nbsp;:<br/> <a href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] }>{ this.props.tls["Grade"] }</a></td>
       )
 
     } else if(this.props.tls["Grade"].includes('B') || this.props.tls["Grade"].includes('C')) {
       return (
-        <td><span>{ this.props.tls["Grade"] }</span></td>
+        <td>Note SSL Labs&nbsp;:<br/> <a href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] }>{ this.props.tls["Grade"] }</a></td>
       )
     } else {
       return (
-        <td className="invalid"><span>{ this.props.tls["Grade"] }</span></td>
+        <td className="invalid">Note SSL Labs&nbsp;:<br/> <a href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] }>{ this.props.tls["Grade"] }</a></td>
       )
     }
   }
