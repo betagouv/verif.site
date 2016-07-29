@@ -9,7 +9,7 @@ class SiteRow extends Component {
     return (
       <tr>
         <td className="site-title">
-          <a href="{ this.props.site.inspect.Canonical }">{ this.props.site.inspect.Domain }</a>
+          <a href={ this.props.site.inspect.Canonical }>{ this.props.site.inspect.Domain }</a>
           <span className="type">{ this.props.site.meta.Type }</span>
           <span className="administration">{ this.props.site.meta.Administration }</span>
         </td>
