@@ -4,13 +4,35 @@ Ce site permet de visualiser les statistiques des différents site de [l'incubat
 
 ## Mettre à jour les données
 
+
+Dépendences :
  * [Node.js]
  * [Docker]
 
 
 ```
-./bin/update
+node ./import/index.js
 ```
+## Modifier le site
+
+Dépendences :
+ * [Node.js]
+
+L'application est une application [react] dans le dossier `front`
+
+```
+cd front
+npm start
+```
+
+## Publier une nouvelle version du site
+
+```
+./front/deploy.sh
+```
+
+
 
 [Node.js]: https://nodejs.org/en/
 [Docker]: https://www.docker.com/
+[react]: https://facebook.github.io/react/
