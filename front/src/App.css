@@ -22,6 +22,14 @@
   background-color: #162a45;
 }
 
+.site-table td.site-title a {
+  color: white;
+}
+
+.site-table td.site-title a:hover {
+  color: black;
+}
+
 .site-table tr:hover td.site-title {
   background-color: #12b793;
 }

@@ -9,8 +9,8 @@ class SiteRow extends Component {
     return (
       <tr>
         <td className="site-title">
-          <a href={ this.props.site.inspect.Canonical }>{ this.props.site.inspect.Domain }</a>
-          <span className="type">{ this.props.site.meta.Type }</span>
+          <h2><a href={ this.props.site.inspect.Canonical }>{ this.props.site.inspect.Domain }</a></h2>
+          <span className="type">{ this.props.site.meta.Type }</span> <br/>
           <span className="administration">{ this.props.site.meta.Administration }</span>
         </td>
         <HttpsValid inspect={this.props.site.inspect} />
