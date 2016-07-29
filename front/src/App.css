@@ -1,9 +1,26 @@
+/*
+
+blue:   #A3D9FF
+purple: #7E6B8F
+green:  #96E6B3
+red:    #DA3E52
+yellow: #F2E94E
+
+dark-red: #98091D
+light-red:    #F78F9D
+
+*/
+
+
 .site-table {
   border-color: white;
-  color: white;
   width: 80%;
   margin: 4em auto;
   padding: 0;
+}
+
+a, a:hover {
+  color: black;
 }
 
 .site-table tr {
@@ -14,22 +31,34 @@
   background-color: white;
   padding: 20px 5px;
   text-align: center;
-  color: #162a45;
-}
-
-.site-table td.site-title {
-  color: white;
-  background-color: #162a45;
-}
-
-.site-table td.site-title a {
-  color: white;
-}
-
-.site-table td.site-title a:hover {
   color: black;
 }
 
-.site-table tr:hover td.site-title {
-  background-color: #12b793;
+.site-table td.site-title {
+  background-color: #fafafa;
 }
+
+.site-table td.site-title a {
+}
+
+.site-table td.site-title a:hover {
+}
+
+.site-table tr:hover td.site-title {
+  background-color: #eeeeee;
+}
+
+/* Check coloration */
+
+td.valid {
+  background-color: #96E6B3;
+}
+
+td.invalid {
+  background-color: #DA3E52;
+}
+
+td.warning {
+  background-color: #F2E94E;
+}
+

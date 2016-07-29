@@ -15,7 +15,7 @@ class HttpsEnforce extends Component {
       )
     } else {
       return (
-        <td><span>Ne force pas l'utilisation de HTTPS</span></td>
+        <td className="warning"><span>Ne force pas l'utilisation de HTTPS</span></td>
       )
     }
   }

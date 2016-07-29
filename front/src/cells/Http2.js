@@ -15,7 +15,7 @@ class Http2 extends Component {
       )
     } else {
       return (
-        <td><span>HTTP2 indisponible</span></td>
+        <td className="warning"><span>HTTP2 indisponible</span></td>
       )
     }
   }

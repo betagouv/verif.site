@@ -17,7 +17,7 @@ class HttpsGrade extends Component {
 
     } else if(this.props.tls["Grade"].includes('B') || this.props.tls["Grade"].includes('C')) {
       return (
-        <td>Note SSL Labs&nbsp;:<br/> <a href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] }>{ this.props.tls["Grade"] }</a></td>
+        <td className="warning">Note SSL Labs&nbsp;:<br/> <a href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] }>{ this.props.tls["Grade"] }</a></td>
       )
     } else {
       return (
