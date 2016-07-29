@@ -1,7 +1,28 @@
 Domain,Administration,Type
 beta.gouv.fr, Incubateur Services Numeriques, website
-particulier.api.gouv.fr, Incubateur Services Numeriques, api
-geo.api.gouv.fr, Incubateur Services Numeriques, api
-mes-aides.gouv.fr, Incubateur Services Numeriques, website
+boussole.beta.gouv.fr, Incubateur Services Numeriques, website
+pix.beta.gouv.fr, Incubateur Services Numeriques, website
+api.gouv.fr, Incubateur Services Numeriques, website
 mdph.beta.gouv.fr, Incubateur Services Numeriques, website
-api.gouv.fr, DINSIC, website
+fiches-de-banc.beta.gouv.fr, Incubateur Services Numeriques, website
+urbanisme.api.gouv.fr, Incubateur Services Numeriques, website
+openacademie.beta.gouv.fr, Incubateur Services Numeriques, website
+bourse.beta.gouv.fr, Incubateur Services Numeriques, website
+embauche.beta.gouv.fr, Incubateur Services Numeriques, website
+retraite.beta.gouv.fr, Incubateur Services Numeriques, website
+inspire.data.gouv.fr, Incubateur Services Numeriques, website
+apicarto.sgmap.fr, Incubateur Services Numeriques, website
+mes-aides.gouv.fr, Incubateur Services Numeriques, website
+geo.api.gouv.fr,Incubateur Services Numeriques,api
+particulier.api.gouv.fr,Incubateur Services Numeriques,api
+geo.api.gouv.fr,Incubateur Services Numeriques,api
+api.apientreprise.fr,Incubateur Services Numeriques,api
+mps.apientreprise.fr,Incubateur Services Numeriques,website
+tps.apientreprise.fr,Incubateur Services Numeriques,website
+data.gouv.fr,Etalab,website
+addresse.data.gouv.fr,Etalab,website
+api-adresse.data.gouv.fr,Etalab,website
+cada.data.gouv.fr,Etalab,website
+modernisation.gouv.fr,SGMAP,website
+etatplateforme.modernisation.gouv.fr,DINSIC,website
+franceconnect.gouv.fr,DINSIC,website
