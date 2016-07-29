@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
+import SiteRow from './SiteRow'
 
 class App extends Component {
   constructor(props) {
@@ -27,14 +28,11 @@ class App extends Component {
         <table className="site-table">
           <tbody>
             <tr>
-              <td className="site-title">{this.state ? this.state.analytics[0].inspect.Domain : 'Loading'}</td>
+              <td className="site-title">Sites.beta.gouv.fr</td>
             </tr>
           </tbody>
         </table>
-
-        <pre>
-          {this.state ? JSON.stringify(this.state.analytics) : 'Loading'}
-        </pre>
+        {this.state ? this.state.analytics.map((site) => <SiteRow site={site} />) : 'Loading'}
       </div>
     );
   }
