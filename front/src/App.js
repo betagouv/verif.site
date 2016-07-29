@@ -5,13 +5,18 @@ import './App.css'
 class App extends Component {
   constructor(props) {
     super(props)
-    this.getAnalytics()
+    this.getAnalytics();
   }
 
   getAnalytics() {
-    return fetch(`https://storage.gra1.cloud.ovh.net/v1/AUTH_b6699bd0910b4340bc216598cd2102e0/sites/sites.json`)
-      .then((response) => this.setState({analytics: response.json()}))
-      .catch((err) => this.setState({analytics : err}))
+    return fetch(`https://raw.githubusercontent.com/sgmap/sites/master/data/sites.json`)
+      .then((response) => response.json())
+      .then((analytics) => {
+        this.setState({analytics})
+      })
+      .catch((err) => {
+        console.error(err);
+      })
   }
 
   render() {
@@ -21,9 +26,10 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <p className="App-intro">
-          {this.state.analytics}
-        </p>
+
+        <pre>
+          {this.state ? JSON.stringify(this.state.analytics) : 'Loading'}
+        </pre>
       </div>
     );
   }
