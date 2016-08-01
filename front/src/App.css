@@ -14,7 +14,7 @@ light-red:    #F78F9D
 
 .site-table {
   border-color: white;
-  width: 80%;
+  width: 100%;
   margin: 4em auto;
   padding: 0;
 }
@@ -48,10 +48,48 @@ a, a:hover {
   background-color: #eeeeee;
 }
 
+td:first-child {
+  width: 32%;
+}
+
+td:not(:first-child) {
+  width: 17%;
+  padding: 0;
+  border-radius: 20px;
+  color: white;
+}
+
+.block-left {
+  float: left;
+  width: 30%;
+  height: 6em;
+  position: relative;
+}
+
+.block-left * {
+  position: absolute;
+  top: 50%;
+  left: 18%;
+  transform: TranslateY(-30%);
+}
+
+.block-right {
+  float: left;
+  width: 70%;
+  height: 6em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0 4px 4px 0;
+  font-size: 1.2em;
+}
+
 /* Check coloration */
 
 td.valid {
-  background-color: #96E6B3;
+  /*background-color: #96E6B3;*/
+  background-color: #569a6f;
 }
 
 td.invalid {
@@ -59,7 +97,8 @@ td.invalid {
 }
 
 td.warning {
-  background-color: #F2E94E;
+  /*background-color: #F2E94E;*/
+  background-color: #efb000;
 }
 
 td i.fa {
