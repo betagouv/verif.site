@@ -10,8 +10,8 @@ Dépendences :
  * [Docker]
 
 
-```
-node ./import/index.js
+```sh
+make import
 ```
 ## Modifier le site
 
@@ -21,14 +21,28 @@ Dépendences :
 L'application est une application [react] dans le dossier `front`
 
 ```
-cd front
-npm start
+make install
+make start
+```
+
+## Lancer les tests
+
+Pour l'instant il n'y a qu'un linter
+
+Dépendences :
+ * [Node.js]
+
+Il est nécessaire d'installer des dépendences npm globales avec cette ligne de commande : `npm install -g eslint babel-eslint eslint-plugin-react eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-flowtype`
+
+
+```
+make test
 ```
 
 ## Publier une nouvelle version du site
 
 ```
-./front/deploy.sh
+make deploy
 ```
 
 
