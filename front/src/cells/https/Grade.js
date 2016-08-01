@@ -13,29 +13,38 @@ class HttpsGrade extends Component {
     if(this.props.tls["Grade"].includes('A')) {
       return (
         <td className="valid">
-          <div className="content">
-            <span>Note SSL Lab</span>
-            <a className="icon grade" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] }>{ this.props.tls["Grade"] }</a>
-          </div>
+          <a className="content" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] }>
+            <span>
+              Note SSL&nbsp;: <br/>
+            <span className="grade" >{ this.props.tls["Grade"] }</span>
+            </span>
+            <i className="icon fa fa-4x fa-check-circle"></i>
+          </a>
         </td>
       )
 
     } else if(this.props.tls["Grade"].includes('B') || this.props.tls["Grade"].includes('C')) {
       return (
         <td className="warning">
-          <div className="content">
-            <span>Note SSL Lab</span>
-            <a className="icon grade" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] }>{ this.props.tls["Grade"] }</a>
-          </div>
+          <a className="content" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] }>
+            <span>
+              Note SSL&nbsp;: <br/>
+              <span className="grade" >{ this.props.tls["Grade"] }</span>
+            </span>
+            <i className="icon fa fa-4x fa-check-triangle"></i>
+          </a>
         </td>
       )
     } else {
       return (
         <td className="invalid">
-          <div className="content">
-            <span>Note SSL Lab</span>
-            <a className="icon grade" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] }>{ this.props.tls["Grade"] }</a>
-          </div>
+          <a className="content" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] }>
+            <span>
+              Note SSL&nbsp;: <br/>
+              <span className="grade" >{ this.props.tls["Grade"] }</span>
+            </span>
+            <i className="icon fa fa-4x fa-times-circle"></i>
+          </a>
         </td>
       )
     }

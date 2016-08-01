@@ -22,7 +22,7 @@ class HttpsEnforce extends Component {
       return (
         <td className="warning">
           <div className="content">
-            <span>Ne force pas l'utilisation de HTTS</span>
+            <span>Ne force pas l'utilisation de HTTPS</span>
             <i className="icon fa fa-4x fa-exclamation-triangle"></i>
           </div>
         </td>

@@ -38,6 +38,18 @@ a, a:hover {
   background-color: #fafafa;
 }
 
+.site-table td.site-title a {
+  text-decoration: none;
+}
+
+.site-table td.site-title h2 {
+  text-decoration: underline;
+}
+
+.site-table td h2 {
+  margin-top: 0;
+}
+
 
 .site-table tr:hover td.site-title {
   background-color: #eeeeee;
@@ -56,6 +68,11 @@ a, a:hover {
   margin: 0.3em;
 }
 
+.site-table td a.content {
+  color: white;
+  text-decoration: none;
+}
+
 .site-table td .content span {
   align-self: center;
 }
@@ -64,12 +81,10 @@ a, a:hover {
   margin-left: 0.5em;
 }
 
-.site-table td .content .icon.grade {
+.site-table td .content .grade {
   font-size: 200%;
   font-weight: bold;
-  background-color: white;
-  border-radius: 50%;
-  padding: 0.3em;
+  text-decoration: underline;
 }
 
 
