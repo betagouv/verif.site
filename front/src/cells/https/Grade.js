@@ -31,7 +31,7 @@ class HttpsGrade extends Component {
               Note SSL&nbsp;: <br/>
               <span className="grade" >{ this.props.tls["Grade"] }</span>
             </span>
-            <i className="icon fa fa-4x fa-check-triangle"></i>
+            <i className="icon fa fa-4x fa-exclamation-triangle"></i>
           </a>
         </td>
       )
