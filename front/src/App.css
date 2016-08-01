@@ -63,6 +63,5 @@ td.warning {
 }
 
 td i.fa {
-  display: inline-block;
+  display: block;
 }
-
