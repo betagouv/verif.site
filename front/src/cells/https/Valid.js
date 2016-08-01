@@ -12,22 +12,18 @@ class HttpsValid extends Component {
     if(this.props.inspect["Valid HTTPS"]) {
       return (
         <td className="valid">
-          <div className="block-left">
-            <i className="fa fa-4x fa-check-circle"></i>
-          </div>
-          <div className="block-right">
+          <div className="content">
             <span>HTTPS valide</span>
+            <i className="icon fa fa-4x fa-check-circle"></i>
           </div>
         </td>
       )
     } else {
       return (
         <td className="warning">
-          <div className="block-left">
-            <i className="fa fa-4x fa-exclamation-triangle"></i>
-          </div>
-          <div className="block-right">
+          <div className="content">
             <span>HTTPS non valide</span>
+            <i className="icon fa fa-4x fa-exclamation-triangle"></i>
           </div>
         </td>
       )
