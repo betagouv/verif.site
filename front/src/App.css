@@ -1,9 +1,26 @@
+/*
+
+blue:   #A3D9FF
+purple: #7E6B8F
+green:  #96E6B3
+red:    #DA3E52
+yellow: #F2E94E
+
+dark-red: #98091D
+light-red:    #F78F9D
+
+*/
+
+
 .site-table {
   border-color: white;
-  color: white;
-  width: 80%;
+  width: 100%;
   margin: 4em auto;
   padding: 0;
+}
+
+a, a:hover {
+  color: black;
 }
 
 .site-table tr {
@@ -14,22 +31,82 @@
   background-color: white;
   padding: 20px 5px;
   text-align: center;
-  color: #162a45;
-}
-
-.site-table td.site-title {
-  color: white;
-  background-color: #162a45;
-}
-
-.site-table td.site-title a {
-  color: white;
-}
-
-.site-table td.site-title a:hover {
   color: black;
 }
 
+.site-table td.site-title {
+  background-color: #fafafa;
+}
+
+.site-table td.site-title a {
+  text-decoration: none;
+}
+
+.site-table td.site-title h2 {
+  text-decoration: underline;
+}
+
+.site-table td h2 {
+  margin-top: 0;
+}
+
+
 .site-table tr:hover td.site-title {
-  background-color: #12b793;
+  background-color: #eeeeee;
+}
+
+
+.site-table td:not(:first-child) {
+  padding: 0;
+  border-radius: 20px;
+  color: white;
+}
+
+.site-table td .content {
+  display: flex;
+  justify-content: center;
+  margin: 0.3em;
+}
+
+.site-table td a.content {
+  color: white;
+  text-decoration: none;
+}
+
+.site-table td .content span {
+  align-self: center;
+}
+
+.site-table td .content .icon {
+  margin-left: 0.5em;
+}
+
+.site-table td .content .grade {
+  font-size: 200%;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+/* Check coloration */
+
+td.valid {
+  background-color: #569a6f;
+}
+
+td.invalid {
+  background-color: #DA3E52;
+}
+
+td.warning {
+  background-color: #efb000;
+}
+
+.site-table td .icon {
+  display: block;
+  float: right;
+}
+
+.site-table td span {
+
 }

@@ -12,16 +12,40 @@ class HttpsGrade extends Component {
 
     if(this.props.tls["Grade"].includes('A')) {
       return (
-        <td className="valid">Note SSL Labs&nbsp;:<br/> <a href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] }>{ this.props.tls["Grade"] }</a></td>
+        <td className="valid">
+          <a className="content" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] }>
+            <span>
+              Note SSL&nbsp;: <br/>
+            <span className="grade" >{ this.props.tls["Grade"] }</span>
+            </span>
+            <i className="icon fa fa-4x fa-check-circle"></i>
+          </a>
+        </td>
       )
 
     } else if(this.props.tls["Grade"].includes('B') || this.props.tls["Grade"].includes('C')) {
       return (
-        <td>Note SSL Labs&nbsp;:<br/> <a href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] }>{ this.props.tls["Grade"] }</a></td>
+        <td className="warning">
+          <a className="content" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] }>
+            <span>
+              Note SSL&nbsp;: <br/>
+              <span className="grade" >{ this.props.tls["Grade"] }</span>
+            </span>
+            <i className="icon fa fa-4x fa-exclamation-triangle"></i>
+          </a>
+        </td>
       )
     } else {
       return (
-        <td className="invalid">Note SSL Labs&nbsp;:<br/> <a href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] }>{ this.props.tls["Grade"] }</a></td>
+        <td className="invalid">
+          <a className="content" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] }>
+            <span>
+              Note SSL&nbsp;: <br/>
+              <span className="grade" >{ this.props.tls["Grade"] }</span>
+            </span>
+            <i className="icon fa fa-4x fa-times-circle"></i>
+          </a>
+        </td>
       )
     }
   }

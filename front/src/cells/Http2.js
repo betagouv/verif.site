@@ -11,11 +11,21 @@ class Http2 extends Component {
     }
     if(this.props.tls["HTTP/2"]) {
       return (
-        <td className="valid"><span>HTTP2 disponible</span></td>
+        <td className="valid">
+          <div className="content">
+            <span>HTTP2 disponible</span>
+            <i className="icon fa fa-4x fa-check-circle"></i>
+          </div>
+        </td>
       )
     } else {
       return (
-        <td><span>HTTP2 indisponible</span></td>
+        <td className="warning">
+          <div className="content">
+            <span>HTTP2 indisponible</span>
+            <i className="icon fa fa-4x fa-exclamation-triangle"></i>
+          </div>
+        </td>
       )
     }
   }
