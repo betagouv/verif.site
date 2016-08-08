@@ -2,6 +2,11 @@ machine:
   node:
     version: 6.3.0
 
+general:
+  branches:
+    ignore:
+      - gh-pages
+
 dependencies:
   pre:
     - npm install -g eslint babel-eslint eslint-plugin-react eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-flowtype
