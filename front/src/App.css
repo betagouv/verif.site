@@ -15,7 +15,7 @@ light-red:    #F78F9D
 .site-table {
   border-color: white;
   width: 100%;
-  margin: 4em auto;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -109,4 +109,45 @@ td.warning {
 
 .site-table td span {
 
+}
+
+/* header */
+
+#header {
+  background-color: #7E6B8F;
+  padding: 3em 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+}
+
+#header h1 {
+  padding: .2em 0;
+  font-size: 200%;
+  line-height: 1.8;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: white;
+}
+
+#header h2 {
+  padding: .2em 0;
+  font-size: 150%;
+  line-height: 1.4;
+  letter-spacing: .03em;
+  color: white;
+}
+
+/* footer */
+
+#footer {
+  background-color: #7E6B8F;
+  padding: 2em 0;
+}
+
+#footer p {
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
