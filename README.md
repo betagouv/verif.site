@@ -1,6 +1,6 @@
 # [verif.site](https://verif.site)
 
-Ce site permet de visualiser les statistiques des différents site de [l'incubateur des startup d'État](https://beta.gouv.fr)
+Ce site permet de visualiser les statistiques des différents sites de [l'incubateur des startup d'État](https://beta.gouv.fr)
 
 ## Mettre à jour les données
 
