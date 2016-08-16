@@ -30,10 +30,10 @@ class App extends Component {
         <Header />
         <table className="site-table">
           <tbody>
-            {this.state ? this.state.analytics.map((site, idx) => <SiteRow key={idx} site={site} />) : 'Loading'}
+            {this.state ? this.state.analytics.data.map((site, idx) => <SiteRow key={idx} site={site} />) : 'Loading'}
           </tbody>
         </table>
-        <Footer />
+        <Footer lastUpdated={this.state.analytics.meta.lastUpdated} />
       </div>
     );
   }
