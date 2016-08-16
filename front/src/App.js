@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   getAnalytics() {
-    return fetch(`https://raw.githubusercontent.com/sgmap/verif.site/0a747435e34fa03606c71523cb64dd45e66d4687/data/sites.json`)
+    return fetch(`https://raw.githubusercontent.com/sgmap/verif.site/e3905c00b859286d32e7e53403274de1340bdf8e/data/sites.json`)
       .then((response) => response.json())
       .then((json) => {
         const analytics = Object.keys(json.data).map((key) => {
