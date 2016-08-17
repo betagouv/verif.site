@@ -6,7 +6,8 @@ import Footer from './Footer'
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
+    this.state = {analytics: [], meta: {}};
     this.getAnalytics();
   }
 
@@ -31,7 +32,7 @@ class App extends Component {
         <Header />
         <table className="site-table">
           <tbody>
-            {this.state ? this.state.analytics.map((site, idx) => <SiteRow key={idx} site={site} />) : 'Loading'}
+            {this.state.analytics.map((site, idx) => <SiteRow key={idx} site={site} />)}
           </tbody>
         </table>
         <Footer lastUpdated={this.state ? this.state.meta.lastUpdated : '...'} />
