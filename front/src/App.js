@@ -14,10 +14,11 @@ class App extends Component {
     return fetch(`https://raw.githubusercontent.com/sgmap/sites/master/data/sites.json`)
       .then((response) => response.json())
       .then((json) => {
-        const analytics = Object.keys(json).map((key) => {
-          return json[key]
+        const analytics = Object.keys(json.data).map((key) => {
+          return json.data[key]
         })
-        this.setState({analytics})
+
+        this.setState({analytics, meta: json.meta})
       })
       .catch((err) => {
         console.error(err);
@@ -33,7 +34,7 @@ class App extends Component {
             {this.state ? this.state.analytics.map((site, idx) => <SiteRow key={idx} site={site} />) : 'Loading'}
           </tbody>
         </table>
-        <Footer />
+        <Footer lastUpdated={this.state ? this.state.meta.lastUpdated : '...'} />
       </div>
     );
   }
