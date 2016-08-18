@@ -26,10 +26,8 @@ class Content extends Component {
     var result = []
     var search = this.props.search
 
-    console.log(this);
     if (this.state.analytics.length && this.props) {
       this.state.analytics.forEach(function(e) {
-        console.log(e.meta.Domain)
         if (e.meta.Administration.toLowerCase().match(search) || e.meta.Domain.toLowerCase().match(search)) {
           result.push(e)
         }
