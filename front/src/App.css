@@ -94,9 +94,12 @@ a, a:hover {
 .site-table td .content .grade {
   font-size: 200%;
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
+.site-table td .content .grade:hover {
+  text-decoration: underline;;
+}
 
 /* Check coloration */
 
