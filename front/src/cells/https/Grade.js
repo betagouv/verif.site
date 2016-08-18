@@ -14,7 +14,6 @@ class HttpsGrade extends Component {
       return (
         <td className="valid">
           <div className="content">
-            <i className="icon fa fa-check-circle"></i>
             <div className="column">
               <div>Note SSL</div>
               <a className="grade" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] } >{ this.props.tls["Grade"] }</a>
@@ -27,7 +26,6 @@ class HttpsGrade extends Component {
       return (
         <td className="warning">
           <div className="content">
-            <i className="icon fa fa-exclamation-triangle"></i>
             <div className="column">
               <div>Note SSL</div>
               <a className="grade" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] } >{ this.props.tls["Grade"] }</a>
@@ -39,7 +37,6 @@ class HttpsGrade extends Component {
       return (
         <td className="invalid">
           <div className="content">
-            <i className="icon fa fa-times-circle"></i>
             <div className="column">
               <div>Note SSL</div>
               <a className="grade" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] } >{ this.props.tls["Grade"] }</a>

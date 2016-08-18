@@ -105,6 +105,10 @@ td.unknown {
   background-color: whitesmoke;
 }
 
+td.valid a {
+  color: #569a6f;
+}
+
 td.valid .icon {
   color: #569a6f;
 }
@@ -168,7 +172,6 @@ td.warning .icon {
 }
 
 /* footer */
-
 #footer {
   color: #7E6B8F;
   padding: 2em 0;
