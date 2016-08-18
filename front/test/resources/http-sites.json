@@ -1,0 +1,30 @@
+{
+  "data": {
+    "bourse.beta.gouv.fr": {
+      "inspect": {
+        "Domain": "bourse.beta.gouv.fr",
+        "Canonical": "https://bourse.beta.gouv.fr"
+
+      },
+      "meta": {
+        "Domain": "bourse.beta.gouv.fr",
+        "Administration": "Incubateur Services Numeriques",
+        "Type": "website"
+      }
+    },
+    "fiches-de-banc.beta.gouv.fr": {
+      "inspect": {
+        "Domain": "fiches-de-banc.beta.gouv.fr",
+        "Canonical": "https://fiches-de-banc.beta.gouv.fr"
+      },
+      "meta": {
+        "Domain": "fiches-de-banc.beta.gouv.fr",
+        "Administration": "Incubateur Services Numeriques",
+        "Type": "website"
+      }
+    }
+  },
+  "meta": {
+    "lastUpdated": "8/16/2016, 4:48:01 PM"
+  }
+}

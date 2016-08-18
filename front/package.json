@@ -8,6 +8,7 @@
     "babel-register": "6.11.6",
     "chai": "3.5.0",
     "enzyme": "2.4.1",
+    "fetch-mock": "4.6.1",
     "jsdom": "9.4.2",
     "mocha": "3.0.2",
     "react-addons-test-utils": "15.3.0",

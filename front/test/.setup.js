@@ -18,3 +18,9 @@ global.navigator = {
 };
 
 documentRef = document;
+
+// Disable webpack-specific features for tests since
+// Mocha doesn't know what to do with them.
+void ['.css', '.scss', '.png', '.jpg'].forEach(ext => {
+  require.extensions[ext] = () => null
+})
