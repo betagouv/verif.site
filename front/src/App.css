@@ -11,12 +11,12 @@ light-red:    #F78F9D
 
 */
 
-
 .site-table {
   border-color: white;
   width: 100%;
   margin: 0 auto;
   padding: 0;
+  background-color: #efefef;
 }
 
 a, a:hover {
@@ -34,16 +34,27 @@ a, a:hover {
   color: black;
 }
 
-.site-table td.site-title {
+.site-table th {
+  text-align: left;
+  padding-left: 2em;
   background-color: #fafafa;
 }
 
-.site-table td.site-title a {
+.site-table th a {
   text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #7e6b8f;
 }
 
-.site-table td.site-title h2 {
+.site-table th a:hover {
   text-decoration: underline;
+}
+
+.site-table th div {
+  font-weight: lighter;
+  color: grey;
+  font-size: 0.9em;
 }
 
 .site-table td h2 {
@@ -51,34 +62,33 @@ a, a:hover {
 }
 
 
-.site-table tr:hover td.site-title {
-  background-color: #eeeeee;
+.site-table tr:hover th {
+  background: none;
 }
-
 
 .site-table td:not(:first-child) {
   padding: 0;
-  border-radius: 20px;
-  color: white;
 }
 
 .site-table td .content {
   display: flex;
-  justify-content: center;
+  align-items: center;
   margin: 0.3em;
+  padding: 1em 1em;
+  border-right: 1em solid white;
 }
 
-.site-table td a.content {
-  color: white;
-  text-decoration: none;
+.site-table td .content i.icon {
+  font-size: 1.5em;
+  margin-right: 0.2em;
 }
 
 .site-table td .content span {
   align-self: center;
 }
 
-.site-table td .content .icon {
-  margin-left: 0.5em;
+.site-table td .content .column {
+  flex-direction: column;
 }
 
 .site-table td .content .grade {
@@ -90,16 +100,41 @@ a, a:hover {
 
 /* Check coloration */
 
+td.unknown {
+  border-color: whitesmoke;
+  background-color: whitesmoke;
+}
+
+td.valid .icon {
+  color: #569a6f;
+}
+
 td.valid {
-  background-color: #569a6f;
+  border-left: 1em solid white;
+}
+
+td.invalid .icon {
+  color: #DA3E52;
 }
 
 td.invalid {
-  background-color: #DA3E52;
+  border-left: 1em solid #DA3E52;
+}
+
+td.invalid a {
+  color: #DA3E52;
 }
 
 td.warning {
-  background-color: #efb000;
+  border-left: 1em solid #efb000;
+}
+
+td.warning a {
+  color: #efb000;
+}
+
+td.warning .icon {
+  color: #efb000;
 }
 
 .site-table td .icon {
@@ -107,42 +142,35 @@ td.warning {
   float: right;
 }
 
-.site-table td span {
-
-}
-
 /* header */
-
 #header {
-  background-color: #7E6B8F;
-  padding: 3em 0;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction: column;
+  padding: 1em 0 1.2em 0;
+  font-size: 1em;
+  padding-left: 2em;
+  overflow: hidden;
+
+  color: white;
+
+  background: #7E6B8F; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #502a71 , #7E6B8F); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #502a71 , #7E6B8F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #header h1 {
-  padding: .2em 0;
-  font-size: 200%;
-  line-height: 1.8;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: white;
+  padding: .2em 0 0 0;
+  margin: 0;
+  font-size: 1.6em;
+  font-variant: small-caps;
 }
 
-#header h2 {
-  padding: .2em 0;
-  font-size: 150%;
-  line-height: 1.4;
-  letter-spacing: .03em;
-  color: white;
+#header span {
+  font-size: 1em;
 }
 
 /* footer */
 
 #footer {
-  background-color: #7E6B8F;
+  color: #7E6B8F;
   padding: 2em 0;
 }
 
