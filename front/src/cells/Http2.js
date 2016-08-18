@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Badge from './Badge'
 
 
 class Http2 extends Component {
@@ -11,21 +11,11 @@ class Http2 extends Component {
     }
     if(this.props.tls["HTTP/2"]) {
       return (
-        <td className="valid">
-          <div className="content">
-            <span>HTTP2 disponible</span>
-            <i className="icon fa fa-4x fa-check-circle"></i>
-          </div>
-        </td>
+        <Badge status='valid' text='HTTP2 disponible' icon='fa-check-circle'/>
       )
     } else {
       return (
-        <td className="warning">
-          <div className="content">
-            <span>HTTP2 indisponible</span>
-            <i className="icon fa fa-4x fa-exclamation-triangle"></i>
-          </div>
-        </td>
+        <Badge status='warning' text='HTTP2 indisponible' icon='fa-exclamation-triangle'/>
       )
     }
   }
