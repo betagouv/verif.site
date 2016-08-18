@@ -26,14 +26,12 @@ class Content extends Component {
     var result = []
     var search = this.props.search
 
-    if (this.state.analytics.length && this.props) {
+    if (this.state.analytics.length) {
       this.state.analytics.forEach(function(e) {
         if (e.meta.Administration.toLowerCase().match(search) || e.meta.Domain.toLowerCase().match(search)) {
           result.push(e)
         }
       })
-    } else {
-      result = this.state.analytics
     }
 
     return (
