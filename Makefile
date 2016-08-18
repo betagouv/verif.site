@@ -7,7 +7,7 @@ install-import:
 install-front:
 	(cd front && npm install)
 
-test: install lint
+test: install lint test-front
 
 lint: lint-front
 
@@ -22,3 +22,6 @@ deploy:
 
 start:
 	(cd front && npm start)
+
+test-front:
+	(cd front && npm test)
