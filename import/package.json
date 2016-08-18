@@ -12,8 +12,5 @@
     "async": "2.0.1",
     "aws-sdk": "2.4.10",
     "csv-parser": "1.9.3"
-  },
-  "eslintConfig": {
-    "extends": "./node_modules/react-scripts/config/eslint.js"
   }
 }
