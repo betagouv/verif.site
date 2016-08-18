@@ -6,8 +6,8 @@ class Badge extends Component {
       return (
         <td className={this.props.status}>
           <div className="content">
+            <i className={'icon fa ' + this.props.icon}></i>
             <span>{this.props.text}</span>
-            <i className={'icon fa fa-4x ' + this.props.icon}></i>
           </div>
         </td>
       )

@@ -8,12 +8,10 @@ class SiteRow extends Component {
   render() {
     return (
       <tr>
-        <td className="site-title">
-          <a href={ this.props.site.inspect.Canonical }>
-            <h2>{ this.props.site.inspect.Domain }</h2>
-            <span className="administration">{ this.props.site.meta.Administration }</span>
-          </a>
-        </td>
+        <th>
+          <a href={ this.props.site.inspect.Canonical }>{ this.props.site.inspect.Domain }</a>
+          <div className="administration">{ this.props.site.meta.Administration }</div>
+        </th>
         <HttpsValid inspect={this.props.site.inspect} />
         <HttpsEnforce inspect={this.props.site.inspect} />
         <HttpsGrade tls={this.props.site.tls} />
