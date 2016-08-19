@@ -3,9 +3,9 @@ import { expect } from 'chai';
 import { shallow, mount } from 'enzyme';
 import App from '../src/App';
 import Header from '../src/Header';
+import SearchBar from '../src/SearchBar';
 import Footer from '../src/Footer';
 import fetchMock from 'fetch-mock';
-import SiteRow from '../src/SiteRow'
 const httpSites = require('./resources/http-sites')
 const arraySite = require('./resources/array-sites')
 
@@ -50,8 +50,12 @@ describe("Apps", () => {
     expect(shallow(<App />).contains(<Header />)).to.equal(true)
   })
 
-  it("show results as row", () => {
-    expect(shallow(<App />).contains(<Footer lastUpdated={undefined}/>)).to.equal(true)
+  it("show the search bar", () => {
+    expect(shallow(<App />).contains(<SearchBar sites={shallow(<App />).state().analytics} />)).to.equal(true)
+  })
+
+  it("show the footer", () => {
+    expect(shallow(<App />).contains(<Footer lastUpdated={undefined} />)).to.equal(true)
   })
 
   it('Should have 2 rows', (done) => {
