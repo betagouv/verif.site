@@ -2,32 +2,12 @@ import React, { Component } from 'react'
 import SiteRow from './SiteRow'
 
 class Content extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {analytics: [], meta: {}}
-    this.getAnalytics()
-  }
-
-  getAnalytics() {
-    return fetch(`https://raw.githubusercontent.com/sgmap/sites/master/data/sites.json`)
-      .then((response) => response.json())
-      .then((json) => {
-        const analytics = Object.keys(json.data).map((key) => {
-          return json.data[key]
-        })
-        this.setState({analytics, meta: json.meta})
-      })
-      .catch((err) => {
-        console.error(err);
-      })
-  }
-
   render() {
     var result = []
     var search = this.props.search
 
-    if (this.state.analytics.length) {
-      this.state.analytics.forEach(function(e) {
+    if (this.props.sites.length) {
+      this.props.sites.forEach(function(e) {
         if (e.meta.Administration.toLowerCase().match(search) || e.meta.Domain.toLowerCase().match(search)) {
           result.push(e)
         }

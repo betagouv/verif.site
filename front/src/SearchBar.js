@@ -23,7 +23,7 @@ class SearchBar extends Component {
             onChange={this.handleTextChange} />
         </div>
         <div className="content">
-          <Content search={this.state.text} />
+          <Content sites={this.props.sites} search={this.state.text} />
         </div>
       </div>
     );
