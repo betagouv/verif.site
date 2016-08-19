@@ -1,6 +1,6 @@
 import React from 'react';
 import { expect } from 'chai';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import Content from '../src/Content';
 import SiteRow from '../src/SiteRow'
 const arraySite = require('./resources/array-sites')
