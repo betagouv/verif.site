@@ -23,8 +23,8 @@ a, a:hover {
   color: black;
 }
 
-.site-table tr {
-  border-bottom: 1px solid whitesmoke;
+.site-table {
+  border-spacing: 2px;
 }
 
 .site-table td {
@@ -168,4 +168,23 @@ input:focus {
 
 .hidden {
   display: none;
+}
+
+td.show-details {
+  margin-right: none;
+}
+
+td.show-details button {
+  color: #7E6B8F;
+  background-color: inherit;
+  font-size: 2em;
+  font-weight: bold;
+  box-sizing: border-box;
+  padding: 2px 6px 3px;
+  border-width: 2px;
+  border: none;
+}
+
+td.show-details button:focus {
+  outline:none;
 }
