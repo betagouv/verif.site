@@ -177,12 +177,18 @@ td.warning .icon {
 /* search bar */
 .search-bar {
   width: 10em;
-  margin: 20px auto;
+  margin: 10px auto;
   padding: 8px 15px;
 }
 
 .search-bar > input {
+  padding-left: 0.3em;
+  border: 0.14em solid whitesmoke;
   font-size: 130%;
+}
+
+input:focus {
+    outline-width: 0;
 }
 
 /* footer */
