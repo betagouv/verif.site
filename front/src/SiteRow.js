@@ -8,8 +8,9 @@ class SiteRow extends Component {
   render() {
     return (
       <tr>
-        <th>
+        <th id={ this.props.site.inspect.Domain }>
           <a href={ this.props.site.inspect.Canonical }>{ this.props.site.inspect.Domain }</a>
+          <a className="anchor" href={ '#' + this.props.site.inspect.Domain }><i className="fa fa-link" aria-hidden="true"></i></a>
           <div className="administration">{ this.props.site.meta.Administration }</div>
         </th>
         <HttpsValid inspect={this.props.site.inspect} />
