@@ -61,9 +61,22 @@ a, a:hover {
   margin-top: 0;
 }
 
-
 .site-table tr:hover th {
   background: none;
+}
+
+.site-table tr:hover th a.anchor {
+  color: grey;
+}
+
+.site-table a.anchor {
+  color: whitesmoke;
+  margin-left: 0.5em;
+}
+
+.site-table tr:hover th a.anchor:hover {
+  color: white;
+  margin-left: 0.5em;
 }
 
 .site-table td:not(:first-child) {
