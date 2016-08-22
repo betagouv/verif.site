@@ -5,7 +5,8 @@ module.exports = function({ dockerImage, scanners, file}, callback) {
     '-v ' + __dirname + '/../data:/data ' +
     '-v ' + __dirname + '/../results:/home/scanner/results ' +
     dockerImage +
-    ' /data/' + file + ' --scan=' + scanners.join(',');
+    ' /data/' + file + ' --scan=' + scanners.join(',') +
+    ' --force';
 
   exec(cmd, callback);
 }
