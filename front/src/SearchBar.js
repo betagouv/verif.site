@@ -1,17 +1,6 @@
 import React, { Component } from 'react'
-import Content from './Content'
 
 class SearchBar extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {text: ''}
-    this.handleTextChange = this.handleTextChange.bind(this)
-  }
-
-  handleTextChange(e) {
-    this.setState({text: e.target.value.toLowerCase()})
-  }
-
   render() {
     return (
       <div>
@@ -19,11 +8,8 @@ class SearchBar extends Component {
           <input
             type="text"
             placeholder="Recherche"
-            value={this.state.text}
-            onChange={this.handleTextChange} />
-        </div>
-        <div className="content">
-          <Content sites={this.props.sites} search={this.state.text} />
+            value={this.props.text}
+            onChange={this.props.onChange} />
         </div>
       </div>
     );

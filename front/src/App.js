@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import './App.css'
-import SearchBar from './SearchBar'
 import Header from './Header'
+import SearchBar from './SearchBar'
+import Content from './Content'
 import Footer from './Footer'
 
 class App extends Component {
   constructor(props) {
     super(props)
-    this.state = {analytics: [], meta: {}}
+    this.state = {analytics: [], meta: {}, text: ''}
+    this.handleTextChange = this.handleTextChange.bind(this)
     this.getAnalytics()
   }
 
@@ -25,11 +27,16 @@ class App extends Component {
       })
   }
 
+  handleTextChange(e) {
+    this.setState({text: e.target.value.toLowerCase()})
+  }
+
   render() {
     return (
       <div>
         <Header />
-        <SearchBar sites={this.state.analytics} />
+        <SearchBar onChange={this.handleTextChange} text={this.state.text} />
+        <Content sites={this.state.analytics} search={this.state.text} />
         <Footer lastUpdated={this.state ? this.state.meta.lastUpdated : '...'} />
       </div>
     );
