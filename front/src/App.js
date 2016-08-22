@@ -27,8 +27,8 @@ class App extends Component {
       })
   }
 
-  handleTextChange(e) {
-    this.setState({text: e.target.value.toLowerCase()})
+  handleTextChange(text) {
+    this.setState({text})
   }
 
   render() {
