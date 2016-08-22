@@ -6,7 +6,7 @@ const scanners = ['inspect', 'sslyze', 'tls', 'pageload']
 
 const name = 'sites'
 const options = {
-  dockerImage: 'domainscan_scan',
+  dockerImage: 'betagouv/domain-scan',
   scanners,
   file: name+ '.csv',
 }
