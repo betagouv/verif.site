@@ -14,8 +14,8 @@ lint: lint-front
 lint-front:
 	(cd front && npm run lint)
 
-import:
-	node ./import/index.js
+importData:
+	(node ./import/index.js)
 
 deploy:
 	(cd front && ./deploy.sh)
