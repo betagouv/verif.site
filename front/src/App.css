@@ -149,6 +149,16 @@ td.warning .icon {
   float: right;
 }
 
+.site-table a.anchor {
+  color: grey;
+  margin-left: 0.5em;
+}
+
+.site-table a.anchor:hover {
+  color: white;
+  margin-left: 0.5em;
+}
+
 /* header */
 #header {
   padding: 1em 0 1.2em 0;
