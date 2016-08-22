@@ -188,3 +188,23 @@ td.show-details button {
 td.show-details button:focus {
   outline:none;
 }
+
+dt, dd {
+  display: inline-block;
+  *display: inline;
+  width: 46%;
+  padding: 3px 2% 4px;
+  margin: 0;
+}
+
+dt {
+    margin-right: -1px;
+}
+
+dl {
+  border-bottom: 1px solid #7E6B8F;
+}
+
+dt, dd {
+  border-top: 1px solid #7E6B8F;
+}
