@@ -27,6 +27,9 @@
     "test": "mocha test/.setup.js test/**/*-test.js"
   },
   "eslintConfig": {
-    "extends": "./node_modules/react-scripts/config/eslint.js"
+    "extends": "./node_modules/react-scripts/config/eslint.js",
+    "env": {
+      "mocha": true
+    }
   }
 }
