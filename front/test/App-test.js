@@ -57,7 +57,7 @@ describe("Apps", () => {
     });
   })
 
-    describe("Contains", () => {
+  describe("Contains", () => {
     it("show the header", () => {
       expect(shallow(<App />).contains(<Header />)).to.equal(true)
     })
