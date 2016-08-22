@@ -177,8 +177,8 @@ td.warning .icon {
 /* search bar */
 .search-bar {
   width: 10em;
-  margin: 10px auto;
-  padding: 8px 15px;
+  margin: 0.3em auto;
+  padding: 0.5em;
 }
 
 .search-bar > input {
