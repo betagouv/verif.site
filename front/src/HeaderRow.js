@@ -4,11 +4,12 @@ import HttpsGrade from './cells/https/Grade'
 import HttpsEnforce from './cells/https/Enforce'
 import Http2 from './cells/Http2'
 
-class SiteRow extends Component {
+class HeaderRow extends Component {
   render() {
     return (
       <tr>
         <th id={ this.props.site.inspect.Domain }>
+          <button onClick={this.props.onArrowClick}>+</button>
           <a href={ this.props.site.inspect.Canonical }>{ this.props.site.inspect.Domain }</a>
           <a className="anchor" href={ '#' + this.props.site.inspect.Domain }><i className="fa fa-link" aria-hidden="true"></i></a>
           <div className="administration">{ this.props.site.meta.Administration }</div>
@@ -22,4 +23,4 @@ class SiteRow extends Component {
   }
 }
 
-export default SiteRow
+export default HeaderRow

@@ -1,22 +1,15 @@
 import React, { Component } from 'react'
-import SiteRow from './SiteRow'
+import Site from './Site'
 
 class Content extends Component {
   render() {
-    var result = []
-    var search = this.props.search
-
-    this.props.sites.forEach(function(e) {
-      if (e.meta.Administration.toLowerCase().match(search) || e.meta.Domain.toLowerCase().match(search)) {
-        result.push(e)
-      }
-    })
+    const search = new RegExp(this.props.search,'i')
 
     return (
       <table className="site-table">
-        <tbody>
-          {result.map((site, idx) => <SiteRow key={idx} site={site} />)}
-        </tbody>
+        {this.props.sites
+          .filter( site => site.meta.Administration.match(search) || site.meta.Domain.match(search))
+          .map((site, idx) => <Site key={idx} site={site} />)}
       </table>
     )
   }

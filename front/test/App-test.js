@@ -5,7 +5,7 @@ import App from '../src/App';
 import Header from '../src/Header';
 import SearchBar from '../src/SearchBar';
 import Content from '../src/Content';
-import SiteRow from '../src/SiteRow';
+import Site from '../src/Site';
 import Footer from '../src/Footer';
 import fetchMock from 'fetch-mock';
 const httpSites = require('./resources/http-sites')
@@ -85,17 +85,9 @@ describe("Apps", () => {
 
       //then (sââââââââle)
       setTimeout(() => {
-        expect(wrapper.find(SiteRow)).to.have.length(2)
+        expect(wrapper.find(Site)).to.have.length(2)
         done()
       }, 200)
     });
   })
-
-  it('should be lowercase', () => {
-    const wrapper = mount(<App />)
-    const input = wrapper.find('input')
-
-    input.simulate('change', { target: { value: 'LOWERCASE' } });
-    expect(wrapper.state().text).equal('lowercase')
-  });
 })

@@ -165,3 +165,7 @@ td.warning .icon {
 input:focus {
     outline-width: 0;
 }
+
+.hidden {
+  display: none;
+}

@@ -8,7 +8,7 @@ class SearchBar extends Component {
   }
 
   onChange(e) {
-    this.props.onChange(e.target.value.toLowerCase())
+    this.props.onChange(e.target.value)
   }
 
   render() {

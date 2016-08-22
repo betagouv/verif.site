@@ -2,7 +2,7 @@ import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import Content from '../src/Content';
-import SiteRow from '../src/SiteRow'
+import Site from '../src/Site'
 const arraySite = require('./resources/array-sites')
 
 describe("Content", () => {
@@ -17,13 +17,13 @@ describe("Content", () => {
   it("Without seeking, it must display the entire list", () => {
     const wrapper = shallow(<Content sites={arraySite} />)
 
-    expect(wrapper.find(SiteRow)).to.have.length(2)
+    expect(wrapper.find(Site)).to.have.length(2)
   })
 
   it('With seeking, it must display the corresponding single site', () => {
     const wrapper = shallow(<Content search='bourse' sites={arraySite} />)
 
-    expect(wrapper.find(SiteRow)).to.have.length(1)
+    expect(wrapper.find(Site)).to.have.length(1)
   })
 
 })
