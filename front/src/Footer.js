@@ -11,6 +11,8 @@ class Header extends Component {
           L'API&nbsp;<a href="https://www.ssllabs.com/">Qualys SSL Labs</a>&nbsp;est utilisée pour calculer les notes SSL
         </p>
         <p>Dernière mise à jour le {this.props.lastUpdated}</p>
+
+        <img src="http://stats.data.gouv.fr/piwik.php?idsite=25&rec=1" alt="" />
       </div>
     );
   }
