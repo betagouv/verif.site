@@ -11,6 +11,7 @@ td.show-details button {
   padding: 2px 6px 3px;
   border-width: 2px;
   border: none;
+  cursor: pointer;
 }
 
 td.show-details button:focus {
