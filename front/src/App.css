@@ -162,56 +162,6 @@ td.warning .icon {
   float: right;
 }
 
-/* header */
-#header {
-  padding: 1em 0 1.2em 0;
-  font-size: 1em;
-  padding-left: 2em;
-  overflow: hidden;
-
-  color: white;
-
-  background: #7E6B8F; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #502a71 , #7E6B8F); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #502a71 , #7E6B8F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-#header h1 {
-  padding: .2em 0 0 0;
-  margin: 0;
-  font-size: 1.6em;
-  font-variant: small-caps;
-}
-
-#header span {
-  font-size: 1em;
-}
-
-/* search bar */
-.search-bar {
-  width: 10em;
-  margin: 0.3em auto;
-  padding: 0.5em;
-}
-
-.search-bar > input {
-  padding-left: 0.3em;
-  border: 0.14em solid whitesmoke;
-  font-size: 130%;
-}
-
 input:focus {
     outline-width: 0;
-}
-
-/* footer */
-#footer {
-  color: #7E6B8F;
-  padding: 2em 0;
-}
-
-#footer p {
-  display:flex;
-  justify-content:center;
-  align-items:center;
 }
