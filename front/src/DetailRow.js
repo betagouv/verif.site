@@ -49,7 +49,7 @@ class DetailRow extends Component {
 
     return (
       <tr className={this.props.visible ? 'visible' : 'hidden'}>
-        <td colSpan="6">
+        <td colSpan="7">
           <div className="detail-category">
             <h3>SSL/TLS</h3>
             <DetailCategory data={this.props.site} dict={tls} />
