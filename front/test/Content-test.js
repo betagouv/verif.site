@@ -1,8 +1,9 @@
-import React from 'react';
-import { expect } from 'chai';
-import { shallow } from 'enzyme';
-import Content from '../src/Content';
+import React from 'react'
+import { expect } from 'chai'
+import { shallow } from 'enzyme'
+import Content from '../src/Content'
 import Site from '../src/Site'
+
 const arraySite = require('./resources/array-sites')
 
 describe("Content", () => {
