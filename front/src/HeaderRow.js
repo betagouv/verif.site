@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import HttpsValid from './cells/https/Valid'
 import HttpsGrade from './cells/https/Grade'
 import HttpsEnforce from './cells/https/Enforce'
+import HttpsDate from './cells/https/Date'
 import Http2 from './cells/Http2'
 
 class HeaderRow extends Component {
@@ -20,6 +21,7 @@ class HeaderRow extends Component {
         <HttpsEnforce inspect={this.props.site.inspect} />
         <HttpsGrade tls={this.props.site.tls} />
         <Http2 tls={this.props.site.tls} />
+        <HttpsDate sslyze={this.props.site.sslyze} />
       </tr>
     );
   }

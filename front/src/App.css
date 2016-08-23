@@ -104,24 +104,22 @@ a, a:hover {
   flex-direction: column;
 }
 
-.site-table td .content .grade {
+.site-table td .content .big {
   font-size: 200%;
   font-weight: bold;
   text-decoration: none;
 }
 
-.site-table td .content .grade:hover {
+.site-table td .content a.big:hover {
   text-decoration: underline;;
 }
-
-/* Check coloration */
 
 td.unknown {
   border-color: whitesmoke;
   background-color: whitesmoke;
 }
 
-td.valid a {
+td.valid .big {
   color: #569a6f;
 }
 
@@ -141,7 +139,7 @@ td.invalid {
   border-left: 1em solid #DA3E52;
 }
 
-td.invalid a {
+td.invalid .big {
   color: #DA3E52;
 }
 
@@ -149,7 +147,7 @@ td.warning {
   border-left: 1em solid #efb000;
 }
 
-td.warning a {
+td.warning .big {
   color: #efb000;
 }
 

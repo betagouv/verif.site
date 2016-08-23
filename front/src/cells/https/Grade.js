@@ -16,7 +16,7 @@ class HttpsGrade extends Component {
           <div className="content">
             <div className="column">
               <div>Note SSL</div>
-              <a className="grade" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] } >{ this.props.tls["Grade"] }</a>
+              <a className="big" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] } >{ this.props.tls["Grade"] }</a>
             </div>
           </div>
         </td>
@@ -28,7 +28,7 @@ class HttpsGrade extends Component {
           <div className="content">
             <div className="column">
               <div>Note SSL</div>
-              <a className="grade" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] } >{ this.props.tls["Grade"] }</a>
+              <a className="big" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] } >{ this.props.tls["Grade"] }</a>
             </div>
           </div>
         </td>
@@ -39,7 +39,7 @@ class HttpsGrade extends Component {
           <div className="content">
             <div className="column">
               <div>Note SSL</div>
-              <a className="grade" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] } >{ this.props.tls["Grade"] }</a>
+              <a className="big" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] } >{ this.props.tls["Grade"] }</a>
             </div>
           </div>
         </td>
