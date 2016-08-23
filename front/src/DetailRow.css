@@ -1,0 +1,38 @@
+td.show-details {
+  margin-right: none;
+}
+
+td.show-details button {
+  color: #7E6B8F;
+  background-color: inherit;
+  font-size: 2em;
+  font-weight: bold;
+  box-sizing: border-box;
+  padding: 2px 6px 3px;
+  border-width: 2px;
+  border: none;
+}
+
+td.show-details button:focus {
+  outline:none;
+}
+
+dt, dd {
+  display: inline-block;
+  *display: inline;
+  width: 46%;
+  padding: 3px 2% 4px;
+  margin: 0;
+}
+
+dt {
+    margin-right: -1px;
+}
+
+dl {
+  border-bottom: 1px solid #7E6B8F;
+}
+
+dt, dd {
+  border-top: 1px solid #7E6B8F;
+}

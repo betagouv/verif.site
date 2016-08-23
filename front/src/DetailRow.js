@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import DetailCategory from './DetailCategory';
-
+import './DetailRow.css'
 
 class DetailRow extends Component {
   render() {
