@@ -5,10 +5,15 @@ class DetailCategory extends Component {
     const data = this.props.data
     const dict = this.props.dict
     const entries = []
-    Object.keys(dict).forEach((key) => {
-      if(data[key]) {
-        entries.push(<dt>{ dict[key] }</dt>)
-        entries.push(<dd>{ parser(data[key]) }</dd>)
+
+    Object.keys(dict).forEach((categoryKey) => {
+      if(data[categoryKey] !== undefined) {
+        Object.keys(dict[categoryKey]).forEach((dataKey) => {
+          if(data[categoryKey][dataKey] !== undefined && data[categoryKey][dataKey] !== "") {
+            entries.push(<dt key={categoryKey + dataKey + 'dt'}>{ dict[categoryKey][dataKey] }</dt>)
+            entries.push(<dd key={categoryKey + dataKey + 'dd'}>{ parser(data[categoryKey][dataKey]) }</dd>)
+          }
+        })
       }
     })
     return (
@@ -24,5 +29,6 @@ function parser(value) {
   }
   return value
 }
+export default DetailCategory
 
-export { parser, DetailCategory }
+export { parser }
