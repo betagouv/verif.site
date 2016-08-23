@@ -8,13 +8,13 @@ class DetailRow extends Component {
           <h2>TLS</h2>
           <dl>
             <dt>Taille de la clé</dt>
-            <dd>{this.props.visible && this.props.site.tls["Key Size"]}</dd>
+            <dd>{this.props.site.tls && this.props.site.tls["Key Size"]}</dd>
 
             <dt>Type de la clé</dt>
-            <dd>{this.props.visible && this.props.site.tls["Key Type"]}</dd>
+            <dd>{this.props.site.tls && this.props.site.tls["Key Type"]}</dd>
 
             <dt>Algorithmes</dt>
-            <dd>{this.props.visible && this.props.site.tls["Signature Algorithm"]}</dd>
+            <dd>{this.props.site.tls && this.props.site.tls["Signature Algorithm"]}</dd>
           </dl>
         </th>
       </tr>
