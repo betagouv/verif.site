@@ -36,6 +36,17 @@ class DetailRow extends Component {
       }
     }
 
+    const pageload = {
+      pageload: {
+        "httpsRequests": "Nombre de requêtes HTTP",
+        "timeToFirstByte": "Time to First Byte",
+        "timeToLastByte": "Time to Last Byte",
+        "httpTrafficCompleted": "Traffic HTTP terminé",
+        "domContentLoaded": "DOM Content Loaded",
+        "domComplete": "DOM terminé",
+      }
+    }
+
     return (
       <tr className={this.props.visible ? 'visible' : 'hidden'}>
         <td colSpan="6">
@@ -47,6 +58,11 @@ class DetailRow extends Component {
           <div className="detail-category">
             <h3>Certificat</h3>
             <DetailCategory data={this.props.site} dict={certificat} />
+          </div>
+
+          <div className="detail-category">
+            <h3>Chargement de la page d'accueil</h3>
+            <DetailCategory data={this.props.site} dict={pageload} />
           </div>
         </td>
       </tr>
