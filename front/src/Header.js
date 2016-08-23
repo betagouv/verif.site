@@ -6,7 +6,7 @@ class Header extends Component {
     return (
       <div id="header">
         <h1>Le Vérificateur</h1>
-        <span>Donner de la visibilité sur la configuration HTTP des sites de l'administration</span>
+        <span>Estimer la sécurité et la performance des sites web de l'administration</span>
       </div>
     );
   }
