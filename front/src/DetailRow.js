@@ -50,19 +50,21 @@ class DetailRow extends Component {
     return (
       <tr className={this.props.visible ? 'visible' : 'hidden'}>
         <td colSpan="7">
-          <div className="detail-category">
-            <h3>SSL/TLS</h3>
-            <DetailCategory data={this.props.site} dict={tls} />
-          </div>
+          <div className="detail-wrapper">
+            <div className="detail-category">
+              <h3>Certificat</h3>
+              <DetailCategory data={this.props.site} dict={certificat} />
+            </div>
 
-          <div className="detail-category">
-            <h3>Certificat</h3>
-            <DetailCategory data={this.props.site} dict={certificat} />
-          </div>
+            <div className="detail-category">
+              <h3>SSL/TLS</h3>
+              <DetailCategory data={this.props.site} dict={tls} />
+            </div>
 
-          <div className="detail-category">
-            <h3>Chargement de la page d'accueil</h3>
-            <DetailCategory data={this.props.site} dict={pageload} />
+            <div className="detail-category">
+              <h3>Chargement de la page d'accueil</h3>
+              <DetailCategory data={this.props.site} dict={pageload} />
+            </div>
           </div>
         </td>
       </tr>

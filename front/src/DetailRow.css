@@ -26,7 +26,7 @@ dt, dd {
 }
 
 dt {
-    margin-right: -1px;
+  margin-right: -1px;
 }
 
 dl {
@@ -35,4 +35,19 @@ dl {
 
 dt, dd {
   border-top: 1px solid #7E6B8F;
+}
+
+.detail-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.detail-category {
+  width: 48%;
+  text-align: left;
+}
+
+.detail-category h3 {
+  margin: 0;
 }
