@@ -23,7 +23,7 @@ class Content extends Component {
   }
 
   handleTextChange(query) {
-    const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?q=' + query
+    const newUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?q=${query}`
 
     history.pushState({path: newUrl}, "", newUrl)
     this.setState({query})
@@ -31,9 +31,9 @@ class Content extends Component {
 
   filterAdministration(administration) {
     if (this.state.query === administration) {
-      this.setState({query: ''})
+      this.handleTextChange('')
     } else {
-      this.setState({query: administration})
+      this.handleTextChange(administration)
     }
   }
 
