@@ -1,6 +1,14 @@
 import React, { Component } from 'react'
 
-
+function getStatus(grade) {
+  if(grade.includes('A')) {
+    return 'valid'
+  } else if(grade.includes('B') || grade.includes('C')) {
+    return 'warning'
+  } else {
+    return 'invalid'
+  }
+}
 
 class HttpsGrade extends Component {
   render() {
@@ -10,41 +18,18 @@ class HttpsGrade extends Component {
       )
     }
 
-    if(this.props.tls["Grade"].includes('A')) {
-      return (
-        <td className="valid">
-          <div className="content">
-            <div className="column">
-              <div>Note SSL</div>
-              <a className="grade" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] } >{ this.props.tls["Grade"] }</a>
-            </div>
-          </div>
-        </td>
-      )
+    const status = getStatus(this.props.tls["Grade"])
 
-    } else if(this.props.tls["Grade"].includes('B') || this.props.tls["Grade"].includes('C')) {
-      return (
-        <td className="warning">
-          <div className="content">
-            <div className="column">
-              <div>Note SSL</div>
-              <a className="grade" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] } >{ this.props.tls["Grade"] }</a>
-            </div>
+    return (
+      <td className={status}>
+        <div className="content">
+          <div className="column">
+            <div>Note SSL</div>
+            <a className="big" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] } >{ this.props.tls["Grade"] }</a>
           </div>
-        </td>
-      )
-    } else {
-      return (
-        <td className="invalid">
-          <div className="content">
-            <div className="column">
-              <div>Note SSL</div>
-              <a className="grade" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] } >{ this.props.tls["Grade"] }</a>
-            </div>
-          </div>
-        </td>
-      )
-    }
+        </div>
+      </td>
+    )
   }
 }
 
