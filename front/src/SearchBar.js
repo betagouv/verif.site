@@ -15,7 +15,7 @@ class SearchBar extends Component {
     return (
       <div className="search-bar">
         <input
-          autoFocus={focus}
+          autoFocus
           type="text"
           placeholder="Recherche"
           value={this.props.text}
