@@ -5,10 +5,9 @@ import SearchBar from '../src/SearchBar'
 
 describe("SearchBar", () => {
 
-  it('should has an search-bar class', () => {
+  it('should have a search-bar class', () => {
     const wrapper = shallow(<SearchBar />)
-
-    expect(wrapper.hasClass('search-bar')).to.equal(true)
+    expect(wrapper.find('.search-bar')).to.have.length(1)
   })
 
   it('should render an input', () => {

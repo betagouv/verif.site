@@ -13,14 +13,19 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="search-bar">
-        <input
-          autoFocus
-          type="text"
-          placeholder="Recherche"
-          value={this.props.text}
-          onChange={this.onChange} />
-      </div>
+      <tr>
+        <td>
+          <i className="fa fa-search"></i>
+        </td>
+        <th className="search-bar">
+          <input
+            autoFocus
+            type="text"
+            placeholder="Recherche"
+            value={this.props.query}
+            onChange={this.onChange} />
+        </th>
+      </tr>
     )
   }
 }
