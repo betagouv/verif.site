@@ -4,9 +4,9 @@ import DetailRow from './DetailRow'
 
 class Site extends Component {
   constructor(props) {
-    super(props);
-    this.state = {isDetailVisible: false};
-    this.onArrowClick = this.onArrowClick.bind(this);
+    super(props)
+    this.state = {isDetailVisible: false}
+    this.onArrowClick = this.onArrowClick.bind(this)
   }
 
   onArrowClick() {
@@ -16,7 +16,7 @@ class Site extends Component {
   render() {
     return (
       <tbody>
-        <HeaderRow site={this.props.site} onArrowClick={this.onArrowClick}/>
+        <HeaderRow site={this.props.site} onArrowClick={this.onArrowClick} filterAdministration={this.props.filterAdministration}/>
         <DetailRow site={this.props.site} visible={this.state.isDetailVisible}/>
       </tbody>
     );

@@ -21,6 +21,7 @@
   text-align: left;
   padding-left: 2em;
   background-color: #fafafa;
+  min-width: 25vw;
 }
 
 .site-table th a {
