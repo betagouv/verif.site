@@ -15,6 +15,10 @@ td.show-details button:focus, th .administration button:focus {
   outline:none;
 }
 
+th .administration button:hover {
+  text-decoration: underline;
+}
+
 th .administration button {
   font-weight: lighter;
   color: grey;
