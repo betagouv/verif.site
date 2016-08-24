@@ -8,7 +8,7 @@ import Footer from './Footer'
 class App extends Component {
   constructor(props) {
     super(props)
-    let q = this.getParameterByName('q')
+    const q = this.getParameterByName('q')
     this.state = {analytics: [], meta: {}, text: q ? q : ''}
     this.handleTextChange = this.handleTextChange.bind(this)
     this.getAnalytics()
@@ -29,7 +29,7 @@ class App extends Component {
   }
 
   handleTextChange(text) {
-    let newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?q=' + text
+    const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?q=' + text
 
     history.pushState({path: newUrl}, "", newUrl)
     this.setState({text})
