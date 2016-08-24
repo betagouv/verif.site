@@ -16,7 +16,7 @@ class HttpsValid extends Component {
       )
     } else {
       return (
-        <Badge status='warning' text='HTTPS non valide' icon='fa-exclamation-triangle'/>
+        <Badge status='invalid' text='HTTPS non valide' icon='fa-exclamation-triangle'/>
       )
     }
   }
