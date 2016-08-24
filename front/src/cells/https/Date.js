@@ -13,7 +13,8 @@ function matchStatus(diffDays) {
 function computeDiffDays(date) {
   const today = new Date()
   const oneDay = 24 * 60 * 60 * 1000 // hours*minutes*seconds*milliseconds
-  const dateNotAfter = new Date(date)
+  const dateWithoutTime = date.substring(0, 10)
+  const dateNotAfter = new Date(dateWithoutTime)
 
   return Math.round(Math.abs((dateNotAfter.getTime() - today.getTime())/(oneDay)))
 }
