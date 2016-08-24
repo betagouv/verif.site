@@ -8,7 +8,7 @@ class Header extends Component {
         <h1>Le Vérificateur</h1>
         <span>Estimer la sécurité et la performance des sites web de l'administration</span>
       </div>
-    );
+    )
   }
 }
 

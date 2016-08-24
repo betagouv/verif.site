@@ -14,7 +14,7 @@ class Header extends Component {
         <p>Dernière mise à jour le {this.props.lastUpdated}</p>
 
       </div>
-    );
+    )
   }
 }
 

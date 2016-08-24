@@ -3,8 +3,8 @@ import './SearchBar.css'
 
 class SearchBar extends Component {
   constructor(props) {
-    super(props);
-    this.onChange = this.onChange.bind(this);
+    super(props)
+    this.onChange = this.onChange.bind(this)
   }
 
   onChange(e) {
@@ -15,12 +15,13 @@ class SearchBar extends Component {
     return (
       <div className="search-bar">
         <input
+          autoFocus
           type="text"
           placeholder="Recherche"
           value={this.props.text}
           onChange={this.onChange} />
       </div>
-    );
+    )
   }
 }
 
