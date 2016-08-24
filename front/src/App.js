@@ -8,7 +8,7 @@ import Footer from './Footer'
 class App extends Component {
   constructor(props) {
     super(props)
-    const q = this.getParameterByName('q')
+    let q = this.getParameterByName('q')
     this.state = {analytics: [], meta: {}, text: q ? q : ''}
     this.handleTextChange = this.handleTextChange.bind(this)
     this.getAnalytics()
