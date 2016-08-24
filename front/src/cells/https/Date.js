@@ -10,7 +10,8 @@ function matchStatus(diffDays) {
   }
 }
 
-function computeDiffDays(date, today) {
+function computeDiffDays(date) {
+  const today = new Date()
   const oneDay = 24 * 60 * 60 * 1000 // hours*minutes*seconds*milliseconds
   const dateNotAfter = new Date(date)
 
@@ -25,8 +26,7 @@ class HttpsDate extends Component {
       )
     }
 
-    const today = this.props.sslyze.__today__ || new Date() // sale, pour les tests
-    const diffDays = computeDiffDays(this.props.sslyze['Not After'], today)
+    const diffDays = computeDiffDays(this.props.sslyze['Not After'])
 
     return (
       <td className={matchStatus(diffDays)}>
