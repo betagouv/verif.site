@@ -12,7 +12,6 @@ class Header extends Component {
         </p>
         <p>Dernière mise à jour le {this.props.lastUpdated}</p>
 
-        <img src="http://stats.data.gouv.fr/piwik.php?idsite=25&rec=1" alt="" />
       </div>
     );
   }
