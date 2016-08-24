@@ -3,7 +3,6 @@ import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import App from '../src/App'
 import Header from '../src/Header'
-import SearchBar from '../src/SearchBar'
 import Content from '../src/Content'
 import Site from '../src/Site'
 import Footer from '../src/Footer'
@@ -49,13 +48,6 @@ describe("Apps", () => {
         done()
       }, 10)
     })
-
-    it('should init text', (done) => {
-      const wrapper = shallow(<App/>)
-
-      expect(wrapper.state().text).equal('')
-      done()
-    })
   })
 
   describe("Contains", () => {
@@ -63,16 +55,10 @@ describe("Apps", () => {
       expect(shallow(<App />).contains(<Header />)).to.equal(true)
     })
 
-    it("show the search bar", () => {
-      const wrapper = shallow(<App/>)
-
-      expect(wrapper.contains(<SearchBar onChange={wrapper.instance().handleTextChange} text={wrapper.state().text} />)).to.equal(true)
-    })
-
     it("show the content", () => {
       const wrapper = shallow(<App/>)
 
-      expect(wrapper.contains(<Content sites={wrapper.state().analytics} search={wrapper.state().text} />)).to.equal(true)
+      expect(wrapper.contains(<Content sites={wrapper.state().analytics} />)).to.equal(true)
     })
 
     it("show the footer", () => {
