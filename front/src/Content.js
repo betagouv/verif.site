@@ -19,13 +19,22 @@ class Content extends Component {
     let q = getParameterByName('q')
     this.state = {query: q ? q : ''}
     this.handleTextChange = this.handleTextChange.bind(this)
+    this.filterAdministration = this.filterAdministration.bind(this)
   }
 
   handleTextChange(query) {
-    const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?q=' + query
+    const newUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?q=${query}`
 
     history.pushState({path: newUrl}, "", newUrl)
     this.setState({query})
+  }
+
+  filterAdministration(administration) {
+    if (this.state.query === administration) {
+      this.handleTextChange('')
+    } else {
+      this.handleTextChange(administration)
+    }
   }
 
   render() {
@@ -39,7 +48,7 @@ class Content extends Component {
 
         {this.props.sites
           .filter( site => site.meta.Administration.match(search) || site.meta.Domain.match(search))
-          .map((site, idx) => <Site key={idx} site={site} />)}
+          .map((site, idx) => <Site key={idx} site={site} filterAdministration={this.filterAdministration}/>)}
       </table>
     )
   }

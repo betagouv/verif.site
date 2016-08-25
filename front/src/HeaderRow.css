@@ -2,11 +2,8 @@ td.show-details {
   margin-right: none;
 }
 
-td.show-details button {
-  color: #7E6B8F;
+td.show-details button, th .administration button {
   background-color: inherit;
-  font-size: 2em;
-  font-weight: bold;
   box-sizing: border-box;
   padding: 2px 6px 3px;
   border-width: 2px;
@@ -14,6 +11,24 @@ td.show-details button {
   cursor: pointer;
 }
 
-td.show-details button:focus {
+td.show-details button:focus, th .administration button:focus {
   outline:none;
+}
+
+th .administration button:hover {
+  text-decoration: underline;
+}
+
+th .administration button {
+  font-weight: lighter;
+  color: grey;
+  font-size: .9em;
+  padding: 0;
+}
+
+td.show-details button {
+  color: #7E6B8F;
+  background-color: inherit;
+  font-size: 2em;
+  font-weight: bold;
 }

@@ -7,6 +7,15 @@ import Http2 from './cells/Http2'
 import './HeaderRow.css'
 
 class HeaderRow extends Component {
+  constructor(props) {
+    super(props)
+    this.onAdministrationClick = this.onAdministrationClick.bind(this)
+  }
+
+  onAdministrationClick() {
+    this.props.filterAdministration(this.props.site.meta.Administration)
+  }
+
   render() {
     return (
       <tr>
@@ -16,7 +25,7 @@ class HeaderRow extends Component {
         <th id={ this.props.site.inspect.Domain }>
           <a href={ this.props.site.inspect.Canonical }>{ this.props.site.inspect.Domain }</a>
           <a className="anchor" href={ '#' + this.props.site.inspect.Domain }><i className="fa fa-link" aria-hidden="true"></i></a>
-          <div className="administration">{ this.props.site.meta.Administration }</div>
+          <div className="administration"><button className="filter" onClick={this.onAdministrationClick}>{ this.props.site.meta.Administration }</button></div>
         </th>
         <HttpsValid inspect={this.props.site.inspect} />
         <HttpsEnforce inspect={this.props.site.inspect} />

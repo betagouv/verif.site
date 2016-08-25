@@ -18,7 +18,7 @@ describe('HeaderRow', () => {
     it('shows the detail', () => {
       const wrapper = mount(<table><Site site={arraySite[0]}/></table>)
 
-      wrapper.find('button').simulate('click')
+      wrapper.find('.show-details button').simulate('click')
 
       expect(wrapper.find('.hidden')).to.have.length(0);
       expect(wrapper.find('.visible')).to.have.length(1);
@@ -29,8 +29,8 @@ describe('HeaderRow', () => {
     it('hide the detail', () => {
       const wrapper = mount(<table><Site site={arraySite[0]}/></table>)
 
-      wrapper.find('button').simulate('click')
-      wrapper.find('button').simulate('click')
+      wrapper.find('.show-details button').simulate('click')
+      wrapper.find('.show-details button').simulate('click')
 
       expect(wrapper.find('.hidden')).to.have.length(1);
       expect(wrapper.find('.visible')).to.have.length(0);
