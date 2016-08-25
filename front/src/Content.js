@@ -25,7 +25,7 @@ class Content extends Component {
   handleTextChange(query) {
     const newUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?q=${query}`
 
-    history.pushState({path: newUrl}, "", newUrl)
+    history.replaceState({path: newUrl}, "", newUrl)
     this.setState({query})
   }
 
