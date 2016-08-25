@@ -10,11 +10,22 @@ const arraySite = require('../../test/resources/array-sites')
 
 describe("Content", () => {
 
+  it('should have a content class', () => {
+    const wrapper = shallow(<Content sites={arraySite} />)
+
+    expect(wrapper.hasClass('content')).to.equal(true)
+  })
 
   it('should have a site-table class', () => {
     const wrapper = shallow(<Content sites={arraySite} />)
 
-    expect(wrapper.hasClass('site-table')).to.equal(true)
+    expect(wrapper.find('.content').hasClass('site-table')).to.equal(true)
+  })
+
+  it("should have a Chart Component", () => {
+    const wrapper = shallow(<Content sites={arraySite} />)
+
+    expect(wrapper.find(Chart)).to.have.length(1)
   })
 
   it("Without seeking, it must display the entire list", () => {
@@ -39,9 +50,9 @@ describe("Content", () => {
   })
 
   it("show the search bar", () => {
-    const wrapper = shallow(<Content sites={arraySite}/>)
+    const wrapper = shallow(<Content sites={arraySite} />)
 
-    expect(wrapper.contains(<SearchBar onChange={wrapper.instance().handleTextChange} query={wrapper.state().query} />)).to.equal(true)
+    expect(wrapper.find(SearchBar)).to.have.length(1)
   })
 
   it("calls handleTextChange with the correct query", () => {

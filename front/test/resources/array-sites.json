@@ -2,7 +2,8 @@
     {
         "inspect": {
             "Domain": "bourse.beta.gouv.fr",
-            "Canonical": "https://bourse.beta.gouv.fr"
+            "Canonical": "https://bourse.beta.gouv.fr",
+            "Valid HTTPS": "true"
         },
         "meta": {
             "Domain": "bourse.beta.gouv.fr",
@@ -14,7 +15,8 @@
     {
         "inspect": {
             "Domain": "fiches-de-banc.beta.gouv.fr",
-            "Canonical": "https://fiches-de-banc.beta.gouv.fr"
+            "Canonical": "https://fiches-de-banc.beta.gouv.fr",
+            "Valid HTTPS": "true"
         },
         "meta": {
             "Domain": "fiches-de-banc.beta.gouv.fr",
