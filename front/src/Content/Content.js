@@ -39,17 +39,21 @@ class Content extends Component {
 
   render() {
     const search = new RegExp(this.state.query,'i')
+    const displaySites = this.props.sites
+      .filter( site => site.meta.Administration.match(search) || site.meta.Domain.match(search))
 
     return (
-      <table className="site-table">
-        <thead>
-          <SearchBar onChange={this.handleTextChange} query={this.state.query} />
-        </thead>
+      <div className="content">
+        <Chart sites={displaySites} query={search} />
+        <table className="site-table">
+          <thead>
+            <SearchBar onChange={this.handleTextChange} query={this.state.query} />
+          </thead>
 
-        {this.props.sites
-          .filter( site => site.meta.Administration.match(search) || site.meta.Domain.match(search))
-          .map((site, idx) => <Site key={idx} site={site} filterAdministration={this.filterAdministration}/>)}
-      </table>
+          {displaySites
+            .map((site, idx) => <Site key={idx} site={site} filterAdministration={this.filterAdministration}/>)}
+        </table>
+      </div>
     )
   }
 }
