@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
 import { Pie } from 'react-chartjs'
+import './Chart.css'
 
 class Chart extends Component {
+  constructor(props) {
+    super(props)
+    this.getStats = this.getStats.bind(this)
+  }
 
   getStats() {
     const httpsSites = this.props.sites.filter( site => site.inspect["Valid HTTPS"])
@@ -22,11 +27,11 @@ class Chart extends Component {
           value: 100 - result,
           color: "#FFFFFF",
           highlight: "#FFFFFF",
-          label: "Invalide"
+          label: "Non valide"
       }
     ]
 
-    var chart;
+    var chart
     if (result >= 0) {
       chart =
       <div>
