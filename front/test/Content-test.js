@@ -1,6 +1,7 @@
 import React from 'react'
 import { expect } from 'chai'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
+import sinon from 'sinon'
 import Content from '../src/Content'
 import Site from '../src/Site'
 import SearchBar from '../src/SearchBar'
@@ -41,5 +42,28 @@ describe("Content", () => {
     const wrapper = shallow(<Content sites={arraySite}/>)
 
     expect(wrapper.contains(<SearchBar onChange={wrapper.instance().handleTextChange} query={wrapper.state().query} />)).to.equal(true)
+  })
+
+  it("calls handleTextChange with the correct query", () => {
+    const wrapper = mount(<Content sites={arraySite}/>)
+    const textChangeSpy = sinon.spy();
+
+    wrapper.instance().handleTextChange = textChangeSpy
+    wrapper.instance().filterAdministration('test')
+
+    expect(textChangeSpy).to.have.been.called
+    expect(textChangeSpy.args[0][0]).to.equal('test');
+  })
+
+  it("calls handleTextChange with an empty query if it was already selected", () => {
+    const wrapper = mount(<Content sites={arraySite}/>)
+    const textChangeSpy = sinon.spy();
+
+    wrapper.setState({query: 'bourse'})
+    wrapper.instance().handleTextChange = textChangeSpy
+    wrapper.instance().filterAdministration('bourse')
+
+    expect(textChangeSpy).to.have.been.called
+    expect(textChangeSpy.args[0][0]).to.equal('');
   })
 })
