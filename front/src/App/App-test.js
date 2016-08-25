@@ -3,9 +3,11 @@ import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import App from './App'
 import Header from '../Header/Header'
-import Content from '../Content/Content'
 import Site from '../Site/Site'
 import Footer from '../Footer/Footer'
+import Domains from '../Domains/Domains'
+import Administrations from '../Administrations/Administrations'
+
 import fetchMock from 'fetch-mock'
 
 const httpSites = require('../../test/resources/http-sites')
@@ -56,10 +58,21 @@ describe("Apps", () => {
       expect(wrapper.find(Header)).to.have.length(1)
     })
 
-    it("show the content", () => {
+    it("show the domains", () => {
       const wrapper = shallow(<App/>)
 
-      expect(wrapper.find(Content)).to.have.length(1)
+      expect(wrapper.find(Domains)).to.have.length(1)
+    })
+
+    describe(' when clicking on the administration button', () => {
+      it("show the administrations", () => {
+        const wrapper = shallow(<App/>)
+        const adminButton = wrapper.find('button.admin')
+
+        adminButton.simulate('click')
+
+        expect(wrapper.find(Administrations)).to.have.length(1)
+      })
     })
 
     it("show the footer", () => {

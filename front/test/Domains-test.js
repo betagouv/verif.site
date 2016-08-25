@@ -2,41 +2,29 @@ import React from 'react'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import sinon from 'sinon'
-import Content from './Content'
-import Site from '../Site/Site'
-import SearchBar from '../SearchBar/SearchBar'
-import Charts from '../Charts/Charts'
+import Domains from '../src/Domains'
+import Site from '../src/Site'
+import SearchBar from '../src/SearchBar'
 
-const arraySite = require('../../test/resources/array-sites')
+const arraySite = require('./resources/array-sites')
 
-describe("Content", () => {
+describe("Domains", () => {
 
-  it('should have a content class', () => {
-    const wrapper = shallow(<Content sites={arraySite} />)
-
-    expect(wrapper.hasClass('content')).to.equal(true)
-  })
 
   it('should have a site-table class', () => {
-    const wrapper = shallow(<Content sites={arraySite} />)
+    const wrapper = shallow(<Domains sites={arraySite} />)
 
-    expect(wrapper.find('.content').find('.site-table')).to.have.length(1);
-  })
-
-  it("should have a Charts Component", () => {
-    const wrapper = shallow(<Content sites={arraySite} />)
-
-    expect(wrapper.find(Charts)).to.have.length(1)
+    expect(wrapper.hasClass('site-table')).to.equal(true)
   })
 
   it("Without seeking, it must display the entire list", () => {
-    const wrapper = shallow(<Content sites={arraySite} />)
+    const wrapper = shallow(<Domains sites={arraySite} />)
 
     expect(wrapper.find(Site)).to.have.length(2)
   })
 
   it('With seeking, it must display the corresponding single site', () => {
-    const wrapper = shallow(<Content sites={arraySite} />)
+    const wrapper = shallow(<Domains sites={arraySite} />)
 
     wrapper.setState({query: 'bourse'})
 
@@ -44,20 +32,20 @@ describe("Content", () => {
   })
 
   it('should init query', (done) => {
-    const wrapper = shallow(<Content sites={arraySite}/>)
+    const wrapper = shallow(<Domains sites={arraySite}/>)
 
     expect(wrapper.state().query).equal('')
     done()
   })
 
   it("show the search bar", () => {
-    const wrapper = shallow(<Content sites={arraySite} />)
+    const wrapper = shallow(<Domains sites={arraySite}/>)
 
-    expect(wrapper.find(SearchBar)).to.have.length(1)
+    expect(wrapper.contains(<SearchBar onChange={wrapper.instance().handleTextChange} query={wrapper.state().query} />)).to.equal(true)
   })
 
   it("calls handleTextChange with the correct query", () => {
-    const wrapper = mount(<Content sites={arraySite}/>)
+    const wrapper = mount(<Domains sites={arraySite}/>)
     const textChangeSpy = sinon.spy();
 
     wrapper.instance().handleTextChange = textChangeSpy
@@ -68,7 +56,7 @@ describe("Content", () => {
   })
 
   it("calls handleTextChange with an empty query if it was already selected", () => {
-    const wrapper = mount(<Content sites={arraySite}/>)
+    const wrapper = mount(<Domains sites={arraySite}/>)
     const textChangeSpy = sinon.spy();
 
     wrapper.setState({query: 'bourse'})

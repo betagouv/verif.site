@@ -22,3 +22,37 @@ input:focus {
 .hidden {
   display: none;
 }
+
+.tabs .header {
+  display: flex;
+}
+
+.tabs .header button{
+  flex-grow: 1;
+  color: #7E6B8F;
+  background-color: inherit;
+  border: none;
+  padding: 0.5em;
+  font-size: 130%;
+  cursor: pointer;
+  border-bottom: 0.5em white solid;
+  border-top: 0.5em white solid;
+}
+
+.tabs .header button:focus {
+  outline:none;
+}
+
+.tabs .header button.active{
+  border-bottom: 0.5em #7E6B8F solid;
+}
+
+
+
+.tabs .content {
+  display: none;
+}
+
+.tabs .content.active {
+  display: block;
+}

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Site from '../Site/Site'
 import SearchBar from '../SearchBar/SearchBar'
 import Charts from '../Charts/Charts'
-import './Content.css'
+import './Domains.css'
 
 function getParameterByName(name, url) {
   if (!url) url = window.location.href

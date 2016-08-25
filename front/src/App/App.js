@@ -1,14 +1,22 @@
 import React, { Component } from 'react'
 import './App.css'
 import Header from '../Header/Header'
-import Content from '../Content/Content'
+import Domains from '../Domains/Domains'
 import Footer from '../Footer/Footer'
+import Administrations from '../Administrations/Administrations'
+
 
 class App extends Component {
   constructor(props) {
     super(props)
-    this.state = {analytics: [], meta: {}}
+    this.state = {
+      analytics: [],
+      meta: {},
+      showDomain: true
+    }
     this.getAnalytics()
+    this.showDomain = this.showDomain.bind(this)
+    this.showAdmin = this.showAdmin.bind(this)
   }
 
   getAnalytics() {
@@ -25,11 +33,33 @@ class App extends Component {
       })
   }
 
+  showDomain() {
+    this.setState({showDomain: true})
+  }
+
+  showAdmin() {
+    this.setState({showDomain: false})
+  }
+
+
+
   render() {
     return (
       <div>
         <Header />
-        <Content sites={this.state.analytics} />
+        <div className="tabs">
+          <div className="header">
+            <button className={ this.state.showDomain ? 'domain active': 'domain'  } onClick={this.showDomain}>Par Domaine</button>
+            <button className={ this.state.showDomain ? 'admin': 'admin active'  } onClick={this.showAdmin}>Par Administration</button>
+          </div>
+          <div className={ 'content ' + (this.state.showDomain ? 'active': '' ) }>
+            <Domains sites={this.state.analytics} />
+          </div>
+          <div className={ 'content ' + (this.state.showDomain ? '': 'active' ) }>
+            <Administrations sites={this.state.analytics} />
+          </div>
+
+        </div>
         <Footer lastUpdated={this.state ? this.state.meta.lastUpdated : '...'} />
       </div>
     )
