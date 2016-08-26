@@ -5,7 +5,7 @@ import Chart from '../src/Chart'
 
 const arraySite = require('./resources/array-sites')
 
-describe.only("Chart", () => {
+describe("Chart", () => {
 
   it('should have a chart class', () => {
     const wrapper = shallow(<Chart sites={arraySite} />)
