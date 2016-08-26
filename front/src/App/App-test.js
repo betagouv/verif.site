@@ -54,21 +54,18 @@ describe("Apps", () => {
       const wrapper = shallow(<App/>)
 
       expect(wrapper.find(Header)).to.have.length(1)
-      // expect(shallow(<App />).contains(<Header />)).to.equal(true)
     })
 
     it("show the content", () => {
       const wrapper = shallow(<App/>)
 
       expect(wrapper.find(Content)).to.have.length(1)
-      // expect(wrapper.contains(<Content sites={wrapper.state().analytics} />)).to.equal(true)
     })
 
     it("show the footer", () => {
       const wrapper = shallow(<App/>)
 
       expect(wrapper.find(Footer)).to.have.length(1)
-      // expect(shallow(<App />).contains(<Footer lastUpdated={undefined} />)).to.equal(true)
     })
 
     it('Should have 2 rows', (done) => {
