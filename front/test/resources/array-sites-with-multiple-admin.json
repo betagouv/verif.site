@@ -1,0 +1,36 @@
+[
+    {
+        "inspect": {
+            "Domain": "bourse.beta.gouv.fr",
+            "Canonical": "https://bourse.beta.gouv.fr"
+        },
+        "meta": {
+            "Domain": "bourse.beta.gouv.fr",
+
+            "Administration": "Incubateur Services Numeriques",
+            "Type": "website"
+        }
+    },
+    {
+        "inspect": {
+            "Domain": "fiches-de-banc.beta.gouv.fr",
+            "Canonical": "https://fiches-de-banc.beta.gouv.fr"
+        },
+        "meta": {
+            "Domain": "fiches-de-banc.beta.gouv.fr",
+            "Administration": "Incubateur Services Numeriques",
+            "Type": "website"
+        }
+    },
+    {
+        "inspect": {
+            "Domain": "modernisation.gouv.fr",
+            "Canonical": "https://modernisation.gouv.fr"
+        },
+        "meta": {
+            "Domain": "modernisation.gouv.fr",
+            "Administration": "SGMAP",
+            "Type": "website"
+        }
+    }
+]
