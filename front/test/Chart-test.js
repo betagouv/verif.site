@@ -1,32 +1,31 @@
 import React from 'react'
 import { expect } from 'chai'
-import { shallow, mount } from 'enzyme'
+import { shallow, mount, render } from 'enzyme'
 import { Pie } from 'react-chartjs'
 import Chart from '../src/Chart'
 
 const arraySite = require('./resources/array-sites')
 
-describe("Chart", () => {
+describe.only("Chart", () => {
 
   it('should have a chart class', () => {
-    const wrapper = shallow(<Chart sites={arraySite} query='' />)
+    const wrapper = shallow(<Chart sites={arraySite} />)
     expect(wrapper.find('.chart')).to.have.length(1)
   })
 
   it('should render Pie Component', (done) => {
-    const wrapper = mount(<Chart sites={arraySite} query='' />)
-
+    const wrapper = render(<Chart sites={arraySite} />)
     setTimeout(() => {
-      expect(wrapper.find(Pie)).to.equal(true)
+      expect(wrapper.find('canvas')).to.have.length(1)
       done()
     }, 10)
   })
 
   it('should not render Pie Component if no site is displayed', (done) => {
-    const wrapper = mount(<Chart sites={arraySite} query='nobody' />)
+    const wrapper = render(<Chart sites={[]} />)
 
     setTimeout(() => {
-      expect(wrapper.find(Pie)).to.equal(false)
+      expect(wrapper.find('canvas')).to.have.length(0)
       done()
     }, 10)
   })
