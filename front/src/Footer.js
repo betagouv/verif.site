@@ -11,6 +11,7 @@ class Header extends Component {
         <p id="qualys">
           L'API&nbsp;<a href="https://www.ssllabs.com/">Qualys SSL Labs</a>&nbsp;est utilisée pour calculer les notes SSL
         </p>
+        <p><small>Icône de cadenas par <a href="https://design.google.com/icons/#ic_lock_outline">Google</a></small></p>
         <p>Dernière mise à jour le {this.props.lastUpdated}</p>
 
       </div>
