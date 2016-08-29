@@ -1,10 +1,5 @@
-#footer {
+footer {
   color: #7E6B8F;
   padding: 2em 0;
-}
-
-#footer p {
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  text-align: center;
 }

@@ -4,7 +4,7 @@ import './Footer.css'
 class Header extends Component {
   render() {
     return (
-      <div id="footer">
+      <footer>
         <p>
           Fait avec ♥ par&nbsp;<a href="https://beta.gouv.fr/" rel="noopener" target="_blank">l'Incubateur de services numériques</a>
         </p>
@@ -13,8 +13,7 @@ class Header extends Component {
           <li>Icône de cadenas par <a href="https://design.google.com/icons/#ic_lock_outline">Google</a>.</li>
         </ul>
         <p>Dernière mise à jour le {this.props.lastUpdated}</p>
-
-      </div>
+      </footer>
     )
   }
 }
