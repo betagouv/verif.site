@@ -36,7 +36,7 @@ class Chart extends Component {
       chart =
       <div>
         <Pie data={data} />
-        <h4>{result}% des sites utilise HTTPS</h4>
+        <h4>{result}% des sites utilisent HTTPS</h4>
       </div>
     }
 
