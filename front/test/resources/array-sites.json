@@ -10,6 +10,9 @@
 
             "Administration": "Incubateur Services Numeriques",
             "Type": "website"
+        },
+        "tls": {
+          "Grade": "A+"
         }
     },
     {
@@ -22,6 +25,9 @@
             "Domain": "fiches-de-banc.beta.gouv.fr",
             "Administration": "Incubateur Services Numeriques",
             "Type": "website"
+        },
+        "tls": {
+          "Grade": "C"
         }
     }
 ]
