@@ -31,9 +31,6 @@ npm start
 
 ## Lancer les tests
 
-Il est nécessaire d'installer des dépendences npm globales avec cette ligne de commande : `npm install -g eslint babel-eslint eslint-plugin-react eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-flowtype`
-
-
 ```
 npm test
 ```
