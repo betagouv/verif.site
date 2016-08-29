@@ -27,7 +27,7 @@ class Chart extends Component {
           value: 100 - result,
           color: "#FFFFFF",
           highlight: "#FFFFFF",
-          label: "Non valide"
+          label: "HTTP"
       }
     ]
 
@@ -36,7 +36,7 @@ class Chart extends Component {
       chart =
       <div>
         <Pie data={data} />
-        <h4>{result}% utilise HTTPS</h4>
+        <h4>{result}% des sites utilise HTTPS</h4>
       </div>
     }
 
