@@ -1,7 +1,7 @@
 import React from 'react'
 import Bool from './charts/Bool'
 import Categories from './charts/Categories'
-import './Chart.css'
+import './Charts.css'
 
 const Charts = props =>
   <div className="charts">
