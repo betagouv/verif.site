@@ -2,47 +2,46 @@
 
 Ce site permet de visualiser les statistiques des différents sites de [l'incubateur des startup d'État](https://beta.gouv.fr)
 
-## Mettre à jour les données
-
+## Installation
 
 Dépendences :
- * [Node.js]
- * [Docker]
-
+ * [Node.js] v≥4.
 
 ```sh
-make import
+npm install
 ```
-## Modifier le site
+
+## Mettre à jour les données
 
 Dépendences :
- * [Node.js]
+
+ * [Docker]
+
+```sh
+npm run import
+```
+
+## Modifier le site
 
 L'application est une application [react] dans le dossier `front`
 
 ```
-make install
-make start
+npm start
 ```
 
 ## Lancer les tests
-
-Pour l'instant il n'y a qu'un linter
-
-Dépendences :
- * [Node.js]
 
 Il est nécessaire d'installer des dépendences npm globales avec cette ligne de commande : `npm install -g eslint babel-eslint eslint-plugin-react eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-flowtype`
 
 
 ```
-make test
+npm test
 ```
 
 ## Publier une nouvelle version du site
 
 ```
-make deploy
+npm run deploy
 ```
 
 

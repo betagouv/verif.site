@@ -10,17 +10,10 @@ general:
 dependencies:
   pre:
     - npm install -g eslint babel-eslint eslint-plugin-react eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-flowtype
-  override:
-    - make install
-
-test:
-  override:
-    - make test
-
 deployment:
   production:
     branch: master
     commands:
       - git config --global user.email "infra@beta.gouv.fr"
       - git config --global user.name "CircleCI"
-      - make deploy
+      - npm run deploy
