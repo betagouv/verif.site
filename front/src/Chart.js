@@ -31,7 +31,7 @@ class Chart extends Component {
       }
     ]
 
-    var chart
+    let chart
     if (result >= 0) {
       chart =
       <div>

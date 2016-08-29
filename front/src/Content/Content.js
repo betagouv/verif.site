@@ -6,7 +6,7 @@ import './Content.css'
 function getParameterByName(name, url) {
   if (!url) url = window.location.href
   name = name.replace(/[\[\]]/g, "\\$&")
-  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+  let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
       results = regex.exec(url)
   if (!results) return null
   if (!results[2]) return ''
@@ -38,7 +38,7 @@ class Content extends Component {
   }
 
   render() {
-    const search = new RegExp(this.state.query,'i')
+    const search = new RegExp(this.state.query, 'i')
     const displaySites = this.props.sites
       .filter( site => site.meta.Administration.match(search) || site.meta.Domain.match(search))
 
