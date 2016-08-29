@@ -10,7 +10,7 @@ describe("Bool", () => {
   it('should have a chart class', () => {
     const wrapper = shallow(<Bool sites={arraySite} property="Valid HTTPS" />)
 
-    expect(wrapper.find('.chart')).to.have.length(1)
+    expect(wrapper.hasClass('chart')).to.equal(true)
   })
 
   describe("HTTPS percent", () => {
