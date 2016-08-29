@@ -23,7 +23,7 @@ npm run import
 
 ## Modifier le site
 
-L'application est une application [react] dans le dossier `front`
+L'application est une application [React] dans le dossier `front`.
 
 ```
 npm start
@@ -48,4 +48,4 @@ npm run deploy
 
 [Node.js]: https://nodejs.org/en/
 [Docker]: https://www.docker.com/
-[react]: https://facebook.github.io/react/
+[React]: https://facebook.github.io/react/
