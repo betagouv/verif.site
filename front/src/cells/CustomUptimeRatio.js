@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import BigBadge from './BigBadge'
 
 function getStatus(uptime) {
-  if(uptime < 90) {
+  if (uptime < 90) {
     return 'invalid'
-  } else if(uptime < 95) {
+  } else if (uptime < 95) {
     return 'warning'
   } else {
     return 'valid'
