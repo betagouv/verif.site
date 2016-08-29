@@ -1,6 +1,6 @@
 import React from 'react'
 import { expect } from 'chai'
-import { shallow, render } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import Chart from '../src/Chart'
 
 const arraySite = require('./resources/array-sites')
@@ -13,7 +13,7 @@ describe("Chart", () => {
   })
 
   it('should render canvas', (done) => {
-    const wrapper = render(<Chart sites={arraySite} />)
+    const wrapper = mount(<Chart sites={arraySite} />)
 
     setTimeout(() => {
       expect(wrapper.find('canvas')).to.have.length(1)
@@ -22,7 +22,7 @@ describe("Chart", () => {
   })
 
   it('should not render canvas if no site is displayed', (done) => {
-    const wrapper = render(<Chart sites={[]} />)
+    const wrapper = mount(<Chart sites={[]} />)
 
     setTimeout(() => {
       expect(wrapper.find('canvas')).to.have.length(0)
