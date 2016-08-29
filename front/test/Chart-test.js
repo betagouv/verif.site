@@ -19,6 +19,7 @@ describe("Chart", () => {
 
     setTimeout(() => {
       expect(wrapper.instance().getStats()).to.equal(100)
+      expect(wrapper.text()).to.contain('100%')
       done()
     }, 10)
   })
@@ -30,6 +31,7 @@ describe("Chart", () => {
 
     setTimeout(() => {
       expect(wrapper.instance().getStats()).to.equal(50)
+      expect(wrapper.text()).to.contain('50%')
       done()
     }, 10)
   })
@@ -43,6 +45,7 @@ describe("Chart", () => {
 
     setTimeout(() => {
       expect(wrapper.instance().getStats()).to.equal(0)
+      expect(wrapper.text()).to.contain('0%')
       done()
     }, 10)
   })
