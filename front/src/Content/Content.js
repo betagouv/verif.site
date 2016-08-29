@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Site from '../Site/Site'
 import SearchBar from '../SearchBar/SearchBar'
+import Charts from '../Charts'
 import './Content.css'
 
 function getParameterByName(name, url) {
@@ -44,7 +45,7 @@ class Content extends Component {
 
     return (
       <div className="content">
-        <Chart sites={displaySites} />
+      <Charts sites={displaySites} />
         <table className="site-table">
           <thead>
             <SearchBar onChange={this.handleTextChange} query={this.state.query} />

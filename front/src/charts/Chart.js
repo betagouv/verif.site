@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Pie } from 'react-chartjs'
-import './Chart.css'
 
 class Chart extends Component {
   constructor(props) {
@@ -18,16 +17,14 @@ class Chart extends Component {
     const result = this.getStats()
     const data = [
       {
-          value: result,
-          color: "#46BFBD",
-          highlight: "#5AD3D1",
-          label: "HTTPS"
+        value: result,
+        color: "#569a6f",
+        label: "HTTPS"
       },
       {
-          value: 100 - result,
-          color: "#FFFFFF",
-          highlight: "#FFFFFF",
-          label: "HTTP"
+        value: 100 - result,
+        color: "#FFFFFF",
+        label: "HTTP"
       }
     ]
 
