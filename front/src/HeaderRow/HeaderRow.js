@@ -4,8 +4,8 @@ import HttpsGrade from '../cells/https/Grade/Grade'
 import HttpsEnforce from '../cells/https/Enforce/Enforce'
 import HttpsDate from '../cells/https/Date/Date'
 import Http2 from '../cells/Http2/Http2'
-import CustomUptimeRatio from '../cells/CustomUptimeRatio'
-import AllTimeUptimeRatio from '../cells/AllTimeUptimeRatio'
+import CustomUptimeRatio from '../cells/uptime/CustomUptimeRatio/CustomUptimeRatio'
+import AllTimeUptimeRatio from '../cells/uptime/AllTimeUptimeRatio/AllTimeUptimeRatio'
 import './HeaderRow.css'
 
 class HeaderRow extends Component {

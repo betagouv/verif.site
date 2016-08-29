@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import BigBadge from '../../BigBadge'
+import BigBadge from '../../BigBadge/BigBadge'
 
 function getStatus(grade) {
   if(grade.includes('A')) {
