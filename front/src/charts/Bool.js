@@ -8,7 +8,7 @@ class ChartBool extends Component {
   }
 
   getStats() {
-    const httpsSites = this.props.sites.filter( site => site.inspect["Valid HTTPS"])
+    const httpsSites = this.props.sites.filter( site => site.inspect[this.props.property])
 
     return Math.floor((httpsSites.length / this.props.sites.length) * 100)
   }
@@ -33,7 +33,7 @@ class ChartBool extends Component {
       chart =
       <div>
         <Pie data={data} />
-        <h4>{result}% des sites utilisent HTTPS</h4>
+        <h4>{result}% des sites {this.props.label}</h4>
       </div>
     }
 
