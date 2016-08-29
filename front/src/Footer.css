@@ -3,3 +3,7 @@ footer {
   padding: 2em 0;
   text-align: center;
 }
+
+footer li {
+  list-style-type: none;
+}
