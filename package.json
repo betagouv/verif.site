@@ -27,7 +27,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "prebuild": "npm install",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "lint": "eslint ./src/",
