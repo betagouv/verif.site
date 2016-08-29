@@ -32,7 +32,7 @@
     "lint": "eslint ./src/",
     "test": "mocha front/test/.setup.js front/test/**/*-test.js",
     "dev": "mocha front/test/.setup.js front/test/**/*-test.js --watch",
-    "import": "node import/index.js",
+    "update": "node import/index.js",
     "deploy": "front/deploy.sh"
   },
   "eslintConfig": {

@@ -18,7 +18,7 @@ Dépendences :
  * [Docker]
 
 ```sh
-npm run import
+npm run update
 ```
 
 ## Modifier le site
