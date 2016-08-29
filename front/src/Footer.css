@@ -1,10 +1,9 @@
-#footer {
+footer {
   color: #7E6B8F;
   padding: 2em 0;
+  text-align: center;
 }
 
-#footer p {
-  display:flex;
-  justify-content:center;
-  align-items:center;
+footer li {
+  list-style-type: none;
 }
