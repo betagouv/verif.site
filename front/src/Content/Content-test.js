@@ -5,6 +5,7 @@ import sinon from 'sinon'
 import Content from './Content'
 import Site from '../Site/Site'
 import SearchBar from '../SearchBar/SearchBar'
+import Charts from '../Charts'
 
 const arraySite = require('../../test/resources/array-sites')
 
@@ -22,10 +23,10 @@ describe("Content", () => {
     expect(wrapper.find('.content').find('.site-table')).to.have.length(1);
   })
 
-  it("should have a Chart Component", () => {
+  it("should have a Charts Component", () => {
     const wrapper = shallow(<Content sites={arraySite} />)
 
-    expect(wrapper.find(Chart)).to.have.length(1)
+    expect(wrapper.find(Charts)).to.have.length(1)
   })
 
   it("Without seeking, it must display the entire list", () => {

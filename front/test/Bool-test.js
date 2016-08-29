@@ -1,21 +1,21 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
-import Bool from '../src/Bool'
+import Bool from '../src/charts/Bool'
 
 const arraySite = require('./resources/array-sites')
 
 describe("Bool", () => {
 
   it('should have a chart class', () => {
-    const wrapper = shallow(<Bool sites={arraySite} />)
+    const wrapper = shallow(<Bool sites={arraySite} property="Valid HTTPS" />)
 
     expect(wrapper.find('.chart')).to.have.length(1)
   })
 
   describe("HTTPS percent", () => {
   it('should 100% https', (done) => {
-    const wrapper = mount(<Bool sites={arraySite} />)
+    const wrapper = mount(<Bool sites={arraySite} property="Valid HTTPS" />)
 
     setTimeout(() => {
       expect(wrapper.instance().getStats()).to.equal(100)
@@ -27,7 +27,7 @@ describe("Bool", () => {
   it('should 50% https', (done) => {
     let newArraySite = arraySite
     newArraySite[0].inspect["Valid HTTPS"] = false
-    const wrapper = mount(<Bool sites={newArraySite} />)
+    const wrapper = mount(<Bool sites={newArraySite} property="Valid HTTPS" />)
 
     setTimeout(() => {
       expect(wrapper.instance().getStats()).to.equal(50)
@@ -53,7 +53,7 @@ describe("Bool", () => {
 
   describe("Canvas render", () => {
     it('should render canvas', (done) => {
-      const wrapper = mount(<Bool sites={arraySite} />)
+      const wrapper = mount(<Bool sites={arraySite} property="Valid HTTPS" />)
 
       setTimeout(() => {
         expect(wrapper.find('canvas')).to.have.length(1)
