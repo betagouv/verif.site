@@ -91,11 +91,14 @@
 .site-table td .content .big {
   font-size: 200%;
   font-weight: bold;
+}
+
+.site-table td .content .big a {
   text-decoration: none;
 }
 
-.site-table td .content a.big:hover {
-  text-decoration: underline;;
+.site-table td .content .big a:hover {
+  text-decoration: underline;
 }
 
 .site-table td .icon {
@@ -108,7 +111,7 @@ td.unknown {
   background-color: whitesmoke;
 }
 
-td.valid .big {
+td.valid .big, td.valid .big a {
   color: #569a6f;
 }
 
@@ -128,7 +131,7 @@ td.invalid {
   border-left: 1em solid #DA3E52;
 }
 
-td.invalid .big {
+td.invalid .big, td.invalid .big a {
   color: #DA3E52;
 }
 
@@ -136,7 +139,7 @@ td.warning {
   border-left: 1em solid #efb000;
 }
 
-td.warning .big {
+td.warning .big, td.warning .big a {
   color: #efb000;
 }
 
