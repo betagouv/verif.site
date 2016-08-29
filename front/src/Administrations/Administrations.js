@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Admin from './Admin.js'
-import './Administrations.css'
 
 class Administrations extends Component {
   constructor(props) {
