@@ -45,7 +45,7 @@ class Content extends Component {
 
     return (
       <div className="content">
-      <Charts sites={displaySites} />
+        <Charts sites={displaySites} />
         <table className="site-table">
           <thead>
             <SearchBar onChange={this.handleTextChange} query={this.state.query} />

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Pie } from 'react-chartjs'
 
-class Chart2 extends Component {
+class Categories extends Component {
   constructor(props) {
     super(props)
     this.getStats = this.getStats.bind(this)
@@ -89,4 +89,4 @@ class Chart2 extends Component {
   }
 }
 
-export default Chart2
+export default Categories

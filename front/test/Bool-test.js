@@ -1,21 +1,21 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
-import Chart from '../src/Chart'
+import Bool from '../src/Bool'
 
 const arraySite = require('./resources/array-sites')
 
-describe("Chart", () => {
+describe("Bool", () => {
 
   it('should have a chart class', () => {
-    const wrapper = shallow(<Chart sites={arraySite} />)
+    const wrapper = shallow(<Bool sites={arraySite} />)
 
     expect(wrapper.find('.chart')).to.have.length(1)
   })
 
   describe("HTTPS percent", () => {
   it('should 100% https', (done) => {
-    const wrapper = mount(<Chart sites={arraySite} />)
+    const wrapper = mount(<Bool sites={arraySite} />)
 
     setTimeout(() => {
       expect(wrapper.instance().getStats()).to.equal(100)
@@ -27,7 +27,7 @@ describe("Chart", () => {
   it('should 50% https', (done) => {
     let newArraySite = arraySite
     newArraySite[0].inspect["Valid HTTPS"] = false
-    const wrapper = mount(<Chart sites={newArraySite} />)
+    const wrapper = mount(<Bool sites={newArraySite} />)
 
     setTimeout(() => {
       expect(wrapper.instance().getStats()).to.equal(50)
@@ -41,7 +41,7 @@ describe("Chart", () => {
     newArraySite.forEach(function(element) {
       element.inspect["Valid HTTPS"] = false
     })
-    const wrapper = mount(<Chart sites={newArraySite} />)
+    const wrapper = mount(<Bool sites={newArraySite} />)
 
     setTimeout(() => {
       expect(wrapper.instance().getStats()).to.equal(0)
@@ -53,7 +53,7 @@ describe("Chart", () => {
 
   describe("Canvas render", () => {
     it('should render canvas', (done) => {
-      const wrapper = mount(<Chart sites={arraySite} />)
+      const wrapper = mount(<Bool sites={arraySite} />)
 
       setTimeout(() => {
         expect(wrapper.find('canvas')).to.have.length(1)
@@ -62,7 +62,7 @@ describe("Chart", () => {
     })
 
     it('should not render canvas if no site is displayed', (done) => {
-      const wrapper = mount(<Chart sites={[]} />)
+      const wrapper = mount(<Bool sites={[]} />)
 
       setTimeout(() => {
         expect(wrapper.find('canvas')).to.have.length(0)

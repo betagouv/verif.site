@@ -1,12 +1,12 @@
 import React from 'react'
-import Chart from './charts/Chart'
-import Chart2 from './charts/Chart2'
+import Bool from './charts/Bool'
+import Categories from './charts/Categories'
 import './Chart.css'
 
 const Charts = props =>
   <div className="chart">
-    <Chart sites={props.sites} />
-    <Chart2 sites={props.sites} />
+    <Bool sites={props.sites} />
+    <Categories sites={props.sites} />
   </div>
 
 export default Charts
