@@ -32,7 +32,7 @@ describe("Categories", () => {
     })
   })
 
-  describe("find", () => {
+  describe("findGrade", () => {
     it('should find grade', () => {
       const grade = 'B'
       const data = [
@@ -40,7 +40,7 @@ describe("Categories", () => {
         {label: grade},
       ]
 
-      expect(wrapper.instance().find(data, grade)).to.equal(data[1])
+      expect(wrapper.instance().findGrade(data, grade)).to.equal(data[1])
     })
 
     it('should not find grade', () => {
@@ -50,7 +50,7 @@ describe("Categories", () => {
         {label: 'B'},
       ]
 
-      expect(wrapper.instance().find(data, grade)).to.be.null
+      expect(wrapper.instance().findGrade(data, grade)).to.be.null
     })
   })
 

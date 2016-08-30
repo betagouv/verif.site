@@ -8,7 +8,7 @@ class Categories extends Component {
     this.setColor = this.setColor.bind(this)
   }
 
-  find(data, grade) {
+  findGrade(data, grade) {
     for(var i = 0; i < data.length; i++) {
       if (data[i].label === grade[0]) {
           return data[i]
@@ -24,7 +24,7 @@ class Categories extends Component {
         return site.tls ? site.tls['Grade'] : 'X'
       })
       .reduce((data, grade) => {
-        const current = this.find(data, grade)
+        const current = this.findGrade(data, grade)
 
         if (current) {
           current.value += 1
