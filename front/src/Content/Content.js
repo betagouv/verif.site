@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Site from './Site'
-import SearchBar from './SearchBar'
+import Site from '../Site/Site'
+import SearchBar from '../SearchBar/SearchBar'
 import './Content.css'
 
 function getParameterByName(name, url) {

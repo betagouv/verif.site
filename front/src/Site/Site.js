@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import HeaderRow from './HeaderRow'
-import DetailRow from './DetailRow'
+import HeaderRow from '../HeaderRow/HeaderRow'
+import DetailRow from '../DetailRow/DetailRow'
 
 class Site extends Component {
   constructor(props) {
