@@ -1,7 +1,7 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import Badge from '../src/cells/Badge'
+import Badge from './Badge'
 
 describe("Badge", () => {
   it("show the correct icon", () => {

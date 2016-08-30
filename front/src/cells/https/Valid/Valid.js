@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Badge from '../Badge'
+import Badge from '../../Badge/Badge'
 
 
 

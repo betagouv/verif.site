@@ -1,16 +1,15 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
-import App from '../src/App'
-import Header from '../src/Header'
-import Content from '../src/Content'
-import Site from '../src/Site'
-import Footer from '../src/Footer'
+import App from './App'
+import Header from '../Header/Header'
+import Content from '../Content/Content'
+import Site from '../Site/Site'
+import Footer from '../Footer/Footer'
 import fetchMock from 'fetch-mock'
 
-const httpSites = require('./resources/http-sites')
-const arraySite = require('./resources/array-sites')
-
+const httpSites = require('../../test/resources/http-sites')
+const arraySite = require('../../test/resources/array-sites')
 
 describe("Apps", () => {
 

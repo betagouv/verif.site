@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import HttpsValid from './cells/https/Valid'
-import HttpsGrade from './cells/https/Grade'
-import HttpsEnforce from './cells/https/Enforce'
-import HttpsDate from './cells/https/Date'
-import Http2 from './cells/Http2'
+import HttpsValid from '../cells/https/Valid/Valid'
+import HttpsGrade from '../cells/https/Grade/Grade'
+import HttpsEnforce from '../cells/https/Enforce/Enforce'
+import HttpsDate from '../cells/https/Date/Date'
+import Http2 from '../cells/Http2/Http2'
 import './HeaderRow.css'
 
 class HeaderRow extends Component {

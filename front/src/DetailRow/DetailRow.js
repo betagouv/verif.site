@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import DetailCategory from './DetailCategory';
+import DetailCategory from '../DetailCategory/DetailCategory';
 import './DetailRow.css'
 
 class DetailRow extends Component {

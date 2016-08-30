@@ -1,8 +1,8 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import Badge from '../src/cells/Badge'
-import HttpsValid from '../src/cells/https/Valid'
+import Badge from '../../Badge/Badge'
+import HttpsValid from './Valid'
 
 
 describe("HttpsValid", () => {
