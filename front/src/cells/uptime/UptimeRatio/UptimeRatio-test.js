@@ -19,4 +19,21 @@ describe('UptimeRatio', () => {
       expect(shallow(<UptimeRatio ratio={100} title='Uptime (7j)'/>).contains(expectedValue)).to.equal(true)
     })
   })
+
+  describe('returns the correct status', () => {
+    it('is valid', () => {
+      const wrapper = shallow(<UptimeRatio />)
+      expect(wrapper.instance().getStatus(100)).to.equal('valid')
+    })
+
+    it('is warning', () => {
+      const wrapper = shallow(<UptimeRatio />)
+      expect(wrapper.instance().getStatus(99.4)).to.equal('warning')
+    })
+
+    it('is invalid', () => {
+      const wrapper = shallow(<UptimeRatio />)
+      expect(wrapper.instance().getStatus(15.4)).to.equal('invalid')
+    })
+  })
 })
