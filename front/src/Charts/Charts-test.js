@@ -1,11 +1,11 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import Charts from '../src/Charts'
-import Bool from '../src/charts/Bool'
-import Categories from '../src/charts/Categories'
+import Charts from './Charts'
+import Bool from './Bool/Bool'
+import Categories from './Categories/Categories'
 
-const arraySite = require('./resources/array-sites')
+const arraySite = require('../../test/resources/array-sites')
 
 describe("Charts", () => {
 

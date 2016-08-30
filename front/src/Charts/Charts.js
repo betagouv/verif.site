@@ -1,6 +1,6 @@
 import React from 'react'
-import Bool from './charts/Bool'
-import Categories from './charts/Categories'
+import Bool from './Bool/Bool'
+import Categories from './Categories/Categories'
 import './Charts.css'
 
 const Charts = props =>

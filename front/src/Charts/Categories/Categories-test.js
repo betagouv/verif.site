@@ -1,7 +1,7 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
-import Categories from '../src/charts/Categories'
+import Categories from './Categories'
 
 const arraySite = require('./resources/array-sites')
 

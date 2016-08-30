@@ -5,7 +5,7 @@ import sinon from 'sinon'
 import Content from './Content'
 import Site from '../Site/Site'
 import SearchBar from '../SearchBar/SearchBar'
-import Charts from '../Charts'
+import Charts from '../Charts/Charts'
 
 const arraySite = require('../../test/resources/array-sites')
 
