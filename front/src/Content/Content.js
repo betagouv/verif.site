@@ -44,16 +44,13 @@ class Content extends Component {
       .filter( site => site.meta.Administration.match(search) || site.meta.Domain.match(search))
 
     return (
-      <div className="content">
+      <div className="site-table">
         <Charts sites={displaySites} />
-        <table className="site-table">
-          <thead>
-            <SearchBar onChange={this.handleTextChange} query={this.state.query} />
-          </thead>
 
-          {displaySites
-            .map((site) => <Site key={site.meta.Domain} site={site} filterAdministration={this.filterAdministration}/>)}
-        </table>
+        <SearchBar onChange={this.handleTextChange} query={this.state.query} />
+
+        {displaySites
+          .map((site) => <Site key={site.meta.Domain} site={site} filterAdministration={this.filterAdministration}/>)}
       </div>
     )
   }

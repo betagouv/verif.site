@@ -1,9 +1,30 @@
-thead tr:hover {
+.search {
   background-color: #fafafa;
 }
 
+.search {
+  width: calc(25% + 3rem);
+  display: flex;
+  flex-direction: row;
+}
+.search .icon {
+  width: 40px;
+}
+
+.search .icon {
+  background-color: #fff;
+  padding: 20px 5px;
+  text-align: center;
+  color: #000;
+}
+
+
 .fa-search {
   color: #7e6b8f;
+}
+
+.search-bar {
+  width: 100%;
 }
 
 .search-bar > input {

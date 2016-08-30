@@ -20,23 +20,25 @@ class HeaderRow extends Component {
 
   render() {
     return (
-      <tr>
-        <td className="show-details" onClick={this.props.onArrowClick}>
+      <div className='site-header'>
+        <div className="show-details" onClick={this.props.onArrowClick}>
           <button onClick={this.props.onArrowClick}>+</button>
-        </td>
-        <th id={ this.props.site.inspect.Domain }>
+        </div>
+        <div id={ this.props.site.inspect.Domain } className="site-name">
           <a href={ this.props.site.inspect.Canonical }>{ this.props.site.inspect.Domain }</a>
           <a className="anchor" href={ '#' + this.props.site.inspect.Domain }><i className="fa fa-link" aria-hidden="true"></i></a>
           <div className="administration"><button className="filter" onClick={this.onAdministrationClick}>{ this.props.site.meta.Administration }</button></div>
-        </th>
-        <HttpsValid inspect={this.props.site.inspect} />
-        <HttpsEnforce inspect={this.props.site.inspect} />
-        <HttpsGrade tls={this.props.site.tls} />
-        <Http2 tls={this.props.site.tls} />
-        <HttpsDate sslyze={this.props.site.sslyze} />
-        <CustomUptimeRatio monitor={this.props.monitor} />
-        <AllTimeUptimeRatio monitor={this.props.monitor} />
-      </tr>
+        </div>
+        <div className='badges'>
+          <HttpsValid inspect={this.props.site.inspect} />
+          <HttpsEnforce inspect={this.props.site.inspect} />
+          <HttpsGrade tls={this.props.site.tls} />
+          <Http2 tls={this.props.site.tls} />
+          <HttpsDate sslyze={this.props.site.sslyze} />
+          <CustomUptimeRatio monitor={this.props.monitor} />
+          <AllTimeUptimeRatio monitor={this.props.monitor} />
+        </div>
+      </div>
     );
   }
 }

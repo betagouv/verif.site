@@ -45,10 +45,11 @@ class Site extends Component {
 
   render() {
     return (
-      <tbody>
+
+      <div className="site">
         <HeaderRow site={this.props.site} onArrowClick={this.onArrowClick} filterAdministration={this.props.filterAdministration} monitor={this.state.monitor}/>
         <DetailRow site={this.props.site} visible={this.state.isDetailVisible}/>
-      </tbody>
+      </div>
     );
   }
 }

@@ -15,7 +15,7 @@ class HttpsGrade extends Component {
   render() {
     if(!this.props.tls) {
       return (
-        <td className="unknown"><span></span></td>
+        <div className="unknown"><span></span></div>
       )
     }
 

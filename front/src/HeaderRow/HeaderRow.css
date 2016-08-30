@@ -1,8 +1,15 @@
-td.show-details {
-  margin-right: none;
+.site-header {
+  display: flex;
+  flex-direction: row;
 }
 
-td.show-details button, th .administration button {
+.show-details {
+  margin-right: none;
+  width: 40px;
+  background-color: white;
+}
+
+.show-details button, .administration button {
   background-color: inherit;
   box-sizing: border-box;
   padding: 2px 6px 3px;
@@ -11,22 +18,22 @@ td.show-details button, th .administration button {
   cursor: pointer;
 }
 
-td.show-details button:focus, th .administration button:focus {
+.show-details button:focus, .administration button:focus {
   outline:none;
 }
 
-th .administration button:hover {
+.administration button:hover {
   text-decoration: underline;
 }
 
-th .administration button {
+.administration button {
   font-weight: lighter;
   color: grey;
   font-size: .9em;
   padding: 0;
 }
 
-td.show-details button {
+.show-details button {
   color: #7E6B8F;
   background-color: inherit;
   font-size: 2em;

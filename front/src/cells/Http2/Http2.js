@@ -6,7 +6,7 @@ class Http2 extends Component {
   render() {
     if(!this.props.tls) {
       return (
-        <td className="unknown"></td>
+        <div className="unknown"></div>
       )
     }
     if(this.props.tls["HTTP/2"]) {

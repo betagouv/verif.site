@@ -18,10 +18,14 @@ dt, dd {
   border-top: 1px solid #7E6B8F;
 }
 
-.detail-wrapper {
+.site-detail {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.site-detail.hidden {
+  display: none;
 }
 
 .detail-category {

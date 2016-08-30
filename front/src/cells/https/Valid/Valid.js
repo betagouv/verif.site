@@ -7,7 +7,7 @@ class HttpsValid extends Component {
   render() {
     if(!this.props.inspect) {
       return (
-        <td className="unknown"></td>
+        <div className="unknown"></div>
       )
     }
     if(this.props.inspect["Valid HTTPS"]) {

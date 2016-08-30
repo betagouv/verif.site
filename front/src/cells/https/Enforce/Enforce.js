@@ -5,7 +5,7 @@ class HttpsEnforce extends Component {
   render() {
     if(!this.props.inspect) {
       return (
-        <td className="unknown"><span>HTTPS Inconnu</span></td>
+        <div className="unknown"><span>HTTPS Inconnu</span></div>
       )
     }
     if(this.props.inspect["Strictly Forces HTTPS"]) {
