@@ -2,6 +2,12 @@ import React, { Component } from 'react'
 import HeaderRow from '../HeaderRow/HeaderRow'
 import DetailRow from '../DetailRow/DetailRow'
 
+function buildUptimeRobotURl({apiKey, format, wrapInJsonCallback, daysForCustomRatio, daysForResponseTimesAverage}) {
+  const noJsonCallback = wrapInJsonCallback ? 0 : 1;
+  return `https://api.uptimerobot.com/getMonitors?apiKey=${apiKey}&format=${format}&noJsonCallback=${noJsonCallback}` +
+    `&customUptimeRatio=${daysForCustomRatio}&responseTimes=1&responseTimesAverage=${daysForResponseTimesAverage * 24 * 60}`
+}
+
 class Site extends Component {
   constructor(props) {
     super(props)
@@ -15,11 +21,16 @@ class Site extends Component {
   }
 
   fetchUptime() {
-    //noJsonCallback or else the json will be wrapped in a callback function
-    //responseTimes=1&responseTimesAverage=${24 * 60}, average for the last day (24 * 60 minutes)
-    //customUptimeRatio=7 uptime for the last 7 days
     if (this.props.site.meta.UptimeApiKey) {
-      return fetch(`https://api.uptimerobot.com/getMonitors?apiKey=${this.props.site.meta.UptimeApiKey}&format=json&noJsonCallback=1&customUptimeRatio=7&responseTimes=1&responseTimesAverage=${24 * 60}`)
+      const url = buildUptimeRobotURl({
+        apiKey: this.props.site.meta.UptimeApiKey,
+        format: 'json',
+        wrapInJsonCallback: false,
+        daysForCustomRatio: 7,
+        daysForResponseTimesAverage: 1
+      })
+
+      return fetch(url)
         .then((response) => response.json())
         .then((json) => {
           const monitor = json.monitors.monitor[0]
