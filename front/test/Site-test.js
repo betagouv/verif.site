@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
 import { mount } from 'enzyme';
-import Site from '../src/Site';
+import Site from '../src/Site/Site';
 const arraySite = require('./resources/array-sites')
 
 describe('HeaderRow', () => {

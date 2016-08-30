@@ -2,7 +2,7 @@ import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import sinon from 'sinon'
-import HeaderRow from '../src/HeaderRow';
+import HeaderRow from '../src/HeaderRow/HeaderRow';
 import HttpsValid from '../src/cells/https/Valid'
 import HttpsGrade from '../src/cells/https/Grade'
 import HttpsEnforce from '../src/cells/https/Enforce'

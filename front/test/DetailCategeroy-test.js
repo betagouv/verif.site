@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
-import DetailCategory, { parser } from '../src/DetailCategory';
+import DetailCategory, { parser } from '../src/DetailCategory/DetailCategory';
 
 
 describe("DetailCategory", () => {
