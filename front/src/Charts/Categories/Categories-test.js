@@ -105,6 +105,8 @@ describe("Categories", () => {
     })
 
     it('should return red', () => {
+      expect(wrapper.instance().setColor('E')).to.equal(red)
+      expect(wrapper.instance().setColor('F')).to.equal(red)
       expect(wrapper.instance().setColor('T')).to.equal(red)
     })
 
