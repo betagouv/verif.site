@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import BigBadge from '../../BigBadge/BigBadge'
 
 function getStatus(grade) {
   if(grade.includes('A')) {
@@ -19,17 +20,9 @@ class HttpsGrade extends Component {
     }
 
     const status = getStatus(this.props.tls["Grade"])
+    const text = <a href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] } >{ this.props.tls["Grade"] }</a>
 
-    return (
-      <td className={status}>
-        <div className="content">
-          <div className="column">
-            <div>Note SSL</div>
-            <a className="big" href={ 'https://www.ssllabs.com/ssltest/analyze.html?d=' + this.props.tls['Domain'] } >{ this.props.tls["Grade"] }</a>
-          </div>
-        </div>
-      </td>
-    )
+    return <BigBadge status={status} title="Note SSL" text={text}/>
   }
 }
 

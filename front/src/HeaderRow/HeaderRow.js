@@ -4,6 +4,8 @@ import HttpsGrade from '../cells/https/Grade/Grade'
 import HttpsEnforce from '../cells/https/Enforce/Enforce'
 import HttpsDate from '../cells/https/Date/Date'
 import Http2 from '../cells/Http2/Http2'
+import CustomUptimeRatio from '../cells/uptime/CustomUptimeRatio/CustomUptimeRatio'
+import AllTimeUptimeRatio from '../cells/uptime/AllTimeUptimeRatio/AllTimeUptimeRatio'
 import './HeaderRow.css'
 
 class HeaderRow extends Component {
@@ -32,6 +34,8 @@ class HeaderRow extends Component {
         <HttpsGrade tls={this.props.site.tls} />
         <Http2 tls={this.props.site.tls} />
         <HttpsDate sslyze={this.props.site.sslyze} />
+        <CustomUptimeRatio monitor={this.props.monitor} />
+        <AllTimeUptimeRatio monitor={this.props.monitor} />
       </tr>
     );
   }
