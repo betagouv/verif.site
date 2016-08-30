@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import Site from '../Site/Site'
 import SearchBar from '../SearchBar/SearchBar'
+import Charts from '../Charts/Charts'
 import './Content.css'
 
 function getParameterByName(name, url) {
   if (!url) url = window.location.href
   name = name.replace(/[\[\]]/g, "\\$&")
-  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+  const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
       results = regex.exec(url)
   if (!results) return null
   if (!results[2]) return ''
@@ -38,18 +39,22 @@ class Content extends Component {
   }
 
   render() {
-    const search = new RegExp(this.state.query,'i')
+    const search = new RegExp(this.state.query, 'i')
+    const displaySites = this.props.sites
+      .filter( site => site.meta.Administration.match(search) || site.meta.Domain.match(search))
 
     return (
-      <table className="site-table">
-        <thead>
-          <SearchBar onChange={this.handleTextChange} query={this.state.query} />
-        </thead>
+      <div className="content">
+        <Charts sites={displaySites} />
+        <table className="site-table">
+          <thead>
+            <SearchBar onChange={this.handleTextChange} query={this.state.query} />
+          </thead>
 
-        {this.props.sites
-          .filter( site => site.meta.Administration.match(search) || site.meta.Domain.match(search))
-          .map((site, idx) => <Site key={idx} site={site} filterAdministration={this.filterAdministration}/>)}
-      </table>
+          {displaySites
+            .map((site, idx) => <Site key={idx} site={site} filterAdministration={this.filterAdministration}/>)}
+        </table>
+      </div>
     )
   }
 }

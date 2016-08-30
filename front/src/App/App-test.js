@@ -51,17 +51,21 @@ describe("Apps", () => {
 
   describe("Contains", () => {
     it("show the header", () => {
-      expect(shallow(<App />).contains(<Header />)).to.equal(true)
+      const wrapper = shallow(<App/>)
+
+      expect(wrapper.find(Header)).to.have.length(1)
     })
 
     it("show the content", () => {
       const wrapper = shallow(<App/>)
 
-      expect(wrapper.contains(<Content sites={wrapper.state().analytics} />)).to.equal(true)
+      expect(wrapper.find(Content)).to.have.length(1)
     })
 
     it("show the footer", () => {
-      expect(shallow(<App />).contains(<Footer lastUpdated={undefined} />)).to.equal(true)
+      const wrapper = shallow(<App/>)
+
+      expect(wrapper.find(Footer)).to.have.length(1)
     })
 
     it('Should have 2 rows', (done) => {
