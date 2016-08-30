@@ -8,23 +8,15 @@ class Categories extends Component {
     this.setColor = this.setColor.bind(this)
   }
 
-  findGrade(data, grade) {
-    for(var i = 0; i < data.length; i++) {
-      if (data[i].label === grade[0]) {
-          return data[i]
-      }
-    }
-
-    return null
-  }
-
   getStats() {
     const grades = this.props.sites
       .map(site => {
         return site.tls ? site.tls['Grade'] : 'X'
       })
       .reduce((data, grade) => {
-        const current = this.findGrade(data, grade)
+        const current = data.find((item) => {
+          return item.label === grade[0]
+        })
 
         if (current) {
           current.value += 1

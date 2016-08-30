@@ -32,28 +32,6 @@ describe("Categories", () => {
     })
   })
 
-  describe("findGrade", () => {
-    it('should find grade', () => {
-      const grade = 'B'
-      const data = [
-        {label: 'A'},
-        {label: grade},
-      ]
-
-      expect(wrapper.instance().findGrade(data, grade)).to.equal(data[1])
-    })
-
-    it('should not find grade', () => {
-      const grade = 'C'
-      const data = [
-        {label: 'A'},
-        {label: 'B'},
-      ]
-
-      expect(wrapper.instance().findGrade(data, grade)).to.be.null
-    })
-  })
-
   describe("setData", () => {
     it('should set color attribute', () => {
       const data = [
