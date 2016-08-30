@@ -5,8 +5,8 @@ import './Charts.css'
 
 const Charts = props =>
   <div className="charts">
-    <Bool sites={props.sites} property="Valid HTTPS" label="utilisent HTTPS" />
-    <Bool sites={props.sites} property="Strictly Forces HTTPS" label="forcent l'utilisation de HTTPS" />
+    <Bool sites={props.sites} property="Valid HTTPS" title="utilisent HTTPS" label="HTTPS" />
+    <Bool sites={props.sites} property="Strictly Forces HTTPS" title="forcent l'utilisation de HTTPS" label="Force HTTPS" />
     <Categories sites={props.sites} />
   </div>
 

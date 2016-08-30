@@ -19,12 +19,12 @@ class ChartBool extends Component {
       {
         value: result,
         color: "#569a6f",
-        label: "HTTPS"
+        label: this.props.label
       },
       {
         value: 100 - result,
         color: "#FFFFFF",
-        label: "HTTP"
+        label: "Autre"
       }
     ]
 
@@ -33,7 +33,7 @@ class ChartBool extends Component {
       chart =
       <div>
         <Pie data={data} />
-        <h4>{result}% des sites {this.props.label}</h4>
+        <h4>{result}% {this.props.title}</h4>
       </div>
     }
 
