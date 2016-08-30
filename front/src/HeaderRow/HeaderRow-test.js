@@ -2,13 +2,13 @@ import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import sinon from 'sinon'
-import HeaderRow from '../src/HeaderRow/HeaderRow';
-import HttpsValid from '../src/cells/https/Valid'
-import HttpsGrade from '../src/cells/https/Grade'
-import HttpsEnforce from '../src/cells/https/Enforce'
-import Http2 from '../src/cells/Http2'
+import HeaderRow from './HeaderRow';
+import HttpsValid from '../cells/https/Valid/Valid'
+import HttpsGrade from '../cells/https/Grade/Grade'
+import HttpsEnforce from '../cells/https/Enforce/Enforce'
+import Http2 from '../cells/Http2/Http2'
 
-const arraySite = require('./resources/array-sites')
+const arraySite = require('../../test/resources/array-sites')
 
 describe("HeaderRow", () => {
 

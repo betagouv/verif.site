@@ -1,7 +1,7 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import SearchBar from '../src/SearchBar/SearchBar'
+import SearchBar from './SearchBar'
 
 describe("SearchBar", () => {
 

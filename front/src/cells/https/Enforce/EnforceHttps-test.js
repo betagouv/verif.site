@@ -1,8 +1,8 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import Badge from '../src/cells/Badge'
-import HttpsEnforce from '../src/cells/https/Enforce'
+import Badge from '../../cells/Badge'
+import HttpsEnforce from './Enforce'
 
 
 describe("HttpsEnforce", () => {

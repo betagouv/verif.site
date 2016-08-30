@@ -2,7 +2,7 @@ import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
-import HttpsDate from '../src/cells/https/Date';
+import HttpsDate from './Date';
 
 describe("HttpsDate", () => {
   let clock

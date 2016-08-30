@@ -2,11 +2,11 @@ import React from 'react'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import sinon from 'sinon'
-import Content from '../src/Content/Content'
-import Site from '../src/Site/Site'
-import SearchBar from '../src/SearchBar/SearchBar'
+import Content from './Content'
+import Site from '../Site/Site'
+import SearchBar from '../SearchBar/SearchBar'
 
-const arraySite = require('./resources/array-sites')
+const arraySite = require('../../test/resources/array-sites')
 
 describe("Content", () => {
 
