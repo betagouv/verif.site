@@ -3,7 +3,7 @@ import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import Categories from './Categories'
 
-const arraySite = require('./resources/array-sites')
+const arraySite = require('../../../test/resources/array-sites')
 
 describe("Categories", () => {
   const wrapper = shallow(<Categories sites={arraySite} />)

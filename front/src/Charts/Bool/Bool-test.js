@@ -3,7 +3,7 @@ import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import Bool from './Bool'
 
-const arraySite = require('./resources/array-sites')
+const arraySite = require('../../../test/resources/array-sites')
 
 describe("Bool", () => {
 
@@ -23,17 +23,17 @@ describe("Bool", () => {
       }, 10)
     })
 
-    it('should display label', (done) => {
-      const wrapper = mount(<Bool sites={arraySite} property="Valid HTTPS" label="label" />)
+    it('should display title', (done) => {
+      const wrapper = mount(<Bool sites={arraySite} property="Valid HTTPS" title="title" />)
 
       setTimeout(() => {
-        expect(wrapper.text()).to.contain(wrapper.props().label)
+        expect(wrapper.text()).to.contain(wrapper.props().title)
         done()
       }, 10)
     })
 
     it('should display percent', (done) => {
-      const wrapper = mount(<Bool sites={arraySite} property="Valid HTTPS" label="label" />)
+      const wrapper = mount(<Bool sites={arraySite} property="Valid HTTPS" label="label"/>)
 
       setTimeout(() => {
         expect(wrapper.text()).to.contain('100%')
@@ -64,7 +64,7 @@ describe("Bool", () => {
     })
 
     it('should 50% https', (done) => {
-      let newArraySite = arraySite
+      let newArraySite = arraySite.slice()
       newArraySite[0].inspect["Valid HTTPS"] = false
       const wrapper = mount(<Bool sites={newArraySite} property="Valid HTTPS" label="label" />)
 
@@ -75,7 +75,7 @@ describe("Bool", () => {
     })
 
     it('should 0% https', (done) => {
-      let newArraySite = arraySite
+      let newArraySite = arraySite.slice()
       newArraySite.forEach(function(element) {
         element.inspect["Valid HTTPS"] = false
       })

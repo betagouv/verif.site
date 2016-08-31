@@ -2,7 +2,7 @@ import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import CustomUptimeRatio from './CustomUptimeRatio'
-import UptimeRatio from './UptimeRatio/UptimeRatio'
+import UptimeRatio from '../UptimeRatio/UptimeRatio'
 
 describe('CustomUptimeRatio', () => {
   describe('when there is no data', () => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import Badge from '../../cells/Badge'
+import Badge from '../../Badge/Badge'
 import HttpsEnforce from './Enforce'
 
 
