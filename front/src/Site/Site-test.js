@@ -55,7 +55,7 @@ describe('HeaderRow', () => {
     it('Should update state on fetch', (done) => {
 
       //when
-      const site = arraySite[0];
+      const site = deepClone(arraySite)[0];
       site.meta.UptimeApiKey = "testKey"
       const wrapper = shallow(<Site site={site} />)
 
@@ -70,3 +70,7 @@ describe('HeaderRow', () => {
     })
   })
 })
+
+function deepClone(object) {
+  return JSON.parse(JSON.stringify(arraySite))
+}

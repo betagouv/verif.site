@@ -64,7 +64,7 @@ describe("Bool", () => {
     })
 
     it('should 50% https', (done) => {
-      let newArraySite = arraySite.slice()
+      let newArraySite = deepClone(arraySite)
       newArraySite[0].inspect["Valid HTTPS"] = false
       const wrapper = mount(<Bool sites={newArraySite} property="Valid HTTPS" label="label" />)
 
@@ -75,7 +75,7 @@ describe("Bool", () => {
     })
 
     it('should 0% https', (done) => {
-      let newArraySite = arraySite.slice()
+      let newArraySite = deepClone(arraySite)
       newArraySite.forEach(function(element) {
         element.inspect["Valid HTTPS"] = false
       })
@@ -89,3 +89,6 @@ describe("Bool", () => {
   })
 
 })
+function deepClone(object) {
+  return JSON.parse(JSON.stringify(arraySite))
+}
