@@ -41,8 +41,6 @@ class App extends Component {
     this.setState({showDomain: false})
   }
 
-
-
   render() {
     return (
       <div>

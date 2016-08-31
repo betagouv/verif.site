@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Admin from './Admin.js'
+import Admin from '../Admin/Admin.js'
+
 
 class Administrations extends Component {
   constructor(props) {
@@ -22,12 +23,14 @@ class Administrations extends Component {
   render() {
     const admins = this.groupSiteByAdmin()
     return (
-      <table className="site-table">
-        <tbody>
-          {Object.keys(admins)
-            .map((name, idx) => <Admin key={idx} name={name} sites={admins[name]} />)}
-        </tbody>
-      </table>
+      <div>
+        <table className="site-table">
+          <tbody>
+            {Object.keys(admins)
+              .map((name, idx) => <Admin key={idx} name={name} sites={admins[name]} />)}
+            </tbody>
+          </table>
+      </div>
     )
   }
 }

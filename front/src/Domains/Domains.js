@@ -42,10 +42,10 @@ class Content extends Component {
     const search = new RegExp(this.state.query, 'i')
     const displaySites = this.props.sites
       .filter( site => site.meta.Administration.match(search) || site.meta.Domain.match(search))
-
     return (
-      <div className="content">
+      <div>
         <Charts sites={displaySites} />
+
         <table className="site-table">
           <thead>
             <SearchBar onChange={this.handleTextChange} query={this.state.query} />
