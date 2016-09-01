@@ -1,6 +1,8 @@
 import React from 'react';
 import { expect } from 'chai';
 import { mount, shallow } from 'enzyme';
+import { deepClone } from '../../test/tools'
+
 import Site from './Site';
 import fetchMock from 'fetch-mock'
 
@@ -70,7 +72,3 @@ describe('HeaderRow', () => {
     })
   })
 })
-
-function deepClone(object) {
-  return JSON.parse(JSON.stringify(arraySite))
-}

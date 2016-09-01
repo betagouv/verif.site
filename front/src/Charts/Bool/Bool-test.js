@@ -2,6 +2,7 @@ import React from 'react'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import Bool from './Bool'
+import { deepClone } from '../../../test/tools'
 
 const arraySite = require('../../../test/resources/array-sites')
 
@@ -89,6 +90,3 @@ describe("Bool", () => {
   })
 
 })
-function deepClone(object) {
-  return JSON.parse(JSON.stringify(arraySite))
-}
