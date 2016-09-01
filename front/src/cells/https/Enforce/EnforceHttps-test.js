@@ -6,13 +6,6 @@ import HttpsEnforce from './Enforce'
 
 
 describe("HttpsEnforce", () => {
-  describe("when there is no data", () => {
-    it("contains empty cell", () => {
-      const expectedValue = <td className="unknown"><span>HTTPS Inconnu</span></td>
-      expect(shallow(<HttpsEnforce />).contains(expectedValue)).to.equal(true)
-    })
-  })
-
   describe("when there a valid HTTPS", () => {
     const inspect = {}
     inspect["Strictly Forces HTTPS"] = true

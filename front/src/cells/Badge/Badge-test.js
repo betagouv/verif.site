@@ -10,7 +10,7 @@ describe("Badge", () => {
   })
 
   it("use the correst status as class", () => {
-    expect(shallow(<Badge status='warning' />).find('td.warning')).to.have.length(1)
+    expect(shallow(<Badge status='warning' />).find('.warning')).to.have.length(1)
   })
 
   it("show the text", () => {

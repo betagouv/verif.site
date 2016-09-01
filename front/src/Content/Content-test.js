@@ -14,13 +14,7 @@ describe("Content", () => {
   it('should have a content class', () => {
     const wrapper = shallow(<Content sites={arraySite} />)
 
-    expect(wrapper.hasClass('content')).to.equal(true)
-  })
-
-  it('should have a site-table class', () => {
-    const wrapper = shallow(<Content sites={arraySite} />)
-
-    expect(wrapper.find('.content').find('.site-table')).to.have.length(1);
+    expect(wrapper.hasClass('site-table')).to.equal(true)
   })
 
   it("should have a Charts Component", () => {
