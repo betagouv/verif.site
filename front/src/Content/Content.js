@@ -52,7 +52,7 @@ class Content extends Component {
           </thead>
 
           {displaySites
-            .map((site, idx) => <Site key={idx} site={site} filterAdministration={this.filterAdministration}/>)}
+            .map((site) => <Site key={site.meta.Domain} site={site} filterAdministration={this.filterAdministration}/>)}
         </table>
       </div>
     )
