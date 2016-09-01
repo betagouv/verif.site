@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import HeaderRow from '../HeaderRow/HeaderRow'
 import DetailRow from '../DetailRow/DetailRow'
+import './Site.css'
 
 function buildUptimeRobotURl({apiKey, format, wrapInJsonCallback, daysForCustomRatio, daysForResponseTimesAverage}) {
   const noJsonCallback = wrapInJsonCallback ? 0 : 1;
@@ -45,7 +46,6 @@ class Site extends Component {
 
   render() {
     return (
-
       <div className="site">
         <HeaderRow site={this.props.site} onArrowClick={this.onArrowClick} filterAdministration={this.props.filterAdministration} monitor={this.state.monitor}/>
         <DetailRow site={this.props.site} visible={this.state.isDetailVisible}/>

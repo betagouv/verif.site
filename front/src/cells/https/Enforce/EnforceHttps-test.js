@@ -17,7 +17,7 @@ describe("HttpsEnforce", () => {
     const inspect = {}
     inspect["Strictly Forces HTTPS"] = true
     it("contains a valid badge", () => {
-      const expectedValue = <Badge status='valid' text="Force l'utilisation de HTTPS" icon='fa-check-circle'/>
+      const expectedValue = <Badge status='valid' text="Force HTTPS" icon='fa-check'/>
       expect(shallow(<HttpsEnforce inspect={inspect} />).contains(expectedValue)).to.equal(true)
     })
   })
@@ -26,7 +26,7 @@ describe("HttpsEnforce", () => {
     const inspect = {}
     inspect["Strictly Forces HTTPS"] = false
     it("contains a invalid badge", () => {
-      const expectedValue = <Badge status='warning' text="Ne force pas l'utilisation de HTTPS" icon='fa-exclamation-triangle'/>
+      const expectedValue = <Badge status='warning' text="Ne force pas HTTPS" icon='fa-exclamation-triangle'/>
       expect(shallow(<HttpsEnforce inspect={inspect} />).contains(expectedValue)).to.equal(true)
     })
   })

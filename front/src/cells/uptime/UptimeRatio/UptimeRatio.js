@@ -15,7 +15,7 @@ class UptimeRatio extends Component {
 
   render() {
     if (!this.props.ratio) {
-      return <div className="unknown"></div>
+      return null
     }
 
     const text = `${this.props.ratio}%`

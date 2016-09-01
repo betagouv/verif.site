@@ -1,0 +1,4 @@
+.badges {
+  display: flex;
+  flex-flow: row wrap;
+}

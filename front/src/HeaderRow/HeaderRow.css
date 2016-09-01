@@ -1,41 +1,35 @@
 .site-header {
   display: flex;
   flex-direction: row;
+  background-color: #fafafa;
 }
 
-.show-details {
-  margin-right: none;
-  width: 40px;
-  background-color: white;
-}
-
-.show-details button, .administration button {
-  background-color: inherit;
-  box-sizing: border-box;
-  padding: 2px 6px 3px;
-  border-width: 2px;
-  border: none;
-  cursor: pointer;
-}
-
-.show-details button:focus, .administration button:focus {
-  outline:none;
-}
-
-.administration button:hover {
-  text-decoration: underline;
-}
-
-.administration button {
-  font-weight: lighter;
-  color: grey;
-  font-size: .9em;
-  padding: 0;
-}
-
-.show-details button {
-  color: #7E6B8F;
-  background-color: inherit;
-  font-size: 2em;
+.site-header a {
+  text-decoration: none;
+  font-size: 1.2em;
   font-weight: bold;
+  color: #7e6b8f;
+}
+
+.site-header .header-title {
+  width: 25%;
+  min-width: 25%;
+}
+
+.site-header .badges {
+  width: 75%;
+}
+
+@media (max-width: 639px) {
+  .site-header {
+    flex-direction: column;
+  }
+
+  .site-header .header-title {
+    width: 100%;
+  }
+
+  .site-header .badges {
+    width: 100%;
+  }
 }

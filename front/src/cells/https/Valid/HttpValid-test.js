@@ -17,7 +17,7 @@ describe("HttpsValid", () => {
     const inspect = {}
     inspect["Valid HTTPS"] = true
     it("contains a valid badge", () => {
-      const expectedValue = <Badge status='valid' text='HTTPS valide' icon='fa-check-circle'/>
+      const expectedValue = <Badge status='valid' text='HTTPS valide' icon='fa-check'/>
       expect(shallow(<HttpsValid inspect={inspect} />).contains(expectedValue)).to.equal(true)
     })
   })

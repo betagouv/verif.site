@@ -14,9 +14,7 @@ function getStatus(grade) {
 class HttpsGrade extends Component {
   render() {
     if(!this.props.tls) {
-      return (
-        <div className="unknown"><span></span></div>
-      )
+      return null
     }
 
     const status = getStatus(this.props.tls["Grade"])

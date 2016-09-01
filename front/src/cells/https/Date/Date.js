@@ -22,21 +22,15 @@ function computeDiffDays(date) {
 class HttpsDate extends Component {
   render() {
     if(!this.props.sslyze || !this.props.sslyze['Not After']) {
-      return (
-        <div className="unknown"></div>
-      )
+      return null
     }
 
     const diffDays = computeDiffDays(this.props.sslyze['Not After'])
 
     return (
       <div className={matchStatus(diffDays) + ' badge'}>
-        <div className="content">
-          <div className="column">
-            <div className="big">{ `${diffDays}j` }</div>
-            <div>avant expiration du certificat</div>
-          </div>
-        </div>
+        <div className="big">{ `${diffDays}j` }</div>
+        <div>Expiration du certificat</div>
       </div>
     )
   }

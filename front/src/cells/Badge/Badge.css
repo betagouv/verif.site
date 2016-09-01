@@ -1,0 +1,29 @@
+.badge {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  line-height: 3em;
+  width: 25%;
+}
+
+.badge i.icon {
+  font-size: 1.5em;
+}
+
+@media (min-width:481px) {
+  .badge {
+    width: 50%;
+  }
+}
+
+@media (min-width:641px) {
+  .badge {
+    width: 33%;
+  }
+}
+
+@media (min-width:961px) {
+  .badge {
+    width: 25%;
+  }
+}
