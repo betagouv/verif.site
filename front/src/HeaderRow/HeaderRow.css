@@ -16,7 +16,7 @@
   min-width: 25%;
 }
 
-.site-header .badges {
+.site-header .badges-container {
   width: 75%;
 }
 
@@ -29,7 +29,7 @@
     width: 100%;
   }
 
-  .site-header .badges {
+  .site-header .badges-container {
     width: 100%;
   }
 }

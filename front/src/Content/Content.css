@@ -28,6 +28,27 @@
   color: white;
 }
 
+
+.mini-badges .badge.valid .icon,
+.mini-badges .badge.valid .big,
+.mini-badges .badge.valid .big a {
+  color: lightgrey;
+}
+
+.mini-badges .badge.invalid .icon,
+.mini-badges .badge.invalid .big,
+.mini-badges .badge.invalid .big a {
+  color: lightgrey;
+  background-color: inherit;
+}
+
+.mini-badges .badge.warning .icon,
+.mini-badges .badge.warning .big,
+.mini-badges .badge.warning .big a {
+  color: lightgrey;
+  background-color: inherit;
+}
+
 @media (max-width: 639px) {
   .search {
     width: 100%;
