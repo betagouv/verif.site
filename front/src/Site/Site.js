@@ -14,6 +14,7 @@ class Site extends Component {
     super(props)
     this.state = {isDetailVisible: false, monitor: {}}
     this.onArrowClick = this.onArrowClick.bind(this)
+
     this.fetchUptime()
   }
 
@@ -43,8 +44,8 @@ class Site extends Component {
     }
   }
 
-
   render() {
+
     return (
       <div className="site">
         <HeaderRow site={this.props.site} onArrowClick={this.onArrowClick} filterAdministration={this.props.filterAdministration} monitor={this.state.monitor}/>

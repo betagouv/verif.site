@@ -2,4 +2,9 @@
   text-align: center;
   display: flex;
   justify-content: center;
+  margin-top: 2em;
+}
+
+.chart .title {
+  font-weight: 200;
 }

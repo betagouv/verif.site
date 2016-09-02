@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Charts from '../Charts/Charts'
 import './Header.css'
 
 class Header extends Component {
@@ -7,6 +8,8 @@ class Header extends Component {
       <div id="header">
         <h1>Le Vérificateur</h1>
         <span>Estimer la sécurité et la performance des sites web de l'administration</span>
+
+        <Charts sites={this.props.sites} />
       </div>
     )
   }

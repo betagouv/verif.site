@@ -62,20 +62,12 @@ class Categories extends Component {
     const result = this.getStats()
     const data = this.setData(result)
 
-    let chart
-    if (result.length) {
-      chart =
-      <div>
-        <Pie data={data.sort((a, b) => {
-          return a.value < b.value
-        })} />
-        <h4>Notes SSL</h4>
-      </div>
-    }
-
     return (
         <div className='chart'>
-          {chart}
+          <Pie height={60} data={data.sort((a, b) => {
+            return a.value < b.value
+          })} />
+          <div className='title'>Notes SSL</div>
         </div>
       )
   }

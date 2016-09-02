@@ -28,18 +28,12 @@ class ChartBool extends Component {
       }
     ]
 
-    let chart
-    if (result >= 0) {
-      chart =
-      <div>
-        <Pie data={data} />
-        <h4>{result}% {this.props.title}</h4>
-      </div>
-    }
+    const title = result ? `${result}% ${this.props.title}` : `0% ${this.props.title}`
 
     return (
         <div className='chart'>
-          {chart}
+          <Pie data={data} height={60} />
+          <div className='title'>{title}</div>
         </div>
       )
   }
