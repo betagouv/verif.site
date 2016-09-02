@@ -1,5 +1,8 @@
 # [verif.site](https://verif.site)
 
+[![CircleCI](https://circleci.com/gh/sgmap/verif.site.svg?style=svg)](https://circleci.com/gh/sgmap/verif.site)
+[![Coverage Status](https://coveralls.io/repos/github/sgmap/verif.site/badge.svg?branch=coveralls)](https://coveralls.io/github/sgmap/verif.site?branch=master)
+
 Ce site permet de visualiser les statistiques des différents sites de [l'incubateur des startup d'État](https://beta.gouv.fr)
 
 ## Mettre à jour les données
