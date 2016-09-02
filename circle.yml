@@ -16,6 +16,8 @@ dependencies:
 test:
   override:
     - make test
+  post:
+    - cd front && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls --verbose
 
 deployment:
   production:
