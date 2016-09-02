@@ -21,6 +21,7 @@
   "dependencies": {
     "canvas": "^1.4.0",
     "chart.js": "1.1.1",
+    "coveralls": "2.11.12",
     "loaders.css": "0.1.2",
     "react": "15.3.1",
     "react-chartjs": "0.8.0",
