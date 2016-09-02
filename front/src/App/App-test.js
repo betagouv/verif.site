@@ -7,6 +7,7 @@ import Content from '../Content/Content'
 import Site from '../Site/Site'
 import Footer from '../Footer/Footer'
 import fetchMock from 'fetch-mock'
+import { Loader } from 'react-loaders'
 
 const httpSites = require('../../test/resources/http-sites')
 const arraySite = require('../../test/resources/array-sites')
@@ -22,6 +23,14 @@ describe("Apps", () => {
   })
 
   describe("Init", () => {
+
+    it('show the loader', () => {
+      const wrapper = shallow(<App/>)
+
+      expect(wrapper.state().loading).to.be.true
+      expect(wrapper.find(Loader)).to.have.length(1)
+    })
+
     it('Should add the analytics', (done) => {
       //when
       const wrapper = shallow(<App/>)
@@ -30,6 +39,7 @@ describe("Apps", () => {
       setTimeout(() => {
         expect(fetchMock.calls().matched).to.have.length(1)
         expect(wrapper.state().analytics).to.have.length(2)
+        expect(wrapper.state().loading).to.be.false
         expect(wrapper.state().analytics).deep.equal(arraySite)
         done()
       }, 10)

@@ -1,6 +1,8 @@
 import React from 'react';
 import { expect } from 'chai';
 import { mount, shallow } from 'enzyme';
+import { deepClone } from '../../test/tools'
+
 import Site from './Site';
 import fetchMock from 'fetch-mock'
 
@@ -55,7 +57,7 @@ describe('HeaderRow', () => {
     it('Should update state on fetch', (done) => {
 
       //when
-      const site = arraySite[0];
+      const site = deepClone(arraySite)[0];
       site.meta.UptimeApiKey = "testKey"
       const wrapper = shallow(<Site site={site} />)
 

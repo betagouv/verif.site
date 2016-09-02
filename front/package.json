@@ -18,9 +18,11 @@
   "dependencies": {
     "canvas": "^1.4.0",
     "chart.js": "1.1.1",
+    "loaders.css": "0.1.2",
     "react": "15.3.1",
     "react-chartjs": "0.8.0",
-    "react-dom": "15.3.1"
+    "react-dom": "15.3.1",
+    "react-loaders": "2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,7 +30,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "lint": "eslint ./src/",
-    "test": "mocha test/.setup.js $(find ./src -d -name '*-test.js')",
+    "test": "mocha test/.setup.js $(find ./src -depth -name '*-test.js')",
     "dev": "mocha test/.setup.js src/**/*-test.js --watch"
   },
   "eslintConfig": {

@@ -2,6 +2,7 @@ import React from 'react'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import Bool from './Bool'
+import { deepClone } from '../../../test/tools'
 
 const arraySite = require('../../../test/resources/array-sites')
 
@@ -64,7 +65,7 @@ describe("Bool", () => {
     })
 
     it('should 50% https', (done) => {
-      let newArraySite = arraySite.slice()
+      let newArraySite = deepClone(arraySite)
       newArraySite[0].inspect["Valid HTTPS"] = false
       const wrapper = mount(<Bool sites={newArraySite} property="Valid HTTPS" label="label" />)
 
@@ -75,7 +76,7 @@ describe("Bool", () => {
     })
 
     it('should 0% https', (done) => {
-      let newArraySite = arraySite.slice()
+      let newArraySite = deepClone(arraySite)
       newArraySite.forEach(function(element) {
         element.inspect["Valid HTTPS"] = false
       })

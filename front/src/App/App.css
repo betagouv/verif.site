@@ -22,3 +22,36 @@ input:focus {
 .hidden {
   display: none;
 }
+
+
+.loaderContainer {
+  display:flex;
+  justify-content:center;
+  margin-top: 12%;
+  margin-bottom: 12%;
+}
+
+.loaderContainer.hidden {
+  display: none;
+}
+
+.loader-inner.pacman > div:nth-child(3) {
+  background-color: #7E6B8F;
+}
+.loader-inner.pacman > div:nth-child(1) {
+  border-color: #7E6B8F;
+  border-right-color: transparent;
+}
+.loader-inner.pacman > div:nth-child(2) {
+  border-color: #7E6B8F;
+  border-right-color: transparent;
+}
+.loader-inner.pacman > div:nth-child(3) {
+  background-color: #7E6B8F;
+}
+.loader-inner.pacman > div:nth-child(4) {
+  background-color: #7E6B8F;
+}
+.loader-inner.pacman > div:nth-child(5) {
+  background-color: #7E6B8F;
+}
