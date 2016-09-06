@@ -20,7 +20,7 @@
   width: 75%;
 }
 
-@media (max-width: 639px) {
+@media (max-width: 799px) {
   .site-header {
     flex-direction: column;
   }

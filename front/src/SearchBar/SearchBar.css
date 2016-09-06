@@ -37,7 +37,7 @@
   background-color: #fafafa;
 }
 
-@media (max-width: 639px) {
+@media (max-width: 799px) {
   .search {
     width: 100%;
   }

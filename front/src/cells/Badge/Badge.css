@@ -16,24 +16,24 @@
   padding: 7px 0;
 }
 
-@media (min-width:481px) {
+@media (min-width: 481px) {
   .badge {
     width: 50%;
   }
 }
 
-@media (min-width:641px) {
+@media (max-width: 641px) {
   .badge {
     width: 33%;
+  }
+}
+
+@media (min-width: 961px) {
+  .badge {
+    width: 25%;
   }
 
   .mini-badges .badge {
     width: 12.5%;
-  }
-}
-
-@media (min-width:961px) {
-  .badge {
-    width: 25%;
   }
 }
