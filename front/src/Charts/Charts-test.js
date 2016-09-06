@@ -18,7 +18,7 @@ describe("Charts", () => {
   it('should have Bool Component', () => {
     const wrapper = shallow(<Charts sites={arraySite} />)
 
-    expect(wrapper.find(Bool)).to.have.length(2)
+    expect(wrapper.find(Bool)).to.have.length(1)
   })
 
   it('should have Categories Component', () => {
