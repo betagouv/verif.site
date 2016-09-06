@@ -65,17 +65,14 @@ class App extends Component {
     const analytics = this.state.analytics.filter( site => site.meta.Administration.match(search) || site.meta.Domain.match(search))
 
     return (
-      <div>
-<<<<<<< HEAD
-        <Header />
+      <div className="site-content">
+        <Header sites={analytics} />
+
         <div className={this.state.loading ? 'loaderContainer': 'loaderContainer hidden'}>
           <Loader type="pacman" />
         </div>
-        <Content sites={this.state.analytics} />
-=======
-        <Header sites={analytics} />
+
         <Content sites={analytics} query={this.state.query} handleTextChange={this.handleTextChange} filterAdministration={this.filterAdministration} />
->>>>>>> Put charts in header
         <Footer lastUpdated={this.state ? this.state.meta.lastUpdated : '...'} />
       </div>
     )

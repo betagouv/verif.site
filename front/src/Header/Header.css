@@ -3,12 +3,8 @@
   font-size: 1em;
   padding-left: 2em;
   overflow: hidden;
-
   color: white;
-  background: #502a71;
-  background: linear-gradient(45deg,#502a71 1%,#502a71 40%,#502a71 40%,#8970d4 100%)
 }
-
 
 #header h1 {
   padding: .2em 0 0 0;

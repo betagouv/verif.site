@@ -11,6 +11,16 @@ light-red:    #F78F9D
 
 */
 
+body {
+  background: linear-gradient(45deg,#8970d4 1%,#8970d4 40%,#8970d4 40%,#502a71 100%)
+}
+
+.site-content {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 a, a:hover {
   color: black;
 }
