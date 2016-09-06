@@ -41,16 +41,6 @@ describe("Bool", () => {
         done()
       }, 10)
     })
-
-    it('should not render canvas if no site is displayed', (done) => {
-      const wrapper = mount(<Bool sites={[]} property="Valid HTTPS" label="label"/>)
-
-      setTimeout(() => {
-        expect(wrapper.find('canvas')).to.have.length(0)
-        done()
-      }, 10)
-    })
-
   })
 
   describe("HTTPS percent", () => {

@@ -14,7 +14,7 @@ describe('HeaderRow', () => {
 
   describe('after init', () => {
     it('the details are hidden', () => {
-      const wrapper = mount(<table><Site site={arraySite[0]}/></table>)
+      const wrapper = mount(<Site site={arraySite[0]}/>)
 
       expect(wrapper.find('.hidden')).to.have.length(1);
       expect(wrapper.find('.visible')).to.have.length(0);
@@ -23,7 +23,7 @@ describe('HeaderRow', () => {
 
   describe('when we click on the button', ()=> {
     it('shows the detail', () => {
-      const wrapper = mount(<table><Site site={arraySite[0]}/></table>)
+      const wrapper = mount(<Site site={arraySite[0]}/>)
 
       wrapper.find('.show-details button').simulate('click')
 
@@ -34,7 +34,7 @@ describe('HeaderRow', () => {
 
   describe('when we click twice on the button', ()=> {
     it('hide the detail', () => {
-      const wrapper = mount(<table><Site site={arraySite[0]}/></table>)
+      const wrapper = mount(<Site site={arraySite[0]}/>)
 
       wrapper.find('.show-details button').simulate('click')
       wrapper.find('.show-details button').simulate('click')

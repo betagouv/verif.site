@@ -11,6 +11,16 @@ light-red:    #F78F9D
 
 */
 
+body {
+  background: linear-gradient(45deg,#8970d4 1%,#8970d4 40%,#8970d4 40%,#502a71 100%)
+}
+
+.site-content {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 a, a:hover {
   color: black;
 }
@@ -33,25 +43,4 @@ input:focus {
 
 .loaderContainer.hidden {
   display: none;
-}
-
-.loader-inner.pacman > div:nth-child(3) {
-  background-color: #7E6B8F;
-}
-.loader-inner.pacman > div:nth-child(1) {
-  border-color: #7E6B8F;
-  border-right-color: transparent;
-}
-.loader-inner.pacman > div:nth-child(2) {
-  border-color: #7E6B8F;
-  border-right-color: transparent;
-}
-.loader-inner.pacman > div:nth-child(3) {
-  background-color: #7E6B8F;
-}
-.loader-inner.pacman > div:nth-child(4) {
-  background-color: #7E6B8F;
-}
-.loader-inner.pacman > div:nth-child(5) {
-  background-color: #7E6B8F;
 }

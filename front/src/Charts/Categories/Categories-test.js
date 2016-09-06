@@ -21,15 +21,6 @@ describe("Categories", () => {
         done()
       }, 10)
     })
-
-    it('should not render canvas if no site is displayed', (done) => {
-      const wrapper = mount(<Categories sites={[]} />)
-
-      setTimeout(() => {
-        expect(wrapper.find('canvas')).to.have.length(0)
-        done()
-      }, 10)
-    })
   })
 
   describe("setData", () => {

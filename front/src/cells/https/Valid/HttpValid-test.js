@@ -6,18 +6,11 @@ import HttpsValid from './Valid'
 
 
 describe("HttpsValid", () => {
-  describe("when there is no data", () => {
-    it("contains empty cell", () => {
-      const expectedValue = <td className="unknown"></td>
-      expect(shallow(<HttpsValid />).contains(expectedValue)).to.equal(true)
-    })
-  })
-
   describe("when there a valid HTTPS", () => {
     const inspect = {}
     inspect["Valid HTTPS"] = true
     it("contains a valid badge", () => {
-      const expectedValue = <Badge status='valid' text='HTTPS valide' icon='fa-check-circle'/>
+      const expectedValue = <Badge status='valid' text='HTTPS valide' icon='fa-check'/>
       expect(shallow(<HttpsValid inspect={inspect} />).contains(expectedValue)).to.equal(true)
     })
   })

@@ -5,13 +5,11 @@ import Badge from '../Badge/Badge'
 class Http2 extends Component {
   render() {
     if(!this.props.tls) {
-      return (
-        <td className="unknown"></td>
-      )
+      return null
     }
     if(this.props.tls["HTTP/2"]) {
       return (
-        <Badge status='valid' text='HTTP2 disponible' icon='fa-check-circle'/>
+        <Badge status='valid' text='HTTP2 disponible' icon='fa-check'/>
       )
     } else {
       return (

@@ -1,14 +1,8 @@
 #header {
-  padding: 1em 0 1.2em 0;
+  padding: 2em 1.2em;
   font-size: 1em;
-  padding-left: 2em;
   overflow: hidden;
-
   color: white;
-
-  background: #7E6B8F; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #502a71 , #7E6B8F); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #502a71 , #7E6B8F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #header h1 {

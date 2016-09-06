@@ -6,13 +6,11 @@ import Badge from '../../Badge/Badge'
 class HttpsValid extends Component {
   render() {
     if(!this.props.inspect) {
-      return (
-        <td className="unknown"></td>
-      )
+      return null
     }
     if(this.props.inspect["Valid HTTPS"]) {
       return (
-        <Badge status='valid' text='HTTPS valide' icon='fa-check-circle'/>
+        <Badge status='valid' text='HTTPS valide' icon='fa-check'/>
       )
     } else {
       return (

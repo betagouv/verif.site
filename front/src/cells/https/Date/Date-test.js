@@ -15,12 +15,6 @@ describe("HttpsDate", () => {
     clock.restore()
   })
 
-  it("show the unknown td when no data is available", () => {
-    const unknown = <td className="unknown"></td>
-    const noData = {}
-    expect(shallow(<HttpsDate sslyze={noData} />).contains(unknown)).to.equal(true)
-  })
-
   it("show the correct diff in days", () => {
     const expectedDiff = '116j';
     const expected = <div className="big">{expectedDiff}</div>
