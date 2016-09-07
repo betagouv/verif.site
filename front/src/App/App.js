@@ -46,7 +46,12 @@ class App extends Component {
   }
 
   handleTextChange(query) {
-    const newUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?q=${query}`
+    let newUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}`
+
+    if (query) {
+      newUrl += `?q=${query}`
+    }
+
     history.replaceState({path: newUrl}, "", newUrl)
     this.setState({query})
   }
