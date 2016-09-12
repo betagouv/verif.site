@@ -25,6 +25,6 @@ analyse(options, (err, stdout, stderr) => {
   files.push({name: 'meta', path: __dirname + '/../data/' + name + '.csv'})
 
   model(files, (data) => {
-    fs.writeFileSync(__dirname + '/../data/sites.json', JSON.stringify({data, meta: {lastUpdated: new Date().toLocaleString()}}), 'utf8')
+    fs.writeFileSync(__dirname + '/../data/sites.json', JSON.stringify({data, meta: {lastUpdated: new Date().toLocaleString()}}, null, 2), 'utf8')
   })
 })
