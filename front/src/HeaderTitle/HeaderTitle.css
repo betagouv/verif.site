@@ -1,0 +1,49 @@
+.header-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.show-details {
+  margin-right: none;
+  width: 40px;
+  background-color: white;
+  color: #7E6B8F;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.administration-filter {
+  font-weight: lighter;
+  color: grey;
+  font-size: 0.9em;
+  padding: 0;
+}
+
+.show-details, .administration-filter {
+  background-color: inherit;
+  box-sizing: border-box;
+  border-width: 2px;
+  border: none;
+  cursor: pointer;
+}
+
+.show-details:focus, .administration-filter:focus {
+  outline:none;
+}
+
+.administration-filter:hover {
+  text-decoration: underline;
+}
+
+a.anchor {
+  margin-left: 0.5em;
+}
+
+a.anchor:hover {
+  color: grey;
+}
+
+a.site-name:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,46 @@
+/*
+
+blue:   #A3D9FF
+purple: #7E6B8F
+green:  #96E6B3
+red:    #DA3E52
+yellow: #F2E94E
+
+dark-red: #98091D
+light-red:    #F78F9D
+
+*/
+
+body {
+  background: linear-gradient(45deg,#8970d4 1%,#8970d4 40%,#8970d4 40%,#502a71 100%)
+}
+
+.site-content {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+a, a:hover {
+  color: black;
+}
+
+input:focus {
+    outline-width: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.loaderContainer {
+  display:flex;
+  justify-content:center;
+  margin-top: 12%;
+  margin-bottom: 12%;
+}
+
+.loaderContainer.hidden {
+  display: none;
+}

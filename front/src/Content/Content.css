@@ -1,0 +1,60 @@
+.site-table {
+  border-color: white;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.badge.valid .icon,
+.badge.valid .big,
+.badge.valid .big a {
+  color: #569a6f;
+}
+
+.badge.invalid .icon,
+.badge.invalid .big,
+.badge.invalid .big a {
+  background-color: #DA3E52;
+  color: white;
+}
+
+.badge.warning .icon,
+.badge.warning .big,
+.badge.warning .big a {
+  background-color: #efb000;
+  color: white;
+}
+
+
+.mini-badges .badge.valid .icon,
+.mini-badges .badge.valid .big,
+.mini-badges .badge.valid .big a {
+  color: lightgrey;
+}
+
+.mini-badges .badge.invalid .icon,
+.mini-badges .badge.invalid .big,
+.mini-badges .badge.invalid .big a {
+  color: lightgrey;
+  background-color: inherit;
+}
+
+.mini-badges .badge.warning .icon,
+.mini-badges .badge.warning .big,
+.mini-badges .badge.warning .big a {
+  color: lightgrey;
+  background-color: inherit;
+}
+
+@media (max-width: 799px) {
+  .search {
+    width: 100%;
+  }
+
+  .badge {
+    width: 100%;
+  }
+}

@@ -1,0 +1,21 @@
+.charts {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  flex-wrap: wrap;
+}
+
+.chart .title {
+  font-weight: 200;
+}
+
+@media (max-width: 799px) {
+  .chart {
+    margin-bottom: 10px;
+  }
+
+  .chart:last-child {
+    margin-bottom: 0;
+  }
+}

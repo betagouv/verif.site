@@ -1,0 +1,10 @@
+footer {
+  color: #7E6B8F;
+  background-color: #efefef;
+  padding: 2em 0;
+  text-align: center;
+}
+
+footer li {
+  list-style-type: none;
+}

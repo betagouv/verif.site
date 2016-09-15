@@ -1,0 +1,12 @@
+{
+  "monitors":
+    {
+      "monitor":
+        [
+          {
+            "alltimeuptimeratio":"100",
+            "customuptimeratio":"90"
+          }
+        ]
+      }
+    }

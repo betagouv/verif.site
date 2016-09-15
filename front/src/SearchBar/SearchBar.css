@@ -1,0 +1,44 @@
+.search {
+  background-color: #fafafa;
+}
+
+.search {
+  width: 25%;
+  min-width: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search .icon {
+  width: 40px;
+}
+
+.search .icon {
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+}
+
+.fa-search {
+  color: #7e6b8f;
+}
+
+.search-bar {
+  width: 100%;
+}
+
+.search-bar > input {
+  border: 0;
+  width: 100%;
+  line-height: 3em;
+  font-size: 1.2em;
+  color: #7e6b8f;
+  background-color: #fafafa;
+}
+
+@media (max-width: 799px) {
+  .search {
+    width: 100%;
+  }
+}

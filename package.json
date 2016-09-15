@@ -18,6 +18,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.0",
     "eslint-plugin-react": "^6.2.0",
     "fetch-mock": "4.6.1",
+    "istanbul": "1.1.0-alpha.1",
     "jsdom": "9.4.2",
     "mocha": "3.0.2",
     "react-addons-test-utils": "15.3.0",
@@ -25,18 +26,21 @@
     "sinon": "^1.17.5"
   },
   "dependencies": {
-    "async": "2.0.1",
-    "aws-sdk": "2.4.10",
-    "csv-parser": "1.9.3",
-    "react": "^15.2.1",
-    "react-dom": "^15.2.1"
+    "canvas": "^1.4.0",
+    "chart.js": "1.1.1",
+    "coveralls": "2.11.12",
+    "loaders.css": "0.1.2",
+    "react": "15.3.1",
+    "react-chartjs": "0.8.0",
+    "react-dom": "15.3.1",
+    "react-loaders": "2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "lint": "eslint ./src/",
-    "test": "mocha front/test/.setup.js front/test/**/*-test.js",
+    "test": "istanbul cover node_modules/mocha/bin/_mocha -- --require front/test/.setup.js --bail --recursive 'front/src/**/*-test.js'",
     "dev": "mocha front/test/.setup.js front/test/**/*-test.js --watch",
     "update": "node import/index.js",
     "deploy": "front/deploy.sh"

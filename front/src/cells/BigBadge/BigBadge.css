@@ -1,0 +1,17 @@
+.badge .big {
+  font-size: 120%;
+  height: 100%;
+  font-weight: bold;
+  margin-right: 0.5em;
+  padding: 0 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.badge .big a {
+  text-decoration: none;
+}
+
+.badge .big a:hover {
+  text-decoration: underline;
+}

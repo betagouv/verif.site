@@ -1,0 +1,35 @@
+.site-header {
+  display: flex;
+  flex-direction: row;
+  background-color: #fafafa;
+}
+
+.site-header a {
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #7e6b8f;
+}
+
+.site-header .header-title {
+  width: 25%;
+  min-width: 25%;
+}
+
+.site-header .badges-container {
+  width: 75%;
+}
+
+@media (max-width: 799px) {
+  .site-header {
+    flex-direction: column;
+  }
+
+  .site-header .header-title {
+    width: 100%;
+  }
+
+  .site-header .badges-container {
+    width: 100%;
+  }
+}
