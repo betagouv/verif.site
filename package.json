@@ -36,7 +36,7 @@
     "react-loaders": "2.1.1"
   },
   "scripts": {
-    "preinstall": "which cairo-trace || (echo 'The canvas library depends on the Cairo binary being installed and in the path. See README for more information.'; exit 1)",
+    "preinstall": "(which cairo-trace || dpkg --status libcairo2) || (echo 'The canvas library depends on the Cairo binary being installed and in the path. See README for more information.'; exit 1)",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint ./src/",
