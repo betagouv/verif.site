@@ -43,7 +43,7 @@
     "test": "istanbul cover node_modules/mocha/bin/_mocha -- --require test/.setup.js --bail --recursive 'src/**/*-test.js'",
     "dev": "mocha test/.setup.js test/**/*-test.js --watch",
     "update": "node import/index.js",
-    "deploy": "deploy.sh"
+    "deploy": "./deploy.sh"
   },
   "eslintConfig": {
     "extends": "./node_modules/react-scripts/config/eslint.js",
