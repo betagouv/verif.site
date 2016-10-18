@@ -12,6 +12,7 @@ test:
     - cat ./coverage/lcov.info | ./node_modules/.bin/coveralls --verbose
     - >
       if [ -n "${RUN_UPDATE}" ]; then
+        docker run -v /home/ubuntu/verif.site/import/../data:/data -v /home/ubuntu/verif.site/import/../results:/home/scanner/results betagouv/domain-scan /data/sites.csv --scan=inspect,sslyze,tls,pageload --force
         npm run update;
       fi
 
