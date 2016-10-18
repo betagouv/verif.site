@@ -1,4 +1,6 @@
 machine:
+  services:
+    - docker
   node:
     version: 6.3.0
 
