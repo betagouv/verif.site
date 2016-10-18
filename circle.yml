@@ -10,6 +10,10 @@ general:
 test:
   post:
     - cat ./coverage/lcov.info | ./node_modules/.bin/coveralls --verbose
+    - >
+      if [ -n "${RUN_UPDATE}" ]; then
+        npm run update;
+      fi
 
 deployment:
   production:
