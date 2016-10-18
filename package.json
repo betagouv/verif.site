@@ -23,7 +23,8 @@
     "mocha": "3.0.2",
     "react-addons-test-utils": "15.3.0",
     "react-scripts": "0.2.0",
-    "sinon": "^1.17.5"
+    "sinon": "^1.17.5",
+    "superagent": "^2.3.0"
   },
   "dependencies": {
     "canvas": "^1.4.0",
