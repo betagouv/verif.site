@@ -3,7 +3,7 @@ const model = require('./model')
 const request = require('superagent')
 const fs = require('fs')
 
-const apiKey = process.env.DATA_GOUV_API_KEY
+const apiKey = process.env.DATA_GOUV_API_KEY  // in CI, this is set in the graphical interface
 
 const scanners = ['inspect', 'sslyze', 'tls', 'pageload']
 const name = 'sites'
