@@ -34,6 +34,8 @@ analyse(options, (err, stdout, stderr) => {
       process.exit(0)
     }
 
+    // This URL comes from the ressource hosted on our 'Incubateur' organization on data.gouv.fr
+    // To become a member, request an invite from an existing admin
     request
       .post('http://www.data.gouv.fr/api/1/datasets/5805f1e2c751df2bb879df72/resources/234299a6-e9a4-4cf4-a220-681a94ac3e92/upload/')
       .attach('file', filePath)
