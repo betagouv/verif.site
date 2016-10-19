@@ -14,7 +14,7 @@ const options = {
 }
 
 analyse(options, (err, stdout, stderr) => {
-  if(err) {
+  if (err) {
     console.error(err)
     process.exit(1)
   }
