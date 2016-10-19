@@ -1,9 +1,9 @@
 const analyse = require('./analyze')
 const model = require('./model')
-const request = require('superagent');
+const request = require('superagent')
 const fs = require('fs')
 
-const apiKey = process.env.DATA_GOUV_API_KEY;
+const apiKey = process.env.DATA_GOUV_API_KEY
 
 const scanners = ['inspect', 'sslyze', 'tls', 'pageload']
 const name = 'sites'
@@ -14,7 +14,10 @@ const options = {
 }
 
 analyse(options, (err, stdout, stderr) => {
-  if(err) return console.error(err)
+  if(err) {
+    console.error(err)
+    process.exit(1)
+  }
 
   console.log('analyze Done')
 
@@ -25,11 +28,12 @@ analyse(options, (err, stdout, stderr) => {
   files.push({name: 'meta', path: `${__dirname}/../data/${name}.csv`})
 
   model(files, (data) => {
-    const filePath = `${__dirname}/../data/${name}.json`;
+    const filePath = `${__dirname}/../data/${name}.json`
     fs.writeFileSync(filePath, JSON.stringify({data, meta: {lastUpdated: new Date().toLocaleString()}}, null, 2), 'utf8')
 
     if (!process.env.DATA_GOUV_API_KEY) {
-      return console.log('data.gouv api key not found, finished');
+      console.log('data.gouv api key not found, finished')
+      process.exit(0)
     }
 
     request
@@ -38,8 +42,13 @@ analyse(options, (err, stdout, stderr) => {
       .set('X-API-KEY', apiKey)
       .set('Accept', 'application/json')
       .end(function(err, res){
-        if (err) return console.err(err);
-        console.log('successfully uploaded to data.gouv');
+        if (err) {
+          console.err(err)
+          process.exit(1)
+        }
+
+        console.log('successfully uploaded to data.gouv')
+        process.exit(0)
       })
   })
 })
