@@ -1,4 +1,6 @@
 machine:
+  services:
+    - docker
   node:
     version: 6.3.0
 
@@ -18,3 +20,5 @@ deployment:
       - git config --global user.email "infra@beta.gouv.fr"
       - git config --global user.name "CircleCI"
       - npm run deploy
+      - npm run update:
+          timeout: 4800

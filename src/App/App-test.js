@@ -16,7 +16,7 @@ const arraySite = require('../../test/resources/array-sites')
 describe("Apps", () => {
 
   before(() => {
-    return fetchMock.mock('https://raw.githubusercontent.com/sgmap/sites/master/data/sites.json', 'GET', httpSites)
+    return fetchMock.mock('https://www.data.gouv.fr/s/resources/caracteristiques-techniques-des-sites/20161018-145351/sites.json', 'GET', httpSites)
   })
 
   afterEach(() => {

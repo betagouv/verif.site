@@ -32,7 +32,7 @@ class App extends Component {
   }
 
   getAnalytics() {
-    return fetch(`https://raw.githubusercontent.com/sgmap/sites/master/data/sites.json`)
+    return fetch('https://www.data.gouv.fr/s/resources/caracteristiques-techniques-des-sites/20161018-145351/sites.json')
       .then((response) => response.json())
       .then((json) => {
         const analytics = Object.keys(json.data).map((key) => {
