@@ -15,7 +15,7 @@ test:
 
 deployment:
   production:
-    branch: master
+    branch: data_gouv
     commands:
       - git config --global user.email "infra@beta.gouv.fr"
       - git config --global user.name "CircleCI"
