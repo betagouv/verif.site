@@ -19,8 +19,6 @@ analyse(options, (err, stdout, stderr) => {
     process.exit(1)
   }
 
-  console.log('analyze Done')
-
   const files = scanners.map((item) => {
     return {name: item, path: `${__dirname}/../results/${item}.csv`}
   })
@@ -32,7 +30,7 @@ analyse(options, (err, stdout, stderr) => {
     fs.writeFileSync(filePath, JSON.stringify({data, meta: {lastUpdated: new Date().toLocaleString()}}, null, 2), 'utf8')
 
     if (!process.env.DATA_GOUV_API_KEY) {
-      console.log('data.gouv api key not found, finished')
+      console.log('data.gouv api key not found, the generated results will not be uploaded')
       process.exit(0)
     }
 
