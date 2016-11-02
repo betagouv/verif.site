@@ -27,7 +27,10 @@ analyse(options, (err, stdout, stderr) => {
 
   model(files, (data) => {
     const filePath = `${__dirname}/../data/${name}.json`
-    fs.writeFileSync(filePath, JSON.stringify({data, meta: {lastUpdated: new Date().toLocaleString()}}, null, 2), 'utf8')
+    const lastUpdated = new Date().toLocaleString()
+    fs.writeFileSync(filePath, JSON.stringify({data, meta: { lastUpdated }}, null, 2), 'utf8')
+
+    console.log(`last updated at ${lastUpdated}`);
 
     if (!process.env.DATA_GOUV_API_KEY) {
       console.log('data.gouv api key not found, the generated results will not be uploaded')
@@ -47,7 +50,8 @@ analyse(options, (err, stdout, stderr) => {
           process.exit(1)
         }
 
-        console.log('successfully uploaded to data.gouv')
+        console.log(`successfully uploaded ${filePath} to data.gouv`)
+        console.log(`response: ${res.status}: ${res.body}`);
         process.exit(0)
       })
   })

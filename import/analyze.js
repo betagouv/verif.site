@@ -8,5 +8,6 @@ module.exports = function({ dockerImage, scanners, file}, callback) {
     ' /data/' + file + ' --scan=' + scanners.join(',') +
     ' --force';
 
+  console.log(`running scan\n${cmd}`);
   exec(cmd, callback);
 }
