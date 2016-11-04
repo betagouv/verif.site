@@ -36,7 +36,7 @@ class App extends Component {
       .then((response) => response.json())
       .then(dataset => {
         const resource = dataset.resources[0]
-        return resource.url
+        return resource.url.replace(/^http:\/\//i, 'https://')
       })
       .then(url => fetch(url))
       .then((response) => response.json())
