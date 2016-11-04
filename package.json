@@ -19,7 +19,7 @@
     "eslint-plugin-import": "^1.14.0",
     "eslint-plugin-jsx-a11y": "^2.2.0",
     "eslint-plugin-react": "^6.2.0",
-    "fetch-mock": "4.6.1",
+    "fetch-mock": "^5.5.0",
     "istanbul": "1.1.0-alpha.1",
     "jsdom": "9.4.2",
     "mocha": "3.0.2",
@@ -44,7 +44,7 @@
     "build": "react-scripts build",
     "lint": "eslint ./src/",
     "test": "istanbul cover node_modules/mocha/bin/_mocha -- --require test/.setup.js --bail --recursive 'src/**/*-test.js'",
-    "dev": "mocha test/.setup.js test/**/*-test.js --watch",
+    "dev": "mocha --require test/.setup.js --bail --recursive 'src/**/*-test.js'",
     "update": "node import/index.js",
     "deploy": "./deploy.sh"
   },

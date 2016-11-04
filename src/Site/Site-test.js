@@ -46,7 +46,7 @@ describe('HeaderRow', () => {
 
   describe('fetch uptimes', () => {
     before(() => {
-      return fetchMock.mock('https://api.uptimerobot.com/getMonitors?apiKey=testKey&format=json&noJsonCallback=1&customUptimeRatio=7&responseTimes=1&responseTimesAverage=1440', 'GET', uptime);
+      return fetchMock.get('https://api.uptimerobot.com/getMonitors?apiKey=testKey&format=json&noJsonCallback=1&customUptimeRatio=7&responseTimes=1&responseTimesAverage=1440', uptime);
     })
 
 

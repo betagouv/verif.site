@@ -32,7 +32,13 @@ class App extends Component {
   }
 
   getAnalytics() {
-    return fetch('https://www.data.gouv.fr/s/resources/caracteristiques-techniques-des-sites/20161102-052618/sites.json')
+    return fetch('https://www.data.gouv.fr/api/1/datasets/5805f1e2c751df2bb879df72/')
+      .then((response) => response.json())
+      .then(dataset => {
+        const resource = dataset.resources[0]
+        return resource.url
+      })
+      .then(url => fetch(url))
       .then((response) => response.json())
       .then((json) => {
         const analytics = Object.keys(json.data).map((key) => {

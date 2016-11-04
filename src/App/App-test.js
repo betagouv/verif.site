@@ -13,15 +13,20 @@ import { Loader } from 'react-loaders'
 const httpSites = require('../../test/resources/http-sites')
 const arraySite = require('../../test/resources/array-sites')
 
+const resourceUrl = 'https://www.data.gouv.fr/s/resources/caracteristiques-techniques-des-sites/234/sites.json'
+const datasetUrl = 'https://www.data.gouv.fr/api/1/datasets/5805f1e2c751df2bb879df72/'
+
 describe("Apps", () => {
 
   before(() => {
-    return fetchMock.mock('https://www.data.gouv.fr/s/resources/caracteristiques-techniques-des-sites/20161102-052618/sites.json', 'GET', httpSites)
+    return fetchMock.get(resourceUrl, httpSites, {name: 'resourceMock'})
   })
 
-  afterEach(() => {
-    return fetchMock.reset()
+  before(() => {
+    return fetchMock.get(datasetUrl, {resources: [{url:resourceUrl}]}, {name: 'datasetMock'})
   })
+
+  afterEach(fetchMock.reset)
 
   describe("Init", () => {
 
@@ -38,7 +43,7 @@ describe("Apps", () => {
 
       //then (sââââââââle)
       setTimeout(() => {
-        expect(fetchMock.calls().matched).to.have.length(1)
+        expect(fetchMock.calls('datasetMock')).to.have.length(1)
         expect(wrapper.state().analytics).to.have.length(2)
         expect(wrapper.state().loading).to.be.false
         expect(wrapper.state().analytics).deep.equal(arraySite)
@@ -53,7 +58,7 @@ describe("Apps", () => {
 
       //then (sââââââââle)
       setTimeout(() => {
-        expect(fetchMock.calls().matched).to.have.length(1)
+        expect(fetchMock.calls('datasetMock')).to.have.length(1)
         expect(wrapper.state().meta.lastUpdated).to.equal('8/16/2016, 4:48:01 PM')
         done()
       }, 10)
