@@ -51,7 +51,7 @@ analyse(options, (err, stdout, stderr) => {
         }
 
         console.log(`successfully uploaded ${filePath} to data.gouv`)
-        console.log(`response: ${res.status}: ${res.body}`);
+        console.log(`response: ${res.status}: ${JSON.stringify(res.body)}`);
         process.exit(0)
       })
   })
