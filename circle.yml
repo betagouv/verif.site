@@ -1,0 +1,24 @@
+machine:
+  services:
+    - docker
+  node:
+    version: 6.3.0
+
+general:
+  branches:
+    ignore:
+      - gh-pages
+
+test:
+  post:
+    - cat ./coverage/lcov.info | ./node_modules/.bin/coveralls --verbose
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - git config --global user.email "infra@beta.gouv.fr"
+      - git config --global user.name "CircleCI"
+      - npm run deploy
+      - npm run update:
+          timeout: 4800
