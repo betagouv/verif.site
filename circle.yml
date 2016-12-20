@@ -21,4 +21,4 @@ deployment:
       - git config --global user.name "CircleCI"
       - npm run deploy
       - npm run update:
-          timeout: 4800
+          timeout: 9600
