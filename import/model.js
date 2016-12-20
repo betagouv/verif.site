@@ -8,7 +8,6 @@ module.exports = function(results, callback) {
 
   async.every(results, addResult, callback);
 
-
   function addResult(result, cb) {
     fs.createReadStream(result.path)
     .pipe(csv())
