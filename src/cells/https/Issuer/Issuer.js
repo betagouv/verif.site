@@ -12,7 +12,7 @@ class HttpsIssuer extends Component {
     if (issuer.indexOf('StartCom') >= 0) {
       return <Badge status='warning' text="StartSSL" icon='fa-exclamation-triangle'/>
     } else if (issuer.indexOf('DST Root CA X3') >= 0) {
-      return <Badge status='warning' text="Let\'s Encrypt" icon='fa-certificate'/>
+      return <Badge status='warning' text="Let's Encrypt" icon='fa-certificate'/>
     } else {
       return <Badge status='warning' text={issuer} icon='fa-certificate'/>
     }
