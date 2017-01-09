@@ -5,7 +5,7 @@ import MiniBadges from './MiniBadges';
 import HttpsEnforce from '../cells/https/Enforce/Enforce'
 import Http2 from '../cells/Http2/Http2'
 
-const arraySite = require('../../test/resources/array-sites')
+const arraySite = require('../../../test/resources/array-sites')
 
 describe("MiniBadges", () => {
 

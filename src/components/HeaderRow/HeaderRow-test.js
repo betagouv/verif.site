@@ -4,7 +4,7 @@ import { mount } from 'enzyme'
 import sinon from 'sinon'
 import HeaderRow from './HeaderRow';
 
-const arraySite = require('../../test/resources/array-sites')
+const arraySite = require('../../../test/resources/array-sites')
 
 describe("HeaderRow", () => {
 

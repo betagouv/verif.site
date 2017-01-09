@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Header from '../components/Header/Header'
 import Content from '../components/Content/Content'
@@ -19,19 +19,11 @@ function getParameterByName(name, url) {
 }
 
 class App extends Component {
-  static propTypes = {
-    query: PropTypes.string,
-    analytics: PropTypes.array.isRequired,
-    isFetching: PropTypes.bool.isRequired,
-    lastUpdated: PropTypes.number,
-    dispatch: PropTypes.func.isRequired
-  }
-
   componentDidMount() {
     this.props.dispatch(fetchAnalyticsIfNeeded())
   }
 
-  handleTextChange = query => {
+  handleTextChange(query) {
     this.props.dispatch(updateQuery(query))
 
     const queryParam = query ? `?q=${query}` : ''

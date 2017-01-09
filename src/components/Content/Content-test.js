@@ -5,7 +5,7 @@ import Content from './Content'
 import Site from '../Site/Site'
 import SearchBar from '../SearchBar/SearchBar'
 
-const arraySite = require('../../test/resources/array-sites')
+const arraySite = require('../../../test/resources/array-sites')
 
 describe("Content", () => {
 
