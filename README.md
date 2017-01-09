@@ -26,9 +26,9 @@ npm run update
 
 Si la variable d'environnement `DATA_GOUV_API_KEY` est présente, le script essaiera alors d'envoyer les données brutes sur [data.gouv.fr](https://data.gouv.fr)
 
-La clé doit être reliée à l'administration [Incubateur de Services Numériques](https://www.data.gouv.fr/fr/organizations/incubateur-de-services-numeriques/#datasets). 
+La clé doit être générée depuis l'administration [Incubateur de Services Numériques](https://www.data.gouv.fr/fr/organizations/incubateur-de-services-numeriques/#datasets) sur data.gouv.fr.
 
-Le jeux de donnée mis à jour est le fichier `sites.json`, dans [Caractéristiques techniques des sites](https://www.data.gouv.fr/fr/datasets/caracteristiques-techniques-des-sites/).
+Le jeu de donnée mis à jour est le fichier `sites.json`, dans [Caractéristiques techniques des sites](https://www.data.gouv.fr/fr/datasets/caracteristiques-techniques-des-sites/).
 
 ## Modifier le site
 
