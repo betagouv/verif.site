@@ -1,6 +1,6 @@
 import {
   REQUEST_ANALYTICS, RECEIVE_ANALYTICS,
-  UPDATE_QUERY
+  UPDATE_QUERY, INVALIDATE_ANALYTICS
 } from '../actions'
 
 const rootReducer = (state = {
@@ -8,10 +8,17 @@ const rootReducer = (state = {
   items: []
 }, action) => {
   switch (action.type) {
+    case INVALIDATE_ANALYTICS:
+      return {
+        ...state,
+        didInvalidate: true,
+        items: []
+      }
     case REQUEST_ANALYTICS:
       return {
         ...state,
-        isFetching: true
+        isFetching: true,
+        didInvalidate: false
       }
     case UPDATE_QUERY:
       return {
@@ -23,7 +30,8 @@ const rootReducer = (state = {
         ...state,
         isFetching: false,
         items: action.analytics,
-        lastUpdated: action.receivedAt
+        lastUpdated: action.receivedAt,
+        didInvalidate: false
       }
     default:
       return state

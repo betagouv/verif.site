@@ -33,7 +33,7 @@ class App extends Component {
   }
 
   render() {
-    const { analytics, isFetching, lastUpdated } = this.props
+    const { analytics, isFetching, lastUpdated, dispatch } = this.props
     const query = this.props.query ? this.props.query : getParameterByName('q')
 
     const search = new RegExp(query, 'i')
@@ -41,7 +41,7 @@ class App extends Component {
 
     return (
       <div className="site-content">
-        <Header sites={filteredAnalytics} />
+        <Header sites={filteredAnalytics} dispatch={dispatch}/>
 
         <div className={isFetching ? 'loaderContainer': 'loaderContainer hidden'}>
           <Loader type="pacman" />

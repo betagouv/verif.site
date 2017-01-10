@@ -1,5 +1,6 @@
 export const REQUEST_ANALYTICS = 'REQUEST_ANALYTICS'
 export const RECEIVE_ANALYTICS = 'RECEIVE_ANALYTICS'
+export const INVALIDATE_ANALYTICS = 'INVALIDATE_ANALYTICS'
 export const UPDATE_QUERY = 'UPDATE_QUERY'
 
 export const updateQuery = query => ({
@@ -15,6 +16,10 @@ export const receiveAnalytics = (json) => ({
   type: RECEIVE_ANALYTICS,
   analytics: Object.keys(json.data).map(child => json.data[child]),
   receivedAt: Date.now()
+})
+
+export const invalidateAnalytics = () => ({
+  type: INVALIDATE_ANALYTICS
 })
 
 const fetchAnalytics = () => dispatch => {
@@ -37,7 +42,10 @@ const shouldFetchAnalytics = (state) => {
     return true
   }
 
-  return !analytics.isFetching
+  if (analytics.isFetching) {
+    return false
+  }
+  return analytics.didInvalidate
 }
 
 export const fetchAnalyticsIfNeeded = () => (dispatch, getState) => {
