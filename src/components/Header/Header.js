@@ -5,7 +5,7 @@ import './Header.css'
 
 class Header extends Component {
 
-  handleRefreshClick = e => {
+  handleRefreshClick(e) {
     e.preventDefault()
 
     const { dispatch } = this.props
