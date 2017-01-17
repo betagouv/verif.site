@@ -5,7 +5,7 @@ import Charts from './Charts'
 import Bool from './Bool/Bool'
 import Categories from './Categories/Categories'
 
-const arraySite = require('../../test/resources/array-sites')
+const arraySite = require('../../../test/resources/array-sites')
 
 describe("Charts", () => {
 

@@ -10,7 +10,7 @@ class Content extends Component {
         <SearchBar onChange={this.props.handleTextChange} query={this.props.query} />
 
         {this.props.sites
-          .map((site) => <Site key={site.meta.Domain} site={site} filterAdministration={this.props.filterAdministration}/>)}
+          .map((site) => <Site key={site.meta.Domain} site={site} filterAdministration={this.props.handleTextChange}/>)}
       </div>
     )
   }

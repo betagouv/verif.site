@@ -1,13 +1,13 @@
 import React from 'react';
 import { expect } from 'chai';
 import { mount, shallow } from 'enzyme';
-import { deepClone } from '../../test/tools'
+import { deepClone } from '../../../test/tools'
 
 import Site from './Site';
 import fetchMock from 'fetch-mock'
 
-const arraySite = require('../../test/resources/array-sites')
-const uptime = require('../../test/resources/uptime')
+const arraySite = require('../../../test/resources/array-sites')
+const uptime = require('../../../test/resources/uptime')
 
 describe('HeaderRow', () => {
 

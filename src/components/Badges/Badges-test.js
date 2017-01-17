@@ -5,7 +5,7 @@ import Badges from './Badges';
 import HttpsValid from '../cells/https/Valid/Valid'
 import HttpsGrade from '../cells/https/Grade/Grade'
 
-const arraySite = require('../../test/resources/array-sites')
+const arraySite = require('../../../test/resources/array-sites')
 
 describe("Badges", () => {
 

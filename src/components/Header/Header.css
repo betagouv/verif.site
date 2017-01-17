@@ -15,3 +15,7 @@
 #header span {
   font-size: 1em;
 }
+
+#header a {
+  color: white;
+}
