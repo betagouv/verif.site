@@ -38,8 +38,8 @@
 .mini-badges .badge.invalid .icon,
 .mini-badges .badge.invalid .big,
 .mini-badges .badge.invalid .big a {
-  color: lightgrey;
-  background-color: inherit;
+  background-color: #DA3E52;
+  color: white;
 }
 
 .mini-badges .badge.warning .icon,
