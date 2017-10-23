@@ -10,10 +10,10 @@ const apiKey = process.env.DATA_GOUV_API_KEY
 // To become a member, request an invite from an existing admin
 const url = 'http://www.data.gouv.fr/api/1/datasets/5805f1e2c751df2bb879df72/resources/234299a6-e9a4-4cf4-a220-681a94ac3e92/upload/'
 
-const scanners = ['inspect', 'inspect', 'sslyze', 'tls', 'pageload']
+const scanners = ['pshtt', 'tls', 'sslyze', 'pageload', 'a11y']
 const name = 'sites'
 const options = {
-  dockerImage: 'betagouv/domain-scan',
+  dockerImage: 'betagouv/domain-scan:latest',
   scanners,
   file: `${name}.csv`,
 }
