@@ -24,6 +24,11 @@ Dépendences :
 npm run update
 ```
 
+### Mettre à jour l'image Docker
+
+Nous utilisons l'outil [domain-scan](https://github.com/18F/domain-scan), développé par 18F. L'image docker est disponible sur
+### Configurer l'export des données vers data.gouv.fr
+
 Si la variable d'environnement `DATA_GOUV_API_KEY` est présente, le script essaiera alors d'envoyer les données brutes sur [data.gouv.fr](https://data.gouv.fr)
 
 La clé doit être générée depuis l'administration [Incubateur de Services Numériques](https://www.data.gouv.fr/fr/organizations/incubateur-de-services-numeriques/#datasets) sur data.gouv.fr.
@@ -40,7 +45,7 @@ npm start
 
 ## Lancer les tests
 
-Dépendences :
+Dépendances :
  * [Node.js]
  * [Cairo](https://cairographics.org/) :
     * Ubuntu: `sudo apt-get install libjpeg-dev && sudo apt-get install libcairo2-dev`
@@ -55,7 +60,6 @@ npm test
 ```
 npm run deploy
 ```
-
 
 
 [Node.js]: https://nodejs.org/en/
