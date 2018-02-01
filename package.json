@@ -11,6 +11,7 @@
     "babel-eslint": "^6.1.2",
     "babel-preset-airbnb": "2.0.0",
     "babel-register": "6.11.6",
+    "canvas": "^1.6.9",
     "chai": "3.5.0",
     "csv-parser": "^1.11.0",
     "enzyme": "2.4.1",
@@ -29,7 +30,6 @@
     "superagent": "^2.3.0"
   },
   "dependencies": {
-    "canvas": "^1.4.0",
     "chart.js": "1.1.1",
     "coveralls": "2.11.12",
     "loaders.css": "0.1.2",
