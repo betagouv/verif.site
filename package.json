@@ -21,6 +21,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.0",
     "eslint-plugin-react": "^6.2.0",
     "fetch-mock": "^5.5.0",
+    "gh-pages": "^1.1.0",
     "istanbul": "1.1.0-alpha.1",
     "jsdom": "9.4.2",
     "mocha": "3.0.2",
@@ -46,7 +47,7 @@
     "test": "istanbul cover node_modules/mocha/bin/_mocha -- --require test/.setup.js --bail --recursive 'src/**/*-test.js'",
     "dev": "mocha --require test/.setup.js --bail --recursive 'src/**/*-test.js'",
     "update": "node import/index.js",
-    "deploy": "./deploy.sh"
+    "deploy": "touch build/.nojekyll && gh-pages -d build -m 'Deploy [skip ci]' --dotfiles=true"
   },
   "eslintConfig": {
     "extends": "./node_modules/react-scripts/config/eslint.js",

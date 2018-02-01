@@ -31,6 +31,7 @@ deployment:
     commands:
       - git config --global user.email "infra@beta.gouv.fr"
       - git config --global user.name "CircleCI"
+      - yarn build
       - yarn deploy
-      - npm run update:
+      - yarn update:
           timeout: 9600

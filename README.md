@@ -59,6 +59,7 @@ yarn test
 ## Publier une nouvelle version du site
 
 ```
+yarn build
 yarn deploy
 ```
 
