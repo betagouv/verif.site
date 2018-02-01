@@ -8,7 +8,7 @@ Ce site permet de visualiser les statistiques des différents sites de [l'incuba
 ## Installation
 
 Dépendences :
- * [Node.js] v≥4.
+ * [Node.js] >= 8.
  * [yarn](https://yarnpkg.com/lang/en/)
 
 ```sh
