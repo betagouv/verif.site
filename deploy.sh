@@ -6,8 +6,8 @@ SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
 function doCompile {
-  npm install
-  npm run build
+  yarn
+  yarn build
 }
 
 # Save some useful information

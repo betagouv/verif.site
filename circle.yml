@@ -3,6 +3,14 @@ machine:
     - docker
   node:
     version: 6.3.0
+  environment:
+    PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+
+dependencies:
+  override:
+    - yarn
+  cache_directories:
+    - ~/.cache/yarn
 
 general:
   branches:
@@ -10,6 +18,8 @@ general:
       - gh-pages
 
 test:
+  override:
+    - yarn test
   post:
     - cat ./coverage/lcov.info | ./node_modules/.bin/coveralls --verbose
 
@@ -19,6 +29,6 @@ deployment:
     commands:
       - git config --global user.email "infra@beta.gouv.fr"
       - git config --global user.name "CircleCI"
-      - npm run deploy
+      - yarn deploy
       - npm run update:
           timeout: 9600

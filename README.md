@@ -9,9 +9,10 @@ Ce site permet de visualiser les statistiques des différents sites de [l'incuba
 
 Dépendences :
  * [Node.js] v≥4.
+ * [yarn](https://yarnpkg.com/lang/en/)
 
 ```sh
-npm install
+yarn
 ```
 
 ## Mettre à jour les données
@@ -21,7 +22,7 @@ Dépendences :
  * [Docker]
 
 ```sh
-npm run update
+yarn update
 ```
 
 ### Mettre à jour l'image Docker
@@ -40,7 +41,7 @@ Le jeu de donnée mis à jour est le fichier `sites.json`, dans [Caractéristiqu
 L'application est une application [React] dans le dossier `front`.
 
 ```
-npm start
+yarn start
 ```
 
 ## Lancer les tests
@@ -52,13 +53,13 @@ Dépendances :
     * Mac: `brew install cairo`
 
 ```
-npm test
+yarn test
 ```
 
 ## Publier une nouvelle version du site
 
 ```
-npm run deploy
+yarn deploy
 ```
 
 
