@@ -67,3 +67,10 @@ yarn deploy
 [Node.js]: https://nodejs.org/en/
 [Docker]: https://www.docker.com/
 [React]: https://facebook.github.io/react/
+
+
+## Licence
+
+2019 DINSIC
+
+Cette application est publiée sous [licence MIT](LICENSE).
